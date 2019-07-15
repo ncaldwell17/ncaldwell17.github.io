@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+    <title>Main Page</title>
+
+    <head>
+        <!-- Meta Tags  -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS -->
+            <link rel="stylesheet" href="index.css">
+            <!-- insert font here --> 
+            <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Notable&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JS -->
+            <script src="index.js"></script>
+    </head>
+    
+    <body>
+        <div class="main" id="section1">
+            <div class="blankSpace"></div>
+            <div class="infoContainer">
+                <div class="name">Noah Caldwell-Gatsos</div>
+                <div class="title" style="border-bottom: 1px solid white">Machine Learning Engineer at Quiddity Solutions, LLC</div>
+                <div class="title">Master's Candidate in Artificial Intelligence at Northwestern University</div>
+            </div>
+        </div>
+        <div class="header" id="myHeader">
+            <a href="#section2"><div class="button" id="myResume">See More</div></a>
+            <a href="#section3"><div class="button" id="myWork">Projects</div></a>
+            <a href="#section4"><div class="button" id="myBlog">Blog</div></a>
+            <a href="#section5"><div class="button" id="myContact"
+                                     style="border-bottom: none;">Contact</div></a>
+        </div>
+        <div class="main" id="section2">
+            
+            <div class="blankSpace2"></div>
+            <div id="convWrapper">
+            <div class="displayContainer">
+                <div class="displayBox" id="displayBox">
+                    <div id="textContent" style="display: block">
+                        <div class="aboutMe">About Me</div>
+                        <div class="paragraphText">I'm a machine learning engineer and quantative economist based in Chicago - I love combining diverse fields and bulk data together to see what new information I can find. Some of my past work has involved cyber threat prediction, supply chain economics, natural language processing, foreign policy, media strategy, and U.S. election polling and analysis.</div>
+                        <div class="smallImage" style="background-image: url(images/moscowbackground.jpg)"></div>
+                    </div>
+                    <div class="igContent" id="ig1Content" style="display: none; background-image: url(images/infographic1.png)"></div>
+                    <div class="igContent" id="ig2Content" style="display: none; background-image: url(images/infographic2.png)"></div>
+                    <div class="igContent" id="ig3Content" style="display: none; background-image: url(images/infographic3.png)"></div>
+                </div>
+                <div class="displayCaption" id="displayCaption">Click Below</div>
+            </div>
+            <div class="graphicContainer">
+                <div class="infographic" style="background-image: url(images/infographic1.png)" onclick="toggleResume()"></div>
+
+                <div class="infographic" style="background-image: url(images/infographic2.png)" onclick="toggleResume2()"></div>
+
+                <div class="infographic" style="background-image: url(images/infographic3.png)" onclick="toggleResume3()"></div>
+            </div>
+            <a href="#">
+            <div class="seeFullResume">See Full Interactive Resume</div>
+            </a>
+        </div>
+            
+        </div>
+        <div class="main" id="section3">
+            
+            <div class="blankSpace2" style="height: 65px;"></div>
+            <div class="projectMatrix">
+            
+                <div class="aProject">Artificial Intelligence Research</div>
+                <div class="aProject" style="height: 280px; padding-top: 120px;">Election Predictions</div>
+                <div class="aProject" style="height: 250px; padding-top: 150px;">Geopolitics</div>
+                <div class="aProject" style="height: 280px; padding-top: 120px;">Development Economics</div>
+                <div class="aProject" style="height: 250px; padding-top: 150px;">Cybersecurity</div>
+                <div class="aProject" style="height: 280px; padding-top: 120px;">Local Issue Analysis</div>
+          
+                
+            </div>
+            
+            
+        
+        </div>
+        <div class="main" id="section4">
+            <div class="blogContainer">
+                <div class="blogHeader">
+                    <div class="option">Archive</div>
+                    <div class="option">Videos</div>
+                    <div class="option" id="sbs">Subscribe</div>
+                    <div class="option">About</div>
+                    <div class="option" id="tps" style="width: 150px;">Travel Posts</div>
+                
+                
+                </div>
+                <div class="blogFront" style="background-image: url(images/blog.jpeg)"></div>
+                
+                <div class="blogPost">
+                    <div class="myTitle"><b>Media and Foreign Policy</b> - Why We Can't Have a Good Debate on TV</div>
+                    <div class="bpDate">July 15th, 2019 @ 12:00PM CST</div>
+                    <div class="bpPreview">Noam Chomsky said it best - "the media's need for soundbites makes it tough to answer foreign policy questions in a manner that actually dives into the meat of the problem."</div>
+                </div>
+                
+                <div class="blogArchive">
+                    <div class="baHeader">See Recent Posts</div>
+                    <div class="baMatrix">
+                        <div class="aPost">
+                            <div class="aPostDate">Yesterday</div>
+                            <div class="aPostImage" style="background-image: url(images/moscowbackground.jpg)"></div>
+                            <div class="aPostCaption">Sample Caption Sample <br>Caption Sample Caption</div>
+                        </div>
+                        <div class="aPost">
+                            <div class="aPostDate">Last Week</div>
+                            <div class="aPostImage" style="background-image: url(images/moscowbackground.jpg)"></div>
+                            <div class="aPostCaption">Sample Caption Sample <br>Caption Sample Caption</div>
+                        </div>
+                    
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        </div>
+        <div class="main" id="section5">
+            <div class="contactWrapper">
+                <div class="title5">Contact</div>
+                <div class="interestingQuote">"所有的知识是好知识"</div>
+                <div class="attrTo">-  未知</div>
+                <div class="aContact">
+                    <div class="contactIcon" style="padding-top: 5px; height: 70px;">@</div>
+                    <div class="contactSource">Email</div>
+                    <div class="contactLink">noahcaldwell-gatsos2019@u.northwestern.edu</div>
+                </div>
+                <div class="aContact">
+                    <div class="contactIcon">
+                        <i class="fa fa-github">
+                    </i></div>
+                    <div class="contactSource">GitHub</div>
+                    <div class="contactLink">/ncaldwell17</div>
+                </div>
+                <div class="aContact">
+                    <div class="contactIcon">
+                        <i class="fa fa-youtube">
+                    </i></div>
+                    <div class="contactSource">YouTube</div>
+                    <div class="contactLink">ncaldwellgatsos</div>
+                </div>
+                <div class="aContact">
+                    <div class="contactIcon">
+                        <i class="fa fa-twitter">
+                    </i></div>
+                    <div class="contactSource">Twitter</div>
+                    <div class="contactLink">@ncaldtor</div>
+                </div>
+                <div class="aContact">
+                    <div class="contactIcon">
+                        <i class="fa fa-medium">
+                    </i></div>
+                    <div class="contactSource">Medium</div>
+                    <div class="contactLink">@ncaldwellgatsos</div>
+                </div>
+                    
+            </div>
+            
+            
+        </div>
+    
+    
+    
+    
+    
+    </body>
+    <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("myHeader");
+    var resume = document.getElementById("myResume");
+    var work = document.getElementById("myWork");
+    var blog = document.getElementById("myBlog");
+    var contact = document.getElementById("myContact");
+    
+    var sect3 = document.getElementById("section3");
+    var sect4 = document.getElementById("section4");
+    var sect5 = document.getElementById("section5");
+
+    // Get the offset position of the navbar
+    var s2point = header.offsetHeight;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > 550 && window.pageYOffset < 1900) {
+            header.classList.add("sticky");
+            resume.innerHTML = '<div>Resume</div>';
+            resume.classList.add("active-top");
+            work.classList.remove("active");
+            blog.classList.remove("active"); 
+            contact.classList.remove("active-bottom");
+        }
+        
+        else if (window.pageYOffset > 1900 && window.pageYOffset < 2850) {
+            header.classList.add("sticky");
+            resume.innerHTML = '<div>Resume</div>';
+            resume.classList.remove("active-top");
+            work.classList.add("active");
+            blog.classList.remove("active");
+            contact.classList.remove("active-bottom");
+        }
+
+        else if (window.pageYOffset > 2850 && window.pageYOffset < 3800) {
+            header.classList.add("sticky");
+            resume.innerHTML = '<div>Resume</div>';
+            resume.classList.remove("active-top");
+            work.classList.remove("active");
+            blog.classList.add("active");
+            contact.classList.remove("active-bottom");
+        } 
+        
+        else if (window.pageYOffset > 3800) {
+            header.classList.add("sticky");
+            resume.innerHTML = '<div>Resume</div>';
+            resume.classList.remove("active-top");
+            work.classList.remove("active");
+            blog.classList.remove("active");
+            contact.classList.add("active-bottom");
+        }
+        
+        else {
+        header.classList.remove("sticky");
+        resume.classList.remove("active-top");
+        resume.innerHTML = '<div>See More</div>';
+        work.classList.remove("active");
+        blog.classList.remove("active");
+        contact.classList.remove("active-bottom");
+        } 
+    }
+    
+    </script>
+</html>

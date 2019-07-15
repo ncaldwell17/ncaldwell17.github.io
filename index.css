@@ -1,0 +1,614 @@
+/* 
+Fonts:
+font-family: 'Spectral', serif;
+
+Dark Colors:
+Colors:
+Light Colors: 
+
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: 'Spectral', serif;
+
+}
+
+.header {
+    height: 408px;
+    width: 150px;
+    position: static;
+    float: right;
+    margin-top: -100px;
+    margin-right: 50px;
+    border-radius: 20px;
+    
+    background-color: black;
+}
+
+.button {
+    height: 60px;
+    width: 150px;
+    padding-top: 40px;
+    border-bottom: 2px solid white;
+    font-family: 'Spectral', serif;
+    
+    font-size: 20px;
+    text-align: center;
+}
+.active-top {
+    background-color: white;
+    color: #1D4058;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.active {
+    background-color: white;
+    color: #1D4058;
+}
+
+.active-bottom {
+    background-color: white;
+    color: #1D4058;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    transition: 1s;
+    background-color: white;
+    color: #1D4058;
+}
+#myContact:hover {
+    transition: 1s;
+    background-color: white;
+    color: #1D4058;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#myResume:hover {
+    transition: 1s;
+    background-color: white;
+    color: #1D4058;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    margin-top: 150px;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+.main {
+    height: 950px;
+}
+
+#section1 {
+    background-image: linear-gradient(90deg, #1D4058, white);
+}
+
+.blankSpace {
+    height: 175px;
+}
+
+.infoContainer {
+    margin: auto;
+    height: 500px;
+    width: 50vw;
+}
+
+.name {
+    font-size: 6vw;
+    text-align: center;
+    font-family: 'Spectral', serif;
+    padding-top: 150px;
+    border-bottom: 4px solid white;
+}
+
+.title {
+    font-size: 3vw;
+    text-align: center;
+    font-family: 'Spectral', serif;
+    margin-top: 20px; 
+}
+
+
+#section2 {
+    background-color: #6297CA;
+    /*color: #1D4058;*/
+    color: white;
+}
+
+.blankSpace2 {
+    height: 50px;
+}
+.displayContainer {
+    height: 600px;
+    width: 60vw;
+    margin-left: 50px;
+}
+
+.displayBox {
+    height: 550px;
+    width: 100%;
+}
+
+.displayCaption {
+    height: 50px;
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    background-color: #6297CA;
+}
+
+.graphicContainer {
+    width: 1200px;
+    margin-left: 50px;
+}
+
+.paragraphText {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.smallImage {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+}
+
+
+.infographic {
+    height: 196px;
+    width: 19.2vw;
+    margin-right: .65vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    float: left;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: .2vw solid white;
+    border-left: .2vw solid white;
+}
+.infographic:hover {
+    height: 196px;
+    width: 19.2vw;
+    border-top: 2px solid #1D4058;
+    border-bottom: 2px solid #1D4058;
+    border-right: .2vw solid #1D4058;
+    border-left: .2vw solid #1D4058;
+}
+
+.igContent {
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 550px;
+}
+
+.aboutMe {
+    font-size: 4vw;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+#section3 {
+    background-image: linear-gradient(90deg, #1D4058, white);
+}
+
+.projectMatrix  {
+    height: 830px;
+    width: 80%;
+    margin-left: 2vw;
+}
+
+.aProject {
+    height: 300px;
+    padding-top: 100px;
+    width: 32%;
+    float: left;
+    margin-right: 1vw;
+    background-color: #6297CA;
+    margin-bottom: 20px;
+    font-size: 8vw;
+    text-align: center;
+}
+
+.aProject:hover {
+    transition: 1s;
+    color: #1D4058;
+    background-color: white;
+}
+
+
+#section4 {
+    background-color: #6297CA;
+    
+}
+
+#section5 {
+    background-image: linear-gradient(90deg, #1D4058, white);
+}
+
+.seeFullResume {
+    height: 40px;
+    width: 60vw;
+    border: 1px solid white;
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 50px;
+}
+
+.main a {
+    color: white;
+}
+
+.seeFullResume:hover {
+    background-color: white;
+    color: #1D4058;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.seeFullResume:active {
+    margin-top: 1px;
+}
+
+.meep {
+    height: 40px;
+}
+
+.meep:first-child::first-letter {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.blogContainer {
+    margin-left: 20px;
+    padding-top: 20px;
+    width: 80%;
+}
+
+
+.blogHeader {
+    height: 50px;
+    margin-left: 50px;
+}
+
+.option {
+    height: 50px;
+    width: 10vw;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.8vw;
+    float: left;
+    margin-right: 20px;
+}
+.option:hover {
+    color: black;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.blogFront {
+    height: 500px;
+    width: 126%;
+    margin-left: -30px;
+    background-size: cover;
+    background-position: center;
+}
+.blogPost {
+    height: 120px;
+    width: 30vw;
+    margin-top: -50px;
+    margin-left: 50px;
+    background-color: #6297CA;
+}
+
+.blogArchive {
+    height: 300px;
+}
+
+.myTitle {
+    font-size: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+.bpDate {
+    float: right;
+    padding-right: 15px;
+}
+.bpPreview {
+    display: none;
+    float: right;
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+    text-indent: 25px;
+}
+
+.blogPost:hover {
+    height: 260px;
+    margin-top: -190px;
+    transition: 1s;
+    background-color: white;
+    color: #6297CA;
+    
+}
+.blogPost:hover .bpPreview {
+    display: block;
+}
+
+.baHeader {
+    margin-top: 25px;
+    height: 50px;
+    font-size: 30px;
+    padding-left: 20px;
+}
+.baMatrix {
+    height: 220px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.aPost {
+    display: inline-block;
+    height: 220px;
+    margin-left: 50px;
+    width: 250px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+.aPost:hover {
+    background-color: black;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+.aPostDate {
+    height: 10%;
+    text-align: center;
+    font-weight: bolder;
+}
+.aPostImage {
+    height: 60%;
+    background-position: center;
+    background-size: cover;
+}
+.aPostCaption {
+    height: 30%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.contactWrapper {
+    width: 500px;
+    margin: auto;
+    padding-top: 150px;
+}
+
+.title5 {
+    font-size: 80px;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+.interestingQuote {
+    font-size: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.attrTo {
+    text-align: right;
+    padding-right: 80px;
+    font-size: 25px;
+    border-bottom: 2px solid white;
+}
+
+.aContact {
+    height: 75px;
+    padding-top: 10px;
+}
+.contactIcon {
+    height: 65px;
+    padding-top: 10px;
+    width: 75px;
+    float: left;
+    margin-left: 10px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: #6297CA;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+.contactSource {
+    float: left;
+    font-weight: bolder;
+    font-size: 25px;
+    width: 380px;
+    border-bottom: 1px solid white;
+}
+.contactLink {
+    float: left;
+    font-size: 18px;
+    width: 390px;
+}
+.contactIcon:hover {
+    color: white;
+    background-color: black;
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+
+/* handles big screens */
+@media screen and (min-width: 1000px) {
+    
+    .name {
+        font-size: 60px;
+    }
+    
+    .title {
+        font-size: 30px;
+    }
+    .displayCaption {
+        font-size: 35px;
+    }
+    .aboutMe {
+        font-size: 40px;
+    }
+    .aProject {
+        font-size: 48px;
+    }
+    .option {
+        font-size: 25px;
+        margin-right: 20px;
+    }
+    
+}
+@media screen and (max-width: 2000px) {
+    .blogPost {
+        width: 450px;
+    }
+    
+}
+
+
+@media screen and (max-width: 900px) {
+ .aProject {
+        font-size: 37px;
+    }
+    .igContent {
+        background-size: cover;
+        background-position: left;
+        overflow-x: scroll;
+        white-space: nowrap;
+        position: absolute;
+        width: 60vw;
+    }
+.blogPost {
+        width: 300px;
+    }
+    .myTitle {
+        font-size: 18px;
+    }
+    .blogPost:hover {
+        height: 130px;
+        margin-top: -70px;
+    }
+    .blogPost:hover .bpPreview {
+        visibility: hidden;
+    }
+    .bpPreview {
+        height: 0px;
+    }
+    .blogFront {
+        height: 250px;
+    }
+    #tps {
+        visibility: hidden;
+    }
+}
+
+/* handles smaller screens */
+@media screen and (max-width: 700px) {
+
+    .header {
+        display: none;
+    }
+    
+    #convWrapper {
+        margin-left: 50px;
+    }
+    
+    .graphicContainer {
+        width: 600px;
+        margin-left: -50px;
+    }
+    .infographic {
+        width: 185px;
+    }
+    .infographic:hover {
+        width: 185px;
+    }
+    
+    .igContent {
+        background-size: cover;
+        background-position: left;
+        overflow-x: scroll;
+        white-space: nowrap;
+        position: absolute;
+        width: 400px;
+    }
+    
+    #section4 {
+        height: 700px;
+    }
+    
+    .displayCaption {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    .smallImage {
+        height: 260px;
+    }
+    .projectMatrix {
+        width: 98%;
+    }
+    .blogHeader {
+        margin-left: 0px;
+    }
+    .option {
+        font-size: 20px;
+        margin-right: 45px;
+    }
+    #sbs {
+        width: 70px;
+    }
+    #tps {
+        display: none;
+    }
+    .blogHeader {
+        margin-left: 10%;
+        width: 500px;
+    }
+   
+}

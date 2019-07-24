@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    color: white;
+    font-family: 'Spectral', serif;
+}
+
+.header {
+    background-color: #999999;
+    height: 60px;
+    width: 100%;
+}
+
+.logo {
+    background-color: #384D8A;
+    height: 50px;
+    width: 160px;
+    margin-left: 30px;
+    font-family: 'Geostar Fill', cursive;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 8px;
+    float: left;
+}
+
+.aProject {
+    font-size: 20px;
+    float: left;
+    margin-left: 30px;
+    padding-top: 13px;
+}
+.aProject:hover {
+    font-weight: bold;
+    color: #292929;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.main {
+    width: 1000px;
+    margin: auto;
+
+}
+
+.title {
+    color: black;
+    font-family: 'Geostar Fill', cursive;
+    font-size: 30px;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.subtitle {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.options {
+    background-color: #999999;
+    margin-top: 20px;
+    height: 50px;
+    
+}
+
+.anOption {
+    height: 38px;
+    padding-top: 12px;
+    float: left;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 120px;
+    text-align: center;
+}
+.anOption:hover {
+    background-color: #384D8A;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.newContainer {
+    height: 400px;
+    margin-top: 25px;
+}
+.featured {
+    width: 498px;
+    height: 400px;
+    float: left;
+}
+
+.front-photo {
+    height: 230px;
+    width: 470px;
+    margin: auto;
+    margin-top: 30px;
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.front-title {
+    color: black;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.front-title:hover {
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.time {
+    color: black;
+    text-align: center;
+}
+.time2 {
+    color: black;
+    float: left;
+    margin-left: 30px;
+}
+
+.aStory {
+    height: 200px;
+    margin-top: 20px;
+    border-top: 2px solid black;
+}
+
+.storyPhoto {
+    height: 200px;
+    width: 300px;
+    background-color: red;
+    float: left;
+    background-position: center;
+    background-size: cover;
+}
+
+.author {
+    width: 600px;
+    color: black;
+    float: left;
+    margin-left: 30px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.tagContainer {
+    height: 50px;
+    float: left;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.aTag {
+    height: 25px;
+    padding-top: 5px;
+    background-color: #384D8A;
+    width: 120px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.bottomSpace {
+    height: 200px;
+    width: 100%;
+}
+

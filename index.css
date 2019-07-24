@@ -16,7 +16,6 @@ body {
     margin: 0;
     color: white;
     font-family: 'Spectral', serif;
-
 }
 
 .header {
@@ -27,7 +26,6 @@ body {
     margin-top: -100px;
     margin-right: 50px;
     border-radius: 20px;
-    
     background-color: black;
 }
 
@@ -244,6 +242,7 @@ body {
     transition: 1s;
     color: #1D4058;
     background-color: white;
+    cursor: pointer;
 }
 
 

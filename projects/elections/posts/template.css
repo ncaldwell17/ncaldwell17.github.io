@@ -220,7 +220,7 @@ p {
         display: none;
     }
     .main {
-        width: 460px; 
+        width: 420px; 
         margin-left: -30px;
         margin-top: 50px;
         float: left;
@@ -263,18 +263,19 @@ p {
         margin-top: 20px;
     }
     .tagContainer {
-        margin-left: 65px;
+        float: none;
+        margin-left: 150px;
     }
     
     .readNext {
-        margin-top: 200px;
+        margin-top: 300px;
     }
     .something {
         line-height: 35px;
     }
     p {
         line-height: 35px;
-        font-size: 18px;
+        font-size: 22px;
         margin-top: 50px;
     }
 }

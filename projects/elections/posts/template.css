@@ -162,6 +162,7 @@ p {
     margin-top: 20px;
     text-align: justify;
     font-size: 17px;
+    line-height: 25px;
 }
 
 .tagContainer {
@@ -200,6 +201,73 @@ p {
 
 .empty {
     height:  200px;
+}
+
+@media screen and (max-width: 500px) {
+    .logo { 
+        width: 100%;
+        margin-left: -10px;
+        text-align: center; 
+        margin-bottom: -50px;}
+    .aProject {
+        display: none;
+    }
+    .main {
+        width: 480px; 
+        margin-left: 0px;
+        margin-top: 50px;
+        float: left;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .subtitle {
+        text-align: justify;
+        font-size: 18px;
+    }
+    .attrContainer {
+        margin-top: 5px;
+        margin-bottom: 50px;
+    }
+    .by {
+        float: none;
+        border-right: none;
+    }
+    .email {
+        display: none;
+    }
+    .datetime {
+        float: none;
+        border-right: none;
+        margin-left: 0px;
+    }
+    .socialContainer {
+        display: none;
+    }
+    .mainPhoto {
+        height: 300px;
+    }
+    .caption {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+    .source {
+        font-size: 8px;
+        margin-top: 20px;
+    }
+    .tagContainer {
+        margin-left: 65px;
+    }
+    
+    .readNext {
+        margin-top: 160px;
+    }
+    .something {
+        line-height: 30px;
+    }
+    p {
+        line-height: 30px;
+    }
 }
 
 

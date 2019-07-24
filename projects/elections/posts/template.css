@@ -226,11 +226,11 @@ p {
         float: left;
     }
     .title {
-        font-size: 30px;
+        font-size: 60px;
     }
     .subtitle {
         text-align: justify;
-        font-size: 18px;
+        font-size: 25px;
     }
     .attrContainer {
         margin-top: 5px;
@@ -267,13 +267,15 @@ p {
     }
     
     .readNext {
-        margin-top: 160px;
+        margin-top: 200px;
     }
     .something {
-        line-height: 30px;
+        line-height: 35px;
     }
     p {
-        line-height: 30px;
+        line-height: 35px;
+        font-size: 18px;
+        margin-top: 50px;
     }
 }
 

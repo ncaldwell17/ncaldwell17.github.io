@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+    <title>Interactive Resume</title>
+    
+    <head>
+        <!-- Meta Tags  -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta property="og:title" content="Interactive Resume">
+            <meta property="og:description" content="I'm a machine learning engineer focused on designing visualizations for statistical analysis of big data.">
+            <meta property="og:image" content="#">
+            <meta property="og:url" content="ncaldwellgatsos.com/iResume.html">
+        <!-- CSS -->
+            <link rel="stylesheet" href="iResume.css">
+            <!-- insert font here --> 
+            <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Diplomata&display=swap" rel="stylesheet">
+            <!-- insert js/css objects here --> 
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JS -->
+            <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+            <script src="iResume.js"></script>
+    </head>
+    
+    <body>
+        <svg id="fader">
+            <div class="header" id="myHeader">
+                <div class="selector">
+                    <div class="site">Noah Caldwell- Gatsos</div>
+                    
+                    
+                    <div class="modalSelector">
+                        <a href="#intro" id="ssect">
+                            <div class="outliner" id="TL"></div>
+                            <div class="outliner" id="TR"></div>
+                            <div class="outliner" id="BL"></div>
+                            <div class="outliner" id="BR"></div>
+                            <div class="sect" id="coverSect">/intro</div>
+                        </a>
+                        <div class="dropdownContent">
+                            <a href="#skills" id="sskills">
+                                <div class="outliner" id="TL"></div>
+                                <div class="outliner" id="TR"></div>
+                                <div class="outliner" id="BL"></div>
+                                <div class="outliner" id="BR"></div>
+                                <div class="sect">/skills</div>
+                            </a>
+                            <a href="#education" id="sedu">
+                                <div class="outliner" id="TL"></div>
+                                <div class="outliner" id="TR"></div>
+                                <div class="outliner" id="BL"></div>
+                                <div class="outliner" id="BR"></div>
+                                <div class="sect">/edu</div>
+                            </a>
+                            <a href="#experience" id="swork">
+                                <div class="outliner" id="TL"></div>
+                                <div class="outliner" id="TR"></div>
+                                <div class="outliner" id="BL"></div>
+                                <div class="outliner" id="BR"></div>
+                                <div class="sect">/work</div>
+                            </a>
+                            <a href="#projects" id="sproj">
+                                <div class="outliner" id="TL"></div>
+                                <div class="outliner" id="TR"></div>
+                                <div class="outliner" id="BL"></div>
+                                <div class="outliner" id="BR"></div>
+                                <div class="sect">/projs</div>
+                            </a>
+                            <a href="#international" id="sworld">
+                                <div class="outliner" id="TL"></div>
+                                <div class="outliner" id="TR"></div>
+                                <div class="outliner" id="BL"></div>
+                                <div class="outliner" id="BR"></div>
+                                <div class="sect">/world</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="intro">
+                <div class="aboutMe">About Me</div>
+                <div class="wordCloud">
+                    <svg id="tagi" x="10px" y="0px"  viewBox="0 0 920 324">
+                        <text transform="matrix(1 0 0 1 100 34.7744)" class="st5 st17 st4">ARTIFICIAL INTELLIGENCE</text>
+                        <text transform="matrix(1 0 0 1 120.0439 54.2744)" class="st5 st28 st11">CLOUD COMPUTING</text>
+                        <text transform="matrix(1 0 0 1 320.8799 54.6626)" class="st5 st28 st6">BIG DATA</text>
+                        <text id="XMLID_2_" transform="matrix(1 0 0 1 443.0854 82.7407)" class="st17 st8">POLICY</text>
+                        <text transform="matrix(1 0 0 1 693.2075 66.7529)" class="st5 st28 st12">WEB DESIGN</text>
+                        <text transform="matrix(1 0 0 1 250.9712 76.1118)" class="st5 st28 st14">ELECTIONS</text>
+                        <text transform="matrix(1 0 0 1 180.3057 102.2393)" class="st5 st28 st24">OPTIMIZATION</text>
+                        <text transform="matrix(1 0 0 1 472.4722 105.3691)" class="st5 st28 st27">ANALYTICS</text>
+                        <text transform="matrix(0.9244 0 0 1 625.7485 110.0288)" class="st5 st28 st16">CYBERSECURITY</text>
+                        <text transform="matrix(1 0 0 1 50 129.9268)" class="st5 st28 st30">AWS</text>
+                        <text transform="matrix(1 0 0 1 100.4019 129.147)" class="st5 st28 st15">BOTS</text>
+                        <text transform="matrix(1 0 0 1 188.187 144.3555)" class="st5 st17 st22">GEOPOLITICS</text>
+                        <text transform="matrix(1 0 0 1 563.5552 142.2856)" class="st5 st28 st3">TEACHING</text>
+                        <text transform="matrix(1 0 0 1 30.1494 150.5947)" class="st5 st28 st7">LINGUISTICS</text>
+                        <text transform="matrix(1 0 0 1 45.5249 212.6006)" class="st17 st9">NLP</text>
+                        <text transform="matrix(1 0 0 1 223.9131 175.5225)" class="st5 st28 st25">MARKETING</text>
+                        <text transform="matrix(1 0 0 1 235.0718 200.1514)" class="st5 st28 st18">GOOGLE</text>
+                        <text transform="matrix(1 0 0 1 350.8022 207.5303)" class="st17 st2">ECONOMICS</text>
+                        <text transform="matrix(1 0 0 1 120.9526 240.2871)" class="st5 st28 st13">WRITING</text>
+                        <text transform="matrix(1 0 0 1 251.3608 240.4502)" class="st5 st17 st31">VISUALIZATIONS</text>
+                        <text transform="matrix(1 0 0 1 583.0542 230.5381)" class="st5 st28 st19">SOCIOLOGY</text>
+                        <text transform="matrix(1 0 0 1 735.7007 233.4639)" class="st5 st28 st1">RUSSIA</text>
+                        <text transform="matrix(1 0 0 1 208.9111 264.4697)" class="st5 st28 st26">SOMETHING LONG AS FUCK</text>
+                        <text transform="matrix(1 0 0 1 185.8467 282.4043)" class="st5 st28 st10">DEVELOPMENT</text>
+                        <text transform="matrix(1 0 0 1 348.4351 289.0342)" class="st5 st28 st1">AUTOMATION</text>
+                        <text transform="matrix(1 0 0 1 549.4292 289.7129)" class="st17 st0">NER</text>
+                        <text transform="matrix(1 0 0 1 700.8999 271.9316)" class="st17 st20">MAPS</text>
+                        <text transform="matrix(1 0 0 1 575.0063 316.7061)" class="st5 st28 st23">CHINA</text>
+                        <text transform="matrix(1 0 0 1 700.77 298.4307)" class="st5 st28 st21">ATTRIBUTION</text>
+                        
+                        
+                        
+                        
+                    
+                        
+                       
+                    
+                       
+                        
+                        
+                        
+                       
+                        
+                        
+                        
+                    </svg>
+                
+                </div>
+            
+            
+            
+            
+            </div>
+            
+            <div class="section" id="skills"></div>
+            
+            <div class="section" id="education"></div>
+            
+            <div class="section" id="experience"></div>
+            
+            <div class="section" id="projects"></div>
+            
+            <div class="section" id="international"></div>
+            
+            <div class="section" id="contact"></div>
+        
+        </svg>
+        <script>
+            fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              continue;
+}
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+                return;
+            }
+            var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+            
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction(), cSChange()};
+
+            // Get the header
+            var header = document.getElementById("myHeader");
+
+            // Get the offset position of the navbar
+            var sticky = header.offsetTop;
+
+            // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+            
+            // Change innerHTML of #coverSect
+            
+            function cSChange() {
+                var sect = document.getElementById("coverSect")
+                if (window.pageYOffset > 0 && window.pageYOffset < 900) {
+                    sect.innerHTML = '/intro';
+                }
+                if (window.pageYOffset > 900 && window.pageYOffset < 1800) {
+                    sect.innerHTML = '/skills';
+                }
+                if (window.pageYOffset > 1800 && window.pageYOffset < 2700) {
+                    sect.innerHTML = '/edu';
+                }
+                if (window.pageYOffset > 2700 && window.pageYOffset < 3600) {
+                    sect.innerHTML = '/work';
+                }
+                if (window.pageYOffset > 3600 && window.pageYOffset < 4500) {
+                    sect.innerHTML = '/projs';
+                }
+                if (window.pageYOffset > 4500 && window.pageYOffset < 5400) {
+                    sect.innerHTML = '/world';
+                }
+                if (window.pageYOffset > 5400 && window.pageYOffset < 6300) {
+                    sect.innerHTML = '/links';
+                }
+            }
+        </script> 
+    </body>
+</html>

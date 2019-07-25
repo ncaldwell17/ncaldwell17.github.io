@@ -1,0 +1,506 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+body {
+    margin: 0;
+    font-family: 'Spectral', serif;
+}
+
+.header {
+    background-color: none;
+    width: 100%;
+    position: relative;
+    margin-bottom: -100px;
+}
+
+.selector {
+    height: 100px;
+    width: 550px;
+    color: white;
+    margin: auto;
+    font-family: 'Diplomata', cursive;
+}
+
+.site {
+    width: 230px;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 25px;
+    float: left;
+}
+.outliner {
+    height: 20px;
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+#TL {
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+#TR {
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+#BL {
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+#BR {
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+#ssect:hover .outliner {
+    visibility: visible;
+}
+#ssect:hover #TL {
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#ssect:hover #TR {
+    margin-left: 260px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#ssect:hover #BL {
+    margin-left: 10px;
+    margin-top: 70px;
+    transition: 1s;
+}
+#ssect:hover #BR {
+    margin-top: 70px;
+    margin-left: 260px;
+    transition: 1s;
+}
+
+
+#sskills:hover .outliner{
+    visibility: visible;
+}
+#sskills:hover #TL {
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#sskills:hover #TR {
+    margin-left: 260px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#sskills:hover #BL {
+    margin-left: 10px;
+    margin-top: 70px;
+    transition: 1s;
+}
+#sskills:hover #BR {
+    margin-top: 70px;
+    margin-left: 260px;
+    transition: 1s;
+}
+
+
+#sedu:hover .outliner {
+    visibility: visible;
+}
+#sedu:hover #TL {
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#sedu:hover #TR {
+    margin-left: 260px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#sedu:hover #BL {
+    margin-left: 10px;
+    margin-top: 70px;
+    transition: 1s;
+}
+#sedu:hover #BR {
+    margin-top: 70px;
+    margin-left: 260px;
+    transition: 1s;
+}
+
+#swork:hover .outliner {
+    visibility: visible;
+}
+#swork:hover #TL {
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#swork:hover #TR {
+    margin-left: 260px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#swork:hover #BL {
+    margin-left: 10px;
+    margin-top: 70px;
+    transition: 1s;
+}
+#swork:hover #BR {
+    margin-top: 70px;
+    margin-left: 260px;
+    transition: 1s;
+}
+
+#sproj:hover .outliner {
+    visibility: visible;
+}
+#sproj:hover #TL {
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#sproj:hover #TR {
+    margin-left: 260px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#sproj:hover #BL {
+    margin-left: 10px;
+    margin-top: 70px;
+    transition: 1s;
+}
+#sproj:hover #BR {
+    margin-top: 70px;
+    margin-left: 260px;
+    transition: 1s;
+}
+#sworld:hover .outliner {
+    visibility: visible;
+}
+#sworld:hover #TL {
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#sworld:hover #TR {
+    margin-left: 260px;
+    margin-top: 10px;
+    transition: 1s;
+}
+#sworld:hover #BL {
+    margin-left: 10px;
+    margin-top: 70px;
+    transition: 1s;
+}
+#sworld:hover #BR {
+    margin-top: 70px;
+    margin-left: 260px;
+    transition: 1s;
+}
+
+.modalSelector {
+    height: 100px;
+    width: 300px;
+    position: relative;
+    display: inline-block;
+    float: right;
+    font-size: 40px;
+}
+.modalSelector a {
+    text-decoration: none;
+    color: white;
+}
+.modalSelector:hover .dropdownContent {
+    display: block;
+    transition: 1s;
+    background-color: #2C8631;
+}
+.modalSelector .sect:hover {
+    background-color: #2C8631;
+    transition: 1s;
+    color: white;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+}
+.dropdownContent .sect:hover {
+    background-color: #2C8631;
+    transition: 1s;
+    color: white;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+}
+.sect {
+    height: 75px;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+/*
+.sticky + .content{
+    padding-top: 102px;
+} */
+
+.section {
+    height: 950px;
+}
+
+#intro {
+    background-color: #262626;
+}
+.aboutMe {
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 200px;
+    border-bottom: 3px solid white;
+}
+
+.wordCloud {
+    height: 550px;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+svg text.blink {
+  animation: blink 2s ease-out;
+}
+
+#tagi {
+width: 100%;
+font-family: 'Spectral', serif;
+}
+
+@keyframes blink {
+  0% {
+    text-shadow: 0 0 20px rgba(44, 134, 49, 0);
+  }
+  20% {
+    fill: rgba(44, 134, 49, 1);
+    text-shadow: -5px -5px 20px rgba(44, 134, 49, 0.8), 5px -5px 20px rgba(44, 134, 49, 0.8), 5px 5px 20px rgba(44, 134, 49, 0.8), -5px 5px 20px rgba(44, 134, 49, 0.8);
+    ;
+  }
+  30% {
+    fill: rgba(44, 134, 49, 1);
+    -5px -5px 20px rgba(44, 134, 49, 0.8), 5px -5px 20px rgba(44, 134, 49, 0.8), 5px 5px 20px rgba(44, 134, 49, 0.8), -5px 5px 20px rgba(44, 134, 49, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(44, 134, 49, 0);
+  }
+}
+
+.st0 {
+
+  font-size: 68px;
+}
+
+.st1 {
+  font-size: 27px;
+}
+
+.st2 {
+  font-size: 82px;
+}
+
+.st3 {
+  font-size: 41px;
+}
+
+.st4 {
+  font-size: 41px;
+}
+
+.st5 {
+  fill: #808080;
+}
+
+.st6 {
+  font-size: 24px;
+}
+
+.st7 {
+  font-size: 24px;
+}
+
+.st8 {
+  font-size: 62px;
+}
+
+.st9 {
+  font-size: 86px;
+}
+
+.st10 {
+  font-size: 18px;
+}
+
+.st11 {
+  font-size: 18px;
+}
+
+.st12 {
+  font-size: 25px;
+}
+
+.st13 {
+  font-size: 25px;
+}
+
+.st14 {
+  font-size: 25px;
+}
+
+.st15 {
+  font-size: 32px;
+}
+
+.st16 {
+  font-size: 32px;
+}
+
+.st17 {
+  font-weight: 600;
+  fill: white;
+}
+
+.st18 {
+  font-size: 22px;
+}
+
+.st19 {
+  font-size: 22px;
+}
+
+.st20 {
+  font-size: 36px;
+}
+
+.st21 {
+  font-size: 19px;
+}
+
+.st22 {
+  font-size: 51px;
+}
+
+.st23 {
+  font-size: 26px;
+}
+
+.st24 {
+  font-size: 33px;
+}
+
+.st25 {
+  font-size: 20px;
+}
+
+.st26 {
+  font-size: 23px;
+}
+
+.st27 {
+  font-size: 23px;
+}
+
+.st28 {
+  font-family: 'Spectral', serif;
+}
+
+.st29 {
+  font-size: 54px;
+}
+
+.st30 {
+  font-size: 20px;
+}
+
+.st31 {
+  font-size: 37px;
+}
+
+
+
+
+
+
+#skills {
+    background-image: url(images/palm.jpg);
+    background-color: #37AD3E;
+}
+
+#education {
+    background-color: #262626;
+}
+
+#experience {
+    background-color: #205F24;
+}
+
+#projects {
+    background-color: #262626;
+}
+
+#international {
+    background-image: url(images/globe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #205F24;
+}
+
+#contact {
+    background-color: #262626;
+}

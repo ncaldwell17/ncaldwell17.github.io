@@ -104,36 +104,17 @@
                         <text transform="matrix(1 0 0 1 251.3608 240.4502)" class="st5 st17 st31">VISUALIZATIONS</text>
                         <text transform="matrix(1 0 0 1 583.0542 230.5381)" class="st5 st28 st19">SOCIOLOGY</text>
                         <text transform="matrix(1 0 0 1 735.7007 233.4639)" class="st5 st28 st1">RUSSIA</text>
-                        <text transform="matrix(1 0 0 1 208.9111 264.4697)" class="st5 st28 st26">SOMETHING LONG AS FUCK</text>
-                        <text transform="matrix(1 0 0 1 185.8467 282.4043)" class="st5 st28 st10">DEVELOPMENT</text>
+                        <text transform="matrix(1 0 0 1 398.9111 264.4697)" class="st5 st28 st26">CHICAGO</text>
+                        <text transform="matrix(1 0 0 1 225.8467 262.4043)" class="st5 st28 st10">DEVELOPMENT</text>
                         <text transform="matrix(1 0 0 1 348.4351 289.0342)" class="st5 st28 st1">AUTOMATION</text>
                         <text transform="matrix(1 0 0 1 549.4292 289.7129)" class="st17 st0">NER</text>
                         <text transform="matrix(1 0 0 1 700.8999 271.9316)" class="st17 st20">MAPS</text>
-                        <text transform="matrix(1 0 0 1 575.0063 316.7061)" class="st5 st28 st23">CHINA</text>
                         <text transform="matrix(1 0 0 1 700.77 298.4307)" class="st5 st28 st21">ATTRIBUTION</text>
-                        
-                        
-                        
-                        
-                    
-                        
-                       
-                    
-                       
-                        
-                        
-                        
-                       
-                        
-                        
-                        
+                        <text transform="matrix(1 0 0 1 575.0063 320)" class="st5 st28 st23">CHINA</text>
                     </svg>
                 
                 </div>
-            
-            
-            
-            
+
             </div>
             
             <div class="section" id="skills"></div>
@@ -163,9 +144,10 @@
                 }
             anchors[idx].addEventListener('click', function(event) {
             var localPath = '/wp-content/uploads/'
-            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
-              continue;
-}
+            
+            //if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+           // }
             var fader = document.getElementById('fader'),
                 anchor = event.currentTarget;
             

@@ -145,9 +145,9 @@
             anchors[idx].addEventListener('click', function(event) {
             var localPath = '/wp-content/uploads/'
             
-            //if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
               //continue;
-           // }
+            }
             var fader = document.getElementById('fader'),
                 anchor = event.currentTarget;
             

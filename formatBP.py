@@ -47,7 +47,7 @@ def format_html(pd_dataframe, id):
                                         pd_dataframe['next2'][id],
                                         pd_dataframe['link_n3'][id],
                                         pd_dataframe['next3'][id],
-                                        del_if(pd_dataframe['extra1'][id]),
+                                        pd_dataframe['extra1'][id],
                                         del_if(pd_dataframe['extra2'][id]),
                                         del_if(pd_dataframe['extra3'][id]),
                                         del_if(pd_dataframe['extra4'][id]),

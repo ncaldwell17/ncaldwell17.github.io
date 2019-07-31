@@ -165,6 +165,11 @@ p {
     line-height: 25px;
 }
 
+p a {
+    font-weight: bold;
+    color: orangered;
+}
+
 .tagContainer {
     margin-left: 40px;
     margin-top: 50px;

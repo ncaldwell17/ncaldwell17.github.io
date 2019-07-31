@@ -57,6 +57,9 @@ body {
 .selector:hover {
     z-index: 99999;
 }
+.selector a {
+    color: white;
+}
 
 .site {
     width: 230px;
@@ -454,7 +457,7 @@ font-family: 'Spectral', serif;
     background-color: #37AD3E;
     color: white;
 }
-#skills .content {
+.content {
     padding-top: 150px;
 }
 
@@ -664,29 +667,161 @@ font-family: 'Spectral', serif;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #education {
     background-color: #262626;
 }
+
+.mainEducation {
+    height: 400px;
+    width: 90%;
+    margin: auto;
+}
+
+.masters {
+    height: 400px;
+    width: 40%;
+    float: left;
+    margin-right: 5%;
+    margin-left: 5%;
+    color: white;
+    border-radius: 5px;
+}
+.masters:hover {
+    background-color: #205F24;
+    color: white;
+    transition: 1s;
+}
+.masters:hover .eduTitle {
+    border-bottom: 3px solid white;
+}
+
+.bachelors {
+    height: 400px;
+    width: 40%;
+    float: left;
+    color: white;
+    border-radius: 5px;
+}
+.bachelors:hover {
+    background-color: #205F24;
+    color: white;
+    transition: 1s;
+}
+.bachelors:hover .eduTitle {
+    border-bottom: 3px solid white;
+}
+
+.eduTitle {
+    font-size: 30px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    border-bottom: 3px solid white;
+    font-family: 'diplomata';
+}
+.icon {
+    height: 180px;
+    width: 180px;
+    margin: auto;
+    background-color: rebeccapurple;
+    margin-top: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.degree {
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+    border-bottom: 3px solid white;
+}
+
+.honors {
+    font-size: 20px;
+    text-align: center;
+}
+
+.theses {
+    height: 100px;
+    margin-top: 10px;
+}
+
+.aThesis {
+    height: 100px;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 50px;
+    float: left;
+}
+.tSpace {
+    height: 10px;
+    width: 80px;
+}
+.tIcon {
+    height: 80px;
+    width: 80px;
+    background-color: #205F24;
+    border-radius: 5px;
+    margin-left: 10px;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/images/paper.png)
+}
+.tTitle {
+    float: left;
+    width: 300px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.tDescription {
+    float: left;
+    width: 300px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.classProjects {
+    height: 200px;
+    margin-top: 40px;
+}
+
+.aProject {
+    height: 70px;
+    width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+.pSpace {
+    height: 5px;
+    width: 50px;
+}
+
+.pIcon {
+    height: 60px;
+    background-color: black;
+    margin-left: 15px;
+    border-radius: 5px;
+    width: 60px;
+    float: left;
+    background-size: cover;
+    background-position: center;
+}
+.pTitle {
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    width: 210px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
 
 #experience {
     background-color: #205F24;

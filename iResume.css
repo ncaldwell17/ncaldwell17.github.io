@@ -553,7 +553,22 @@ font-family: 'Spectral', serif;
     width: 85%;
 }
 #qBar {
-    width: 65%;
+    width: 95%;
+}
+#italianBar {
+    width: 95%;
+}
+#spanishBar {
+    width: 75%;
+}
+#chineseBar {
+    width: 55%;
+}
+#russianBar {
+    width: 55%;
+}
+#germanBar {
+    width: 25%;
 }
 
 .x-axisLabel {

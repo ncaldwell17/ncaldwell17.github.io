@@ -39,7 +39,9 @@
                             <div class="sect" id="coverSect">/intro</div>
                         </a>
                         <div class="dropdownContent">
-                            <a href="#skills" id="sskills">
+                            <a href="#skills"
+                               id="sskills"
+                               onclick="runskills()">
                                 <div class="outliner" id="TL"></div>
                                 <div class="outliner" id="TR"></div>
                                 <div class="outliner" id="BL"></div>
@@ -79,7 +81,7 @@
                 </div>
             </div>
             <div class="section" id="intro">
-                <div class="aboutMe">About Me</div>
+                <div class="aboutMe">.</div>
                 <div class="wordCloud">
                     <svg id="tagi" x="10px" y="0px"  viewBox="0 0 920 324">
                         <text transform="matrix(1 0 0 1 100 34.7744)" class="st5 st17 st4">ARTIFICIAL INTELLIGENCE</text>
@@ -116,11 +118,56 @@
             </div>
             
             <div class="section" id="skills">
-            
-                <div class="skillContainer"></div>
-            
-            
-            
+                <div class="content">
+                    <div class="codingContainer">
+                        <div class="skillTitle">Technical</div>
+                        <div class="animatedSkills">
+                            <ul>
+                                <li class="aSkill">Python</li>
+                                <li class="aSkill">Command Line</li>
+                                <li class="aSkill">JavaScript</li>
+                                <li class="aSkill">Web Standard Languages</li>
+                                <li class="aSkill">???</li>
+                            </ul>
+                        </div>
+                        <div class="runningAnimation">
+                            <div class="aBar" id="pythonBar"></div>
+                            <div class="aBar" id="commandBar"></div>
+                            <div class="aBar" id="jsBar"></div>
+                            <div class="aBar" id="wslBar"></div>
+                            <div class="aBar" id="qBar"></div>
+                        </div>
+                        <div class="technicalLinks">
+                            <a href="https://github.com/ncaldwell17/pythonNotes"><div class="aLink">&#10561</div></a>
+                            <div class="aLink">&#10561</div>
+                            <div class="aLink">&#10561</div>
+                            <div class="aLink">&#10561</div>
+                            <div class="aLink">&#10561</div>
+                        </div>
+                        <div class="x-axisLabel">
+                            <div class="pointsContainer">
+                                <div class="aPoint"></div>
+                                <div class="aPoint"></div>
+                                <div class="aPoint"></div>
+                                <div class="aPoint"></div>
+                                <div class="aPoint"></div>
+                                <div class="aPoint"></div>
+                                <div class="aPoint"></div>
+                                <div class="aPoint"></div>
+                                <div class="aPoint"></div>
+                            </div>
+                            <div class="x-axis"></div>
+                            <div class="markerContainer">
+                                <div class="aMarker" id="beginner">Beginner</div>
+                                <div class="aMarker" id="intermediate">Intermediate</div>
+                                <div class="aMarker" id="advanced">Advanced</div>
+                                <div class="aMarker" id="specialty">Specialty</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="languageContainer"></div>
+                    <div class="toolContainer"></div>
+                </div>
             </div>
             
             <div class="section" id="education"></div>

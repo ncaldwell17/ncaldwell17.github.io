@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+    <title>Elections</title>
+
+    <head>
+        <meta name="description" content="A guide to the positions, fundraising, and predictions on the 2020 General Election.">
+        
+        <!-- Meta Tags  -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS -->
+            <link rel="stylesheet" href="ai.css">
+    <!-- insert font here --> 
+            <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Geostar+Fill&display=swap" rel="stylesheet">
+    <!-- Social Media icons --> 
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JS -->
+            <script src="ai.js"></script>
+    </head>
+    
+    <body>
+    <svg id="fader">
+        <div class="header">
+            <a href="/index.html"><div class="logo">NCG.com</div></a>
+            <a href="/projects/elections/elections.html" style="color: black;"><div class="aProject">Election Predictions</div></a>
+            <div class="aProject">Geopolitics</div>
+            <div class="aProject">Dev. Economics</div>
+            <div class="aProject">Cybersecurity</div>
+            <div class="aProject">Issue Analysis</div>
+        </div>
+        
+        <div class="main">
+            <div class="title">Artificial Intelligence Research</div>
+            <div class="subtitle">No, SkyNet will not kill us all. Helping to make a difficult subject a bit easier for everyone to understand, and providing an in-depth look at some of the newest emerging technologies. #DownWithAmazon #UpWithGoogle</div>
+            <div class="options">
+                <div class="anOption">Machine Learning</div>
+                <div class="anOption">Natural Language</div>
+                <a href="#"><div class="anOption">Programming & Python</div></a>
+                <div class="anOption">Policy, Laws, & News</div>
+                <div class="anOption" style="width: 140px;">All the Shiny New Things</div>
+                <div class="anOption" style="width: 140px;
+                                             height: 40px;
+                                             padding-top: 15px;">FAQs</div>
+            </div>
+            <div class="newContainer">
+                <div class="featured" style="border-right: 3px solid white;">
+                    <div class="front-photo" style="background-image: url(images/debugger.jpg)"></div>
+                    <a href="/projects/elections/posts/ai_bp1.html"><div class="front-title">The Importance of Reading Code and Technical Papers</div></a>
+                    <div class="time">August 1st, 2019 @ 12:33PM CST</div>
+                </div>
+                <div class="featured" style="display: none;">
+                    <div class="front-photo" style="background-image: url(images/#.jpg)"></div>
+                    <a href="/projects/elections/posts/ai_bp1.html"><div class="front-title">#</div></a>
+                    <div class="time">#</div>
+                </div>
+            </div>
+            
+            <div class="pastContainer">
+                 <a href="#">
+                    <div class="aStory" style="display: none;">
+                        <div class="storyPhoto" style="background-image: url(images/#)"></div>
+                        <div class="front-title" style="float: left; margin-left: 20px;">Something</div>
+                        <div class="time2" style="width: 600px">A Time</div>
+                        <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
+
+                        <div class="tagContainer">
+                            <div class="aTag" style="margin-left: 30px;">###</div>
+                            <div class="aTag">###</div>
+                            <div class="aTag">###</div>
+                            <div class="aTag">###</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="bottomSpace"></div>
+    </svg>
+        
+    <script>
+            fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+            }
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+            return;
+            }
+                    var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+    </script>
+        
+    </body>
+    
+</html>

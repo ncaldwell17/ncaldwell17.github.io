@@ -57,7 +57,8 @@ the_body = bheaders+ssh+containers+photoinfo+writings
 
 the_footer = faderf+bodyf+htmlf
 
-# helper functions 
+
+# helper functions
 def create_post(atype):
     num_in_dir = len([name for name in os.listdir('.')])
     # for some reason, num_in_dir seems to think there's always at least 1 file
@@ -66,78 +67,76 @@ def create_post(atype):
     blog_loc = "{0}_bp{1}".format(atype, np_idx)
     return blog_loc
 
+
 def decide_header(atype):
     if atype == 'elections':
         return "<div class='aProject'>Artificial Intelligence</div> <div class='aProject'>Geopolitics</div> <div class='aProject'>Dev. Economics</div> <div class='aProject'>Cybersecurity</div> <div class='aProject'>Issue Analysis</div>"
     if atype == 'ai':
         return "<div class='aProject'>Elections</div> <div class='aProject'>Geopolitics</div> <div class='aProject'>Dev. Economics</div> <div class='aProject'>Cybersecurity</div> <div class='aProject'>Issue Analysis</div>"
 
-def removeO(string):
-    new_string = re.sub('Õ',"'",string)
-    new_string = re.sub('Ô',"'",new_string)
-    new_string = re.sub('Ó','"',new_string)
-    new_string = re.sub('Ò','"',new_string)
-    return new_string
 
-def normalize(varlist):
-    for dataframe in varlist:
-        removeO(str(dataframe))
-    return varlist
+def strip(alist):
+    newlist = []
+    for element in alist:
+        element = re.sub('Õ',"'",element)
+        element = re.sub('Ô',"'",element)
+        element = re.sub('Ó','"',element)
+        element = re.sub('Ò','"',element)
+        element = re.sub('Ê','',element)
+        newlist.append(element)
+    return newlist
 
-def format_html(varlist, document, header):
+
+def format_html(varlist, adoc, header):
     # insert arbitrary variables here
-    ablog = document.format(varlist[0], varlist[1], varlist[2], varlist[3], varlist[4], varlist[5], varlist[6],
-                            varlist[7], varlist[8], varlist[9], varlist[10], varlist[11], varlist[12], varlist[13],
-                            varlist[14], varlist[15], varlist[16], varlist[17], varlist[18], varlist[19], varlist[20],
-                            varlist[21], varlist[22], varlist[23], varlist[24], varlist[25], varlist[26], varlist[27],
-                            varlist[28], varlist[29], varlist[30], varlist[31], varlist[32], varlist[33], varlist[34],
-                            varlist[35], header)
+    ablog = adoc.format(varlist[0], varlist[1], varlist[2], varlist[3], varlist[4], varlist[5], varlist[6],
+                        varlist[7], varlist[8], varlist[9], varlist[10], varlist[11], varlist[12], varlist[13],
+                        varlist[14], varlist[15], varlist[16], varlist[17], varlist[18], varlist[19], varlist[20],
+                        varlist[21], varlist[22], varlist[23], varlist[24], varlist[25], varlist[26], varlist[27],
+                        varlist[28], varlist[29], varlist[30], varlist[31], varlist[32], varlist[33], varlist[34],
+                        varlist[35], header)
     return ablog
 
 
 # system arguments
-
 post_type = sys.argv[1]
-post_id = int(sys.argv[2])
+myid = int(sys.argv[2])
 
 
 # debugging
-# post_type = 'elections'
-# post_id = 1
+# post_type = 'ai'
 
 if __name__ == "__main__":
     document = str(the_head+the_body+the_footer)
     # need a variable holding the dataframe as pd_dataframe
-    cd = os.getcwd()
     if post_type == 'elections':
-        pd_dataframe = pd.read_csv('templateBlog.csv', index_col=0, encoding = "ISO-8859-1", engine='python', na_filter=False)
+        pd_dataframe = pd.read_csv('templateBlog.csv', index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
+        print("Currently working with the Elections dataframe")
     elif post_type == 'ai':
-        pd_dataframe = pd.read_csv(cd+"/aiBlog.csv", index_col=0, encoding = "ISO-8859-1", engine='python', na_filter=False)
-    # need id 
-    id = post_id
+        pd_dataframe = pd.read_csv("aiBlog.csv", index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
+        myid = myid-1
+        print("Currently working with the AI dataframe")
     # need a variable creating the list of dataframes 
-    df_list = [pd_dataframe['title'][id], pd_dataframe['subtitle'][id], pd_dataframe['aut_href'][id],
-               pd_dataframe['author'][id], pd_dataframe['ema_href'][id], pd_dataframe['email'][id],
-               pd_dataframe['date'][id], pd_dataframe['time'][id], pd_dataframe['image_path'][id],
-               pd_dataframe['caption'][id], pd_dataframe['source'][id],pd_dataframe['one_p'][id], 
-               pd_dataframe['two_p'][id], pd_dataframe['three_p'][id], pd_dataframe['four_p'][id],
-               pd_dataframe['five_p'][id], pd_dataframe['tag1'][id], pd_dataframe['tag2'][id], 
-               pd_dataframe['tag3'][id], pd_dataframe['tag4'][id], pd_dataframe['link_n1'][id],
-               pd_dataframe['next1'][id], pd_dataframe['link_n2'][id], pd_dataframe['next2'][id],
-               pd_dataframe['link_n3'][id], pd_dataframe['next3'][id], pd_dataframe['extra1'][id],
-               pd_dataframe['extra2'][id], pd_dataframe['extra3'][id], pd_dataframe['extra4'][id],
-               pd_dataframe['extra5'][id], pd_dataframe['extra6'][id], pd_dataframe['extra7'][id],
-               pd_dataframe['extra8'][id], pd_dataframe['extra9'][id], pd_dataframe['extra10'][id]]
+    df_list = [pd_dataframe['title'][myid], pd_dataframe['subtitle'][myid], pd_dataframe['aut_href'][myid],
+               pd_dataframe['author'][myid], pd_dataframe['ema_href'][myid], pd_dataframe['email'][myid],
+               pd_dataframe['date'][myid], pd_dataframe['time'][myid], pd_dataframe['image_path'][myid],
+               pd_dataframe['caption'][myid], pd_dataframe['source'][myid], pd_dataframe['one_p'][myid],
+               pd_dataframe['two_p'][myid], pd_dataframe['three_p'][myid], pd_dataframe['four_p'][myid],
+               pd_dataframe['five_p'][myid], pd_dataframe['tag1'][myid], pd_dataframe['tag2'][myid],
+               pd_dataframe['tag3'][myid], pd_dataframe['tag4'][myid], pd_dataframe['link_n1'][myid],
+               pd_dataframe['next1'][myid], pd_dataframe['link_n2'][myid], pd_dataframe['next2'][myid],
+               pd_dataframe['link_n3'][myid], pd_dataframe['next3'][myid], pd_dataframe['extra1'][myid],
+               pd_dataframe['extra2'][myid], pd_dataframe['extra3'][myid], pd_dataframe['extra4'][myid],
+               pd_dataframe['extra5'][myid], pd_dataframe['extra6'][myid], pd_dataframe['extra7'][myid],
+               pd_dataframe['extra8'][myid], pd_dataframe['extra9'][myid], pd_dataframe['extra10'][myid]]
+    # print("successfully list-ified dataframe row beginning with {0}".df_list[0])
     # need a variable holding the normalized list produced from above
-    norm_varlist = normalize(df_list)
+    newlist = strip(df_list)
     # need a method call to produce unique header
     unique_header = decide_header(post_type)
-    # formating the new file
+    # formatting the new file
     os.chdir("projects/%s/posts/" % post_type)
     bidx = create_post(post_type)
-    wf = open("{0}.html".format(bidx), "a")
-    aheader = decide_header(post_type)
+    wf = open("{0}.html".format(bidx), "a", encoding='utf-8')
     # main function
-
-    wf.write(format_html(norm_varlist, document, unique_header))
-    wf.close
+    wf.write(format_html(newlist, document, unique_header))

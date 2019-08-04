@@ -12,8 +12,12 @@ a:hover {
     font-weight: bold;
     cursor: pointer;
     transition: .4s;
-    color: black;
-    
+    color: black; 
+}
+
+#fader {
+    margin: 0;
+    height: 0;
 }
 
 .header {

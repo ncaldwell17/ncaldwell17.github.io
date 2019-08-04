@@ -9,6 +9,7 @@ doctype = "<!DOCTYPE html> <html>"
 metatitle = "<title>{0}</title>"
 head = "<head>"
 metadescription = "<meta name='description' content={1}>"
+twitter = "<meta name='twitter:card' content='summary'/><meta name='twitter:site'content='myPost'/><meta name='twitter:title' content='{0}'/><meta name='twitter:description' content='{1}' /><meta name='twitter:image' content='{8}'/>"
 metaphoto = "<meta property='og:image' content='{8}'>"
 othermeta = "<meta charset='utf-8'> <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>"
 css = "<link rel='stylesheet' href='template.css'>"
@@ -51,7 +52,7 @@ bodyf = "</body>"
 htmlf = "</html>"
 
 # meta-variables 
-the_head = doctype+metatitle+head+metadescription+metaphoto+othermeta+css+fonts+social+js+headf
+the_head = doctype+metatitle+head+metadescription+metaphoto+othermeta+css+fonts+social+js+headf+twitter
 
 the_body = bheaders+ssh+containers+photoinfo+writings
 

@@ -14,7 +14,7 @@ twitter = "<meta name='twitter:card' content='summary_large_image'/> \
             <meta name='twitter:creator' content='@noahcaldwell'> \
             <meta name='twitter:title' content='{0}'/> \
             <meta name='twitter:description' content='{1}'/> \
-            <meta name='twitter:image' content='www.ncaldwellgatsos.com{8}'/>"
+            <meta name='twitter:image:src' content='www.ncaldwellgatsos.com{8}'/>"
 metaphoto = "<meta property='og:image' content='{8}'>"
 othermeta = "<meta charset='utf-8'> <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>"
 css = "<link rel='stylesheet' href='template.css'>"

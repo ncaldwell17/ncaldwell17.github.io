@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>3D Page Flip Animation Using HTML5 and JavaScript</title>
+        <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <style>
+        
+            html,body {
+                height: 100%;
+                background: #333;
+            }
+            
+            .site {
+                height: 100%;
+            }
+            
+            .container {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+            }
+            
+            .page-content {
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background: #1abc9c;
+            }
+            
+            #new-content {
+                background: #f1c40f;
+                z-index: 1;
+            }
+            
+            .page-content p {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                font-family: tahoma;
+                font-size: 75px;
+                text-transform: uppercase;
+                color: white;
+                font-weight: 400;
+                margin: 0;
+            }
+            
+            #new-content p {
+                color: #010101;
+            }
+            
+            .page-content p strong {
+                font-weight: 700;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class="site">
+            <div class="container">
+                <div class="page-content"><p><strong>3D</strong>Page Flip</p></div>
+                <div class="page-content" id="new-content"><p><strong>3D</strong>Page Flip</p></div>
+            </div>
+        </div>
+    <script type="text/javascript">
+        var siteW = $(window).width();
+        var siteH = $(window).height();
+        
+        $("p").css({ lineHeight: siteH + 'px'});
+        
+        TweenMax.set(".site", {perspective: 5000});
+        TweenMax.set(".container", {transformstyle: "preserve-3d", transformOrigin: '-0% 50%'});
+        TweenMax.set("#new-content", {rotationY: 90, z: -siteW/2, x:siteW/2});
+        
+        var t1Flip = new TimelineMax({yoyo: true, repeat: -1, delay: 1.5, repeatDelay : 2});
+        
+        t1Flip 
+        .to('.site', .5, {scale: 0.8, ease: Power2.easeInOut}, "start")
+        .to('.container', .4, {rotationY: -90, z: -siteW, ease: Power2.easeInOut}, "start+=0.7")
+        .to('.site', .5, {scale:1, ease: Power2.easeInOut}, "start+=1.2") 
+        
+    </script>
+    </body>
+</html>

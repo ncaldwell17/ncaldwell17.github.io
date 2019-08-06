@@ -1,4 +1,224 @@
 body {
-    background-image: url(images/globecopy.jpg);
-    
+    margin: 0;
+    margin-top: 0px;
 }
+
+body a {
+    text-decoration: none;
+}
+
+/* fader */
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+} 
+
+.desktopMain {
+    height: 950px;
+    background-image: url(images/globecopy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+}
+
+.logo {
+    width: 40%;
+    font-size: 50px;
+    font-family: 'Geostar Fill', cursive;
+    color: white;
+    text-shadow:
+		-1px -1px 0 #184017,
+		1px -1px 0 #184017,
+		-1px 1px 0 #184017,
+		1px 1px 0 #184017;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.logo:hover {
+    text-shadow:
+		-2px -2px 0 #184017,
+		2px -2px 0 #184017,
+		-2px 2px 0 #184017,
+		2px 2px 0 #184017;
+}
+
+.trendingContainer {
+    background-color: #184017;
+    opacity: 0.3;
+    height: 5%;
+}
+
+.central {
+    height: 50%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 8%;
+    background-color: rgb(41,76,25,0.5);
+    font-family: acme;
+}
+
+.subtitle {
+    width: 98%;
+    font-size: 44px;
+    color: white;
+    opacity: 1;
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-left: 1%;
+    padding-top: 5%;
+    font-weight: bold;
+    text-shadow:
+		-1px -1px 0 #184017,
+		1px -1px 0 #184017,
+		-1px 1px 0 #184017,
+		1px 1px 0 #184017;
+}
+
+.cSelect {
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 3%;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 40%;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.bSelect {
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 3%;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 40%;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+    margin-top: 5%;
+}
+.cSelect:hover {
+    background-color: white;
+    transition: 1s;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.bSelect:hover {
+    background-color: white;
+    transition: 1s;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.blog {
+    position: relative;
+    height: 84%;
+    width: 40%;
+    background-color: rgb(41,76,25,0.5);
+    margin-top: 2%;
+    overflow: auto;
+}
+
+.entry {
+    height: 20%;
+    width: 100%;
+    background-color: rgb(41,76,25,0.5);
+    margin-top: 2%;
+}
+.entry:hover {
+    background-color: rgb(41,76,25);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.eTitle {
+    width: 95%;
+    font-size: 30px;
+    margin-left: 2%;
+    color: white;
+    font-family: acme;
+    border-bottom: 4px solid white;
+}
+.time {
+    color: white;
+    font-size: 20px;
+    margin-left: 2%;
+    font-family: spectral;
+    font-style: italic;
+}
+
+.descriptor {
+    color: white;
+    font-size: 18px;
+    font-family: spectral;
+    margin-left: 2%;
+    text-indent: 25px;
+}
+
+.phoneMain {
+    background-color: #6ACB82;
+    height: 950px;
+    display: none;
+}
+
+.phoneHeader {
+    background-color: #284F1C;
+    color: white;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Geostar Fill', cursive;
+    text-shadow:
+		-1px -1px 0 #184017,
+		1px -1px 0 #184017,
+		-1px 1px 0 #184017,
+		1px 1px 0 #184017;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 500px) { 
+    .desktopMain {
+        display: none;
+    }
+    .phoneMain {
+        display: block;
+        
+    }
+}
+
+

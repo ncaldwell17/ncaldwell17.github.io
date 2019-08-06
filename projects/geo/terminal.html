@@ -2,13 +2,15 @@
 <html>
     <title>Geopolitics Terminal</title>
     <head>
-        <meta name="description" content="Helping make sense of a vastly complicated world through visualizations, predictionss, and summaries.">
+        <meta name="description" content="Helping make sense of a vastly complicated world through visualizations, predictions, and summaries.">
         
         <!-- Meta Tags  -->
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name='description' content='Helping make sense of a vastly complicated world through visualizations, predictions, and summaries.'>
+            <meta property='og:image' content='/projects/geo/images/flashmap.png'>
         <!-- CSS -->
-            <link rel="stylesheet" href="geo.css">
+            <link rel="stylesheet" href="terminal.css">
         <!-- insert font here --> 
             <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
@@ -16,50 +18,35 @@
         <!-- Social Media icons --> 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- JS -->
-            <script src="geo.js"></script>
+            <script src="terminal.js"></script>
         <!-- Twitter Card --> 
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:site" content="@ncaldwellgatsos">             <meta name="twitter:creator" content="@noahcaldwell">
+        <meta name="twitter:site" content="@ncaldwellgatsos">             
+        <meta name="twitter:creator" content="@noahcaldwell">
         <meta name="twitter:title" content="AI"/> 
-        <meta name="twitter:description" content="Helping make sense of a vastly complicated world through visualizations, predictionss, and summaries."/>
-        <meta name="twitter:image:src" content="www.ncaldwellgatsos.com/projects/geo/images/globecopy.jpg"/>
+        <meta name="twitter:description" content="Helping make sense of a vastly complicated world through visualizations, predictions, and summaries."/>
+        <meta name="twitter:image:src" content="www.ncaldwellgatsos.com/projects/geo/images/flashmap.png"/>
     </head>
     
     
     <body>
         <svg id="fader">
-            <div class="desktopMain">
-                <div class="header">
-                    <a href="/index.html"><div class="logo">NCG.com</div></a>
-                </div>
-                <div class="trendingContainer">
-                        <div class="aTrend"></div>
-                        <div class="aTrend"></div>
-                        <div class="aTrend"></div>
-                        <div class="aTrend"></div>
-                        <div class="aTrend"></div>
-                </div>
-                <div class="central" id="ccc" style='display: block';>
-                    <div class="subtitle">Go to Country Terminal</div>
-                    <a href="terminal.html"><div class="cSelect">Launch Terminal</div></a>
-                    <div class="subtitle">Or Go to Blog</div>
-                    <div class="bSelect" onclick="launchBlog()">- - ></div>
-                </div>
-                <div class="blog" id="bbb" style="display: none;">
-                    <div class="subtitle">Most Recent Reports</div>
-                    <a href="/projects/geo/posts/geo_bp1.html">
-                        <div class="entry">
-                            <div class="eTitle"><strong>China</strong>- World</div>
-                            <div class="time">Today</div>
-                            <div class="descriptor">Something something Dark Side</div>
-                        </div>
-                    </a>
+            <div id="header">
+                <div id="headerContainer">
+                    <div class="title" id="map">Map:</div>
+                    <div class="title" id="selector">2019 </div>
+                    
+                    
                 </div>
             </div>
-            <div class="phoneMain">
-                <div class="phoneHeader">NCG.com</div>
-            </div>
+            <div id="mainFlash"></div>
+            <div id="mainElect" style="display: none"></div>
+            <div id="mainAllies" style="display: none"></div>
+            <div id="mainRivals" style="display: none"></div>
+            <div id="mainRogues" style="display: none"></div>
+            <div id="footer"></div>
         </svg>
+        
     <script>
             fadeInPage();
             
@@ -100,5 +87,6 @@
             fader.classList.remove('fade-in');
             });
     </script>
+    <script></script>
     </body>
 </html>

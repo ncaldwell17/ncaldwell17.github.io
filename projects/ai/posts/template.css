@@ -168,7 +168,6 @@ p {
     text-align: justify;
     font-size: 18px;
     line-height: 28px;
-    font-family: sans-serif;
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -176,6 +175,22 @@ p a {
     font-weight: bold;
     color: #8E3D38;
 }
+
+body ol {
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    text-align: justify;
+    margin-left: 50px;
+    width: 85%;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+}
+
+body li {
+    margin-top: 20px;
+}
+
 
 .tagContainer {
     margin-left: 40px;

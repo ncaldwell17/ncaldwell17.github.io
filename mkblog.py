@@ -57,7 +57,7 @@ bodyf = "</body>"
 htmlf = "</html>"
 
 # meta-variables 
-the_head = doctype+metatitle+head+metadescription+metaphoto+othermeta+css+fonts+social+js+headf+twitter
+the_head = doctype+metatitle+head+metadescription+metaphoto+othermeta+css+fonts+social+js+twitter+headf
 
 the_body = bheaders+ssh+containers+photoinfo+writings
 

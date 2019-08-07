@@ -6,7 +6,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #384D8A;
+    color: #1E5A2F;
 }
 a:hover {
     font-weight: bold;
@@ -31,7 +31,7 @@ a:hover {
 }
 
 .logo {
-    background-color: #384D8A;
+    background-color: #1E5A2F;
     height: 50px;
     width: 160px;
     margin-left: 30px;
@@ -62,7 +62,7 @@ a:hover {
 }
 
 .title {
-    color: #384D8A;
+    color: #1E5A2F;
     font-family: 'Acme', sans-serif;
     font-size: 50px;
     margin-left: 40px;
@@ -70,14 +70,14 @@ a:hover {
 }
 
 .subtitle {
-    color: #384D8A;
+    color: #1E5A2F;
     font-size: 20px;
     margin-left: 40px;
     margin-top: 20px;
 }
 
 .attrContainer {
-    color: #384D8A;
+    color: #1E5A2F;
     height: 30px;
     margin-top: 20px;
     margin-left: 40px;
@@ -86,21 +86,21 @@ a:hover {
 .by {
     padding-right: 20px;
     height: 25px;
-    border-right: 1px solid #384D8A;
+    border-right: 1px solid #1E5A2F;
     float: left;
 }
 
 .email {
     float: left;
     margin-left: 20px;
-    border-right: 1px solid #384D8A;
+    border-right: 1px solid #1E5A2F;
     padding-right: 20px;
 }
 
 .datetime {
     float: left;
     margin-left: 20px;
-    border-right: 1px solid #384D8A;
+    border-right: 1px solid #1E5A2F;
     padding-right: 20px;
 }
 
@@ -117,16 +117,16 @@ a:hover {
     padding: 10px 25px;
     padding-left: 20px;
     float: left;
-    background-color: #384D8A;
+    background-color: #1E5A2F;
     margin-right: 25px; 
     font-size: 25px;
-    border: 1px solid #384D8A;
+    border: 1px solid #1E5A2F;
 }
 .aSocial:hover {
     transition: 1s;
     background-color: white;
-    border: 1px solid #384D8A;
-    color: #384D8A;
+    border: 1px solid #1E5A2F;
+    color: #1E5A2F;
 }
 
 .mainPhoto {
@@ -147,7 +147,7 @@ a:hover {
 
 .source {
     height: 20px;
-    color: #384D8A;
+    color: #1E5A2F;
     margin-left: 40px;
     border-bottom: 2px solid gray;
     font-size: 14px;
@@ -188,7 +188,7 @@ p a {
 
 .aTag {
     text-align: center;
-    background-color: #384D8A;
+    background-color: #1E5A2F;
     padding: 10px;
     margin-bottom: 10px;
     width: 150px;
@@ -199,7 +199,7 @@ p a {
 }
 
 .readNext {
-    color: #384D8A;
+    color: #1E5A2F;
     margin-left: 45px;
     margin-top: 150px;
 }
@@ -207,7 +207,7 @@ p a {
 .secTitle {
     font-size: 30px;
     font-weight: bold;
-    color: #384D8A;
+    color: #1E5A2F;
 }
 
 .aNext {

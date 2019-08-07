@@ -147,7 +147,7 @@ body a {
 .blog {
     position: relative;
     height: 84%;
-    width: 40%;
+    width: 50%;
     background-color: rgb(41,76,25,0.5);
     margin-top: 2%;
     overflow: auto;
@@ -165,13 +165,22 @@ body a {
     cursor: pointer;
 }
 
+.countryImage {
+    height: 100%;
+    width: 30%;
+    background-position: center;
+    background-size: cover;
+    float: left;
+}
+
 .eTitle {
-    width: 95%;
+    width: 60%;
     font-size: 30px;
     margin-left: 2%;
     color: white;
     font-family: acme;
     border-bottom: 4px solid white;
+    float: left;
 }
 .time {
     color: white;
@@ -179,6 +188,8 @@ body a {
     margin-left: 2%;
     font-family: spectral;
     font-style: italic;
+    float: left;
+    width: 60%;
 }
 
 .descriptor {
@@ -187,6 +198,10 @@ body a {
     font-family: spectral;
     margin-left: 2%;
     text-indent: 25px;
+    text-align: justify;
+    float: left;
+    width: 60%;
+    margin-top: 2%;
 }
 
 .phoneMain {
@@ -209,6 +224,25 @@ body a {
 		1px 1px 0 #184017;
     font-size: 40px;
     padding-top: 20px;
+}
+@media screen and (max-width: 1200px) {
+    .eTitle {
+        font-size: 2vw;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .countryImage {
+        display: none;
+    }
+    .eTitle, .time, .descriptor {
+        width: 96%;
+        font-size: 3vw;
+    }
+    .descriptor {
+        font-size: 2.7vw;
+    }
 }
 
 @media screen and (max-width: 500px) { 

@@ -26,6 +26,10 @@ a:hover {
     width: 100%;
 }
 
+.header a {
+    color: white;
+}
+
 .logo {
     background-color: #8E3D38;
     height: 50px;

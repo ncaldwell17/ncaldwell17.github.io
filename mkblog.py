@@ -67,8 +67,12 @@ the_footer = faderf+bodyf+htmlf
 # helper functions
 def create_post(atype):
     num_in_dir = len([name for name in os.listdir('.')])
+    if atype == 'geo':
+        np_idx = num_in_dir-1
+        print("compensating for weird geopolitics data")
+    else:
     # for some reason, num_in_dir seems to think there's always at least 1 file
-    np_idx = (num_in_dir -2) + 1
+        np_idx = (num_in_dir -2) + 1
     str(np_idx)
     blog_loc = "{0}_bp{1}".format(atype, np_idx)
     return blog_loc
@@ -76,9 +80,26 @@ def create_post(atype):
 
 def decide_header(atype):
     if atype == 'elections':
-        return "<div class='aProject'>Artificial Intelligence</div> <div class='aProject'>Geopolitics</div> <div class='aProject'>Dev. Economics</div> <div class='aProject'>Cybersecurity</div> <div class='aProject'>Issue Analysis</div>"
-    if atype == 'ai':
-        return "<div class='aProject'>Elections</div> <div class='aProject'>Geopolitics</div> <div class='aProject'>Dev. Economics</div> <div class='aProject'>Cybersecurity</div> <div class='aProject'>Issue Analysis</div>"
+        return "<a href='projects/geo/geo.html'><div class='aProject'>Geopolitics</div></a> \
+                <a href='projects/ai/ai.html'><div class='aProject'>Artificial Intelligence</div></a> \
+                <a href='projects/econ/econ.html'><div class='aProject'>Dev. Economics</div></a> \
+                <a href='projects/cyber/cyber.html'><div class='aProject'>Cybersecurity</div></a> \
+                <a href='projects/issues/issues.html'><div class='aProject'>Issue Analysis</div></a>"    
+    elif atype == 'ai':
+        return "<a href='projects/elections/elections.html'><div class='aProject'>Elections</div></a> \
+                <a href='projects/geo/geo.html'><div class='aProject'>Geopolitics</div></a> \
+                <a href='projects/econ/econ.html'><div class='aProject'>Dev. Economics</div></a> \
+                <a href='projects/cyber/cyber.html'><div class='aProject'>Cybersecurity</div></a> \
+                <a href='projects/issues/issues.html'><div class='aProject'>Issue Analysis</div></a>"    
+    elif atype == 'geo':
+        return "<a href='projects/elections/elections.html'><div class='aProject'>Elections</div></a> \
+                <a href='projects/ai/ai.html'><div class='aProject'>Artificial Intelligence</div></a> \
+                <a href='projects/econ/econ.html'><div class='aProject'>Dev. Economics</div></a> \
+                <a href='projects/cyber/cyber.html'><div class='aProject'>Cybersecurity</div></a> \
+                <a href='projects/issues/issues.html'><div class='aProject'>Issue Analysis</div></a>"
+    else:
+        print("She doesn't even go here!")
+
 
 
 def strip(alist):
@@ -122,6 +143,9 @@ if __name__ == "__main__":
         pd_dataframe = pd.read_csv("aiBlog.csv", index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
         myid = myid-1
         print("Currently working with the AI dataframe")
+    elif post_type == 'geo':
+        pd_dataframe = pd.read_csv("geoBlog.csv", index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
+        print("Currently working with the Geopolitics dataframe")
     # need a variable creating the list of dataframes 
     df_list = [pd_dataframe['title'][myid], pd_dataframe['subtitle'][myid], pd_dataframe['aut_href'][myid],
                pd_dataframe['author'][myid], pd_dataframe['ema_href'][myid], pd_dataframe['email'][myid],

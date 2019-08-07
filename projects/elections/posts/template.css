@@ -15,6 +15,21 @@ a:hover {
     color: black; 
 }
 
+body ul {
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    text-align: justify;
+    margin-left: 50px;
+    width: 85%;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+}
+
+body li {
+    margin-top: 20px;
+}
+
 #fader {
     margin: 0;
     height: 0;
@@ -29,6 +44,7 @@ a:hover {
 .header a {
     color: white;
 }
+
 
 .logo {
     background-color: #384D8A;

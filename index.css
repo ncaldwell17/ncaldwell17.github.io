@@ -343,7 +343,6 @@ body {
 
 .blogArchive {
     height: 300px;
-    float: left;
     margin-top: 220px;
 }
 
@@ -370,7 +369,6 @@ body {
     transition: 1s;
     background-color: white;
     color: #6297CA;
-    
 }
 
 .baHeader {
@@ -383,6 +381,7 @@ body {
     height: 220px;
     overflow-x: auto;
     white-space: nowrap;
+    overflow-y: hidden;
 }
 
 .aPost {
@@ -525,17 +524,14 @@ body {
         width: 60vw;
     }
 .blogPost {
-        width: 300px;
+        height: 100px;
+    margin-top: -50px;
     }
     .myTitle {
         font-size: 18px;
     }
-    .blogPost:hover {
-        height: 130px;
-        margin-top: -70px;
-    }
-    .blogPost:hover .bpPreview {
-        visibility: hidden;
+    .bpPreview {
+        display: none;
     }
     .bpPreview {
         height: 0px;
@@ -545,6 +541,9 @@ body {
     }
     #tps {
         visibility: hidden;
+    }
+    .blogArchive {
+        margin-top: -50px;
     }
 }
 
@@ -609,6 +608,16 @@ body {
     .blogHeader {
         margin-left: 10%;
         width: 500px;
+    }
+    .blogArchive {
+        display: none;
+    }
+    .blogPost {
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+    .bpPreview {
+        display: block;
     }
    
 }

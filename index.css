@@ -142,6 +142,10 @@ body {
     color: white;
 }
 
+#downloadit {
+    display: none;
+}
+
 .blankSpace2 {
     height: 50px;
 }
@@ -645,6 +649,9 @@ body {
         margin-top: -100px;
     }
     
+    #downloadit {
+        display: block;
+    }
     
     .igContent {
         background-size: cover;

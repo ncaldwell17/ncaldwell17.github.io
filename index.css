@@ -239,7 +239,7 @@ body {
     margin-right: 1vw;
     background-color: #6297CA;
     margin-bottom: 20px;
-    font-size: 8vw;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -287,6 +287,14 @@ body {
 
 .seeFullResume:active {
     margin-top: 1px;
+}
+
+.resumeIntro {
+    display: none;
+}
+
+.resumeIcon {
+    display: none;
 }
 
 .meep {
@@ -479,12 +487,17 @@ body {
 
 
 /* handles big screens */
+@media screen and (max-width: 2000px) {
+    .blogPost {
+        width: 450px;
+    }
+    
+}
 @media screen and (min-width: 1000px) {
     
     .name {
         font-size: 60px;
     }
-    
     .title {
         font-size: 30px;
     }
@@ -494,28 +507,37 @@ body {
     .aboutMe {
         font-size: 40px;
     }
-    .aProject {
-        font-size: 48px;
-    }
     .option {
         font-size: 25px;
         margin-right: 20px;
     }
     
 }
-@media screen and (max-width: 2000px) {
-    .blogPost {
-        width: 450px;
+@media screen and (max-width: 1200px) {
+    .projectMatrix {
+        margin-top: 30px;
     }
     
+    .aProject {
+        height: 60px;
+        width: 80%;
+        font-size: 20px;
+        float: none;
+        margin: auto;
+        margin-top: 40px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-weight: 1000;
+    }
+    
+    .break {
+        display: none;
+    }
 }
 
 
 @media screen and (max-width: 900px) {
- .aProject {
-        font-size: 37px;
-    }
-    .igContent {
+ .igContent {
         background-size: cover;
         background-position: left;
         overflow-x: scroll;
@@ -523,7 +545,7 @@ body {
         position: absolute;
         width: 60vw;
     }
-.blogPost {
+    .blogPost {
         height: 100px;
     margin-top: -50px;
     }
@@ -545,13 +567,35 @@ body {
     .blogArchive {
         margin-top: -50px;
     }
+    
 }
-
-/* handles smaller screens */
+/* handles iPhone screens */
 @media screen and (max-width: 700px) {
 
     .header {
         display: none;
+    }
+    
+    .blankSpace {
+        display: none;
+    }
+    
+    #section1 {
+        background-image: none;
+        background-color: slategray;
+    }
+    
+    .infoContainer {
+        height: 400px;
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .name {
+        padding-top: 30px;
+        font-size: 45px;
+    }
+    .title {
+        font-size: 25px;
     }
     
     #convWrapper {
@@ -561,12 +605,40 @@ body {
     .graphicContainer {
         width: 600px;
         margin-left: -50px;
+        display: none;
     }
     .infographic {
         width: 185px;
     }
     .infographic:hover {
         width: 185px;
+    }
+    .resumeIntro {
+        display: block;
+        margin-right: 40px;
+        text-align: center;
+        margin-top: 100px;
+        height: 25px;
+        font-weight: 1000;
+        margin-bottom: 10px;
+    }
+    .resumeIcon {
+        display: block;
+        height: 90px;
+        width: 90px;
+        background-image: url(images/rez.png);
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 20px;
+        margin-left: 100px;
+    }
+    .resumeIcon:hover {
+        cursor: pointer;
+    }
+    
+    #section3 {
+        background-image: none;
+        background-color: slategray;
     }
     
     .igContent {
@@ -578,8 +650,12 @@ body {
         width: 400px;
     }
     
-    #section4 {
-        height: 700px;
+    .displayContainer {
+        margin-left: 0px;
+    }
+    .seeFullResume {
+        margin-left: 0px;
+        margin-top: 0px;
     }
     
     .displayCaption {
@@ -592,13 +668,7 @@ body {
     .projectMatrix {
         width: 98%;
     }
-    .blogHeader {
-        margin-left: 0px;
-    }
-    .option {
-        font-size: 20px;
-        margin-right: 45px;
-    }
+
     #sbs {
         width: 70px;
     }
@@ -606,18 +676,74 @@ body {
         display: none;
     }
     .blogHeader {
-        margin-left: 10%;
         width: 500px;
+    }
+    
+    .blogPost {
+        margin-top: 50px;
+        margin-left: 0px;
+        width: 110%;
+        height: 280px;
+    }
+    .myTitle {
+        font-size: 30px;
+    }
+    
+    .main {
+        width: 80%;
+        height: 80%;
+    }
+    
+    /* Section 4 */ 
+    .blogHeader {
+        margin-left: -5px;
+    }
+    .option {
+        font-size: 20px;
+        margin-right: 45px;
     }
     .blogArchive {
         display: none;
     }
-    .blogPost {
-        margin-top: 50px;
-        margin-left: 0px;
+    
+    
+    /* Section 5 */
+    #section5 {
+        background-image: none;
+        background-color: slategray;
     }
-    .bpPreview {
-        display: block;
+    .contactWrapper {
+        width: 80%;
+        margin-bottom: 40px;
+        padding-top: 20px;
+    }
+    .title5 {
+        font-size: 40px;
+    }
+    .contactSource {
+        width: 50%;
+    }
+    .contactLink {
+        display: none;
     }
    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

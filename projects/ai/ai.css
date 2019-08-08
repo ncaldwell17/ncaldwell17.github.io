@@ -304,7 +304,7 @@ a {
 }
 
 .pTitle {
-    font-size: 16px;
+    font-size: 14px;
     width: 120px;
     margin-top: 10px;
     float: left;
@@ -316,11 +316,11 @@ a {
 
 .pAuthor {
     width: 120px;
-    margin-top: 10px;
+    margin-top: 4px;
     float: left;
     margin-left: 10px;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 

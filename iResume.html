@@ -70,12 +70,12 @@
                                 <div class="outliner" id="BR"></div>
                                 <div class="sect">/projs</div>
                             </a>
-                            <a href="#international" id="sworld">
+                            <a href="#contact" id="sworld">
                                 <div class="outliner" id="TL"></div>
                                 <div class="outliner" id="TR"></div>
                                 <div class="outliner" id="BL"></div>
                                 <div class="outliner" id="BR"></div>
-                                <div class="sect">/world</div>
+                                <div class="sect">/links</div>
                             </a>
                         </div>
                     </div>
@@ -295,7 +295,7 @@
                             <div class="tDescription" style="margin-top: -25px; margin-left: 220px;">submitted: Winter 2017</div>
                         </div>
                     </div>
-                    <div class="classProjects">
+                    <div class="classProjects" style="display: none;">
                         <div class="aProject" style="margin-left: 70px;">
                             <div class="pSpace"></div>
                             <div class="pIcon"></div>
@@ -336,11 +336,27 @@
                 </div>
             </div>
             
-            <div class="section" id="experience"></div>
+            <div class="section" id="experience">
+                <div class="workContainer">
+                    <div class="workBubble">
+                        <div class="workLogo">
+                            <div class="workIcon"></div>
+                        </div>
+                        <div class="workTitle"></div>
+                        <div class="workLocation"></div>
+                        <div class="workDuration"></div>
+                        <div class="workDescription">
+                            <ul>
+                                <li>First</li>
+                                <li>Second</li>
+                                <li>Third</li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+            </div>
             
             <div class="section" id="projects"></div>
-            
-            <div class="section" id="international"></div>
             
             <div class="section" id="contact"></div>
         
@@ -423,9 +439,6 @@
                     sect.innerHTML = '/projs';
                 }
                 if (window.pageYOffset > 4500 && window.pageYOffset < 5400) {
-                    sect.innerHTML = '/world';
-                }
-                if (window.pageYOffset > 5400 && window.pageYOffset < 6300) {
                     sect.innerHTML = '/links';
                 }
             }

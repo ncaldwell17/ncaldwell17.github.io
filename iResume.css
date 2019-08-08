@@ -871,17 +871,17 @@ font-family: 'Spectral', serif;
     background-color: #205F24;
 }
 
+.workBubble {
+    height: 400px;
+}
+
 #projects {
     background-color: #262626;
 }
 
-#international {
+#contact {
     background-image: url(images/globe.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #205F24;
-}
-
-#contact {
-    background-color: #262626;
 }

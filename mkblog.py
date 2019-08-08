@@ -110,6 +110,8 @@ def strip(alist):
         element = re.sub('Ó','"',element)
         element = re.sub('Ò','"',element)
         element = re.sub('Ê','',element)
+        element = re.sub('â',"'",element)
+        element = re.sub("'.","'",element)
         newlist.append(element)
     return newlist
 

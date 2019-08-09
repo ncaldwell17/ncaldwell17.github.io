@@ -1,7 +1,7 @@
 body {
     margin: 0;
     margin-top: 0px;
-    background-color: #37A0A5;
+    background-color: #3A852C;
 }
 
 body a {
@@ -38,9 +38,21 @@ body a {
     opacity: 1;
     animation-name: fade-in;
 } 
-
 #header {
     height: 10vw;
+}
+
+#header {
+    height: 100px; 
+    margin-top: 50px;
+}
+
+.title {
+    font-size: 5vw;
+    color: white;
+    font-family: Geostar Fill;
+    margin-left: 100px;
+    float: left;
 }
 
 #mainFlash {
@@ -48,66 +60,43 @@ body a {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 50vw;
+    height: 700px;
 }
 
-#headerContainer {
-    width: 90vw;
-    margin: auto;
-    margin-top: 5vw;
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-#selectorContainer {
-    z-index: 2;
-    position: relative;
-    height: 30vw;
-    width: 70vw;
-    margin-left: 20vw;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-#footer {
-    height: 5vw;
-    margin-top: -1vw;
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-#map {
-    font-weight: 800;
+.dropdown-content .selection {
+    color: black;
+    
+    text-decoration: none;
+    display: block;
 }
 
-#selector {
-    visibility: visible;
-    padding-top: 0;
+.dropdown-content .selection:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-
-
-#selectorH {
-    visibility: ;
-    width: 700px;
-    background-color: #3DB75C;
-    margin-left: 300px;
-}
-
-.title {
-    font-size: 5vw;
-    color: white;
-    font-family: Geostar Fill;
-    float: left;
-}
-
-.option {
-    font-size: 5vw;
-    color: white;
-    font-family: Geostar Fill;
-    text-align: center;
-    background-color: red;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-
-}
-.option:hover {
-    background-color: white;
-    color: red;
-    cursor: pointer;
-    transition: 1s;
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }

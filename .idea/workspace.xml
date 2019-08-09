@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36065b8c-fb4d-4adb-b009-2b16a40d30dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/testing-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/testing-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aiBlog.csv" beforeDir="false" afterPath="$PROJECT_DIR$/aiBlog.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkblog.py" beforeDir="false" afterPath="$PROJECT_DIR$/mkblog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/testing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geo/images/flashmap.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geo/images/flashmap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geo/terminal.css" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geo/terminal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geo/terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geo/terminal.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,26 +14,27 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ncaldwell17_github_io$formatBP.coverage" NAME="formatBP Coverage Results" MODIFIED="1564776478660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ncaldwell17_github_io$mkblog.coverage" NAME="mkblog Coverage Results" MODIFIED="1564957005216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ncaldwell17_github_io$blogcounter.coverage" NAME="blogcounter Coverage Results" MODIFIED="1565374559534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ncaldwell17_github_io$mkblog.coverage" NAME="mkblog Coverage Results" MODIFIED="1565374545029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-2012820769">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="14" />
+          <entry key="py" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="14" />
+          <entry key="Python" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -51,13 +51,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mkblog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="114" column="25" lean-forward="true" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+            <state relative-caret-position="820">
+              <caret line="143" column="25" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="25" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blogcounter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,7 +101,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="765" />
+    <option name="x" value="149" />
     <option name="y" value="22" />
     <option name="width" value="1531" />
     <option name="height" value="1028" />
@@ -99,7 +111,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,6 +122,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -132,7 +144,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mkblog">
+  <component name="RunManager" selected="Python.blogcounter">
+    <configuration name="blogcounter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ncaldwell17.github.io" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blogcounter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="formatBP" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ncaldwell17.github.io" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,9 +214,11 @@
     <list>
       <item itemvalue="Python.formatBP" />
       <item itemvalue="Python.mkblog" />
+      <item itemvalue="Python.blogcounter" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.blogcounter" />
         <item itemvalue="Python.mkblog" />
         <item itemvalue="Python.formatBP" />
       </list>
@@ -202,10 +238,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="765" y="22" width="1531" height="1028" extended-state="0" />
+    <frame x="149" y="22" width="1531" height="1028" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22926192" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22926192" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -239,8 +275,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mkblog.py</url>
-          <line>108</line>
+          <line>137</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/blogcounter.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -254,20 +295,30 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/formatBP.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/Default/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="304" column="54" selection-start-line="304" selection-start-column="54" selection-end-line="304" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mkblog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="114" column="25" lean-forward="true" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+        <state relative-caret-position="820">
+          <caret line="143" column="25" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="25" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/Default/lib/python3.6/codecs.py">
+    <entry file="file://$PROJECT_DIR$/blogcounter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4560">
-          <caret line="304" column="54" selection-start-line="304" selection-start-column="54" selection-end-line="304" selection-end-column="54" />
+        <state relative-caret-position="630">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

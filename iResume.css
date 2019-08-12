@@ -3,6 +3,12 @@ html {
     scroll-behavior: [ auto | smooth ];
 }
 
+.section {
+    height: 950px;
+}
+
+/* header */
+
 #fader {
     position: fixed;
     top: 0;
@@ -289,20 +295,23 @@ body {
     top: 20px;
     width: 100%;
 }
+.sticky:hover {
+    z-index: 99999;
+}
 .sect {
     height: 75px;
     padding-top: 25px;
     padding-left: 25px;
 }
 
+/* Front */
+
 /*
 .sticky + .content{
     padding-top: 102px;
 } */
 
-.section {
-    height: 950px;
-}
+
 
 #intro {
     background-color: #262626;
@@ -451,7 +460,7 @@ font-family: 'Spectral', serif;
   font-size: 37px;
 }
 
-
+/* skills */
 #skills {
     background-image: url(images/palm.jpg);
     background-color: #37AD3E;
@@ -620,6 +629,8 @@ font-family: 'Spectral', serif;
     margin-left: 20%;
 }
 
+/* screen sizing */
+
 @media screen and (max-width: 1200px) {
     .skillTitle {
         font-size: 20px;
@@ -666,7 +677,7 @@ font-family: 'Spectral', serif;
     }
 }
 
-
+/* Education */
 #education {
     background-color: #262626;
 }
@@ -785,6 +796,154 @@ font-family: 'Spectral', serif;
     margin-left: 10px;
     font-size: 15px;
 }
+
+/* Work Experience */
+#experience {
+    background-color: #205F24;
+}
+
+.blankSpace {
+    height: 150px;
+    position: relative;
+    z-index: -1;
+}
+
+.workWrapper {
+    height: 750px;
+    width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    background-color: #205F24;
+}
+
+.anEntry {
+    height: 50%;
+    width: 50%;
+    float: left;   
+}
+
+.eContent {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    color: white;
+    font-family: Spectral;
+}
+
+.eLogo {
+    width: 30%;
+    height: 40%;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.eJob {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+    border-bottom: 3px solid white;
+    float: left;
+}
+.eTenure {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    float: left;
+}
+.eTitle {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 9px; 
+    font-weight: 600;
+    float: left;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+
+.eInfo {
+    height: 33%;
+    float: left;
+    width: 100%;
+}
+
+.seeMore {
+    height: 20px;
+    width: 100px;
+    background-color: white;
+    color: black;
+    z-index: 3;
+    margin-top: -32px;
+    margin-left: 390px;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 4px;
+    display: none;
+}
+.seeMore:hover {
+    background-color: firebrick;
+    color: white;
+    height: 18px;
+    width: 98px;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.eSubtitle {
+    height: 6%;
+    float: left;
+    width: 100%;
+    font-weight: bolder;
+    visibility: hidden;
+}
+
+.eApps {
+    margin: auto;
+    height: 22%;
+    width: 100%;
+    float: left;
+}
+
+.anApp {
+    height: 100%;
+    width: 25%;
+    float: left;
+}
+
+.appLogo {
+    background-color: #205F24;
+    height: 90%;
+    width: 70%;
+    margin: auto;
+    margin-top: 3%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+.appLogo:hover {
+    background-color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1300px) { 
     .classProjects {
         display: none;
@@ -802,6 +961,12 @@ font-family: 'Spectral', serif;
         font-size: 14px; }
 }
 
+@media screen and (max-width: 1000px) {
+    .aResumeRight {
+        float: left;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .theses {
         margin-top: 120px;
@@ -810,6 +975,7 @@ font-family: 'Spectral', serif;
         font-size: 18px;
         margin: 0;
     }
+    
 }
 
 @media screen and (max-width: 500px) {
@@ -833,47 +999,6 @@ font-family: 'Spectral', serif;
     margin-top: 40px;
 }
 
-.aProject {
-    height: 70px;
-    width: 300px;
-    background-color: white;
-    border-radius: 5px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    float: left;
-}
-.pSpace {
-    height: 5px;
-    width: 50px;
-}
-
-.pIcon {
-    height: 60px;
-    background-color: black;
-    margin-left: 15px;
-    border-radius: 5px;
-    width: 60px;
-    float: left;
-    background-size: cover;
-    background-position: center;
-}
-.pTitle {
-    float: left;
-    font-size: 15px;
-    font-weight: bold;
-    width: 210px;
-    margin-left: 10px;
-    margin-top: 5px;
-}
-
-
-#experience {
-    background-color: #205F24;
-}
-
-.workBubble {
-    height: 400px;
-}
 
 #projects {
     background-color: #262626;

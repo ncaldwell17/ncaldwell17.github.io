@@ -820,7 +820,8 @@ font-family: 'Spectral', serif;
 .anEntry {
     height: 50%;
     width: 50%;
-    float: left;   
+    float: left; 
+    border-radius: 10px;
 }
 
 .eContent {
@@ -829,6 +830,8 @@ font-family: 'Spectral', serif;
     margin: auto;
     color: white;
     font-family: Spectral;
+    border-bottom: 4px solid white;
+    padding-bottom: 20px;
 }
 
 .eLogo {
@@ -933,6 +936,23 @@ font-family: 'Spectral', serif;
     transition: 1s;
     cursor: pointer;
 }
+.appLogoReverse {
+    background-color: white;
+    height: 90%;
+    width: 70%;
+    margin: auto;
+    margin-top: 3%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+.appLogoReverse:hover {
+    background-color: #205F24;
+    transition: 1s;
+    cursor: pointer;
+}
+
 
 /* projects */ 
 #projects {

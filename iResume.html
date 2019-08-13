@@ -489,7 +489,13 @@
                     <div id="reportsWrapper">
                         <div class="semiTitle">Reports</div>
                         <div class="someContent">
-                        
+                            <div class="arrowsWrapper">
+                                <div id="leftArrows"></div>
+                            </div>
+                            <div class="aResearch"></div>
+                            <div class="arrowsWrapper">
+                                <div id="rightArrows"></div>
+                            </div>
                         </div>
                         <div class="borderBottom"></div>
                     </div>
@@ -514,7 +520,9 @@
             
             </div>
             
-            <div class="section" id="contact"></div>
+            <div class="section" id="contact">
+            
+            </div>
         
         </svg>
         <script>
@@ -550,12 +558,12 @@
             }
             });
             window.addEventListener('pageshow', function (event) {
-  if (!event.persisted) {
-    return;
-  }
-  var fader = document.getElementById('fader');
-  fader.classList.remove('fade-in');
-});
+            if (!event.persisted) {
+            return;
+            }
+            var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
             
             // When the user scrolls the page, execute myFunction 
             window.onscroll = function() {myFunction(), cSChange()};

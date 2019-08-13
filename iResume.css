@@ -810,7 +810,7 @@ font-family: 'Spectral', serif;
 
 .workWrapper {
     height: 750px;
-    width: 1100px;
+    width: 1200px;
     margin: auto;
     position: relative;
     z-index: 2;
@@ -819,7 +819,7 @@ font-family: 'Spectral', serif;
 
 .anEntry {
     height: 50%;
-    width: 50%;
+    width: 48%;
     float: left; 
     border-radius: 10px;
 }
@@ -1008,6 +1008,39 @@ font-family: 'Spectral', serif;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+.arrowsWrapper {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+#leftArrows {
+    height: 25%;
+    width: 70%;
+    margin: auto;
+    margin-top: 85%;
+    background-color: teal;
+}
+
+.aResearch {
+    height: 300px;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    float: left;
+    background-color: white;
+}
+
+#rightArrows {
+    height: 25%;
+    width: 70%;
+    margin: auto;
+    margin-top: 85%;
+    background-color: teal;
+}
+
 
 
 

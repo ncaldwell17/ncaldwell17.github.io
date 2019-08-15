@@ -1,0 +1,162 @@
+body {
+    background-color: #802A31;
+    font-family: 'Oxygen', sans-serif;
+    margin: 0;
+}
+
+body a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* page standard material */ 
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+/* end page standard material */ 
+
+.header {
+    height: 100px;
+    width: 100%;
+    background-color: #3F3F3F;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#main {
+    height: 1000px;
+    width: 1100px;
+    background-color: white;
+    margin: auto;
+    box-shadow: 5px 10px #888888;
+    margin-bottom: 50px;
+}
+
+.logoWrapper {
+    width: 20%;
+    height: 100%;
+    margin-left: 50px;
+    margin: auto;
+    min-width: 250px;
+    color: white;
+}
+.logoWrapper:hover {
+    background-color: white;
+    color: black;
+    transition: 1.5s;
+    cursor: pointer;
+}
+.logo {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 25px;
+    font-weight: 1000;
+    font-style: italic;
+    font-family: Geostar Fill;
+}
+
+.titleWrapper {
+    height: 12%;
+    width: 100%;
+}
+.title {
+    color: #3F1619;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+}
+.datetime {
+    text-align: center;
+    font-size: 20px;
+}
+
+#mainWrapper {
+    height: 80%;
+    width: 1060px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+#leftTri {
+    height: 100%;
+    width: 45%;
+    float: left;
+}
+#brackets {
+    height: 100%;
+    width: 9%;
+    float: left;
+}
+#rightTri {
+    height: 100%;
+    width: 45%;
+    float: left;
+}
+
+.aParagraphPre {
+    margin-top: 20px;
+    height: 60px;
+    padding: 10px;
+    border-bottom: 4px solid black;
+}
+
+.aParagraph {
+    border: 1px solid black;
+    margin-top: 20px;
+    background-color: yellow;
+    height: 500px;
+    display: none;
+}
+
+.aBracket {
+    height: 98px;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 7px;
+    
+}
+
+#meno700 {
+    display: none;
+}
+
+/* screen dim. alterations */
+@media screen and (max-width: 1100px) {
+    #main {
+        width: 700px;
+    }
+    #mainWrapper {
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {}

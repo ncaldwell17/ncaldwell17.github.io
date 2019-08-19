@@ -15,6 +15,11 @@ a:hover {
     color: black; 
 }
 
+h2 {
+    color: black;
+    margin-left: 40px;
+}
+
 body ul {
     color: black;
     font-family: 'PT Sans', sans-serif;

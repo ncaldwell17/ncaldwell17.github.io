@@ -192,6 +192,134 @@ body a {
     width: 60%;
 }
 
+#nMain {
+    height: 900px;
+    width: 100%;
+    background-image: linear-gradient(#D0A97F, #C17B55);
+    color: #50331D;
+}
+#nMain a {
+    color: #50331D;
+}
+
+#eWatch {
+    height: 900px;
+    width: 100%;
+    background-image: linear-gradient(#C17B55, #995538);
+}
+#nArchive {
+    height: 900px;
+    width: 100%;
+    background-color: #995538;
+}
+
+.nHeader {
+    height: 10%;
+    font-family: Geostar Fill;
+}
+
+.nSelector {
+    float: left;
+    margin-left: 50px;
+    height: 50%;
+    text-align: center;
+    width: 50%;
+}
+
+.nLogo {
+    margin-left: 100px;
+    text-align: center;
+    width: 30%;
+    height: 50%;
+    font-size: 50px;
+    padding-top: 20px;
+    float: left;
+}
+
+.nTrending {
+    height: 5%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.nBackground {
+    height: 45%;
+    background-image: url(/projects/geo/images/background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.nContent {
+    height: 35%;
+}
+
+.nPage {
+    margin-top: 15px;
+    height: 300px;
+    width: 20%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 5px;
+    float: left;
+}
+.nPage:hover {
+    margin-top: -180px;
+    height: 480px;
+    transition: 1.5s;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.nPage:hover .preview {
+    height: 200px;
+    background-color: black;
+}
+.nPage:hover .nCountry {
+    border: 2px solid white;
+}
+.nPage:hover .nSubtitle {
+    display: block;
+}
+
+
+.nCountry {
+    padding-top: 10px;
+    font-family: 'PT Sans';
+    font-size: 30px;
+    text-align: center;
+    border: 2px solid #50331D;
+}
+
+.preview {
+    height: 200px;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.nCaption {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.nSubtitle {
+    height: 150px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 30px;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'PT Sans';
+    display: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #C17B55;
+}
+
+
 .descriptor {
     color: white;
     font-size: 18px;
@@ -230,8 +358,6 @@ body a {
         font-size: 2vw;
     }
 }
-
-
 @media screen and (max-width: 800px) {
     .countryImage {
         display: none;
@@ -244,7 +370,6 @@ body a {
         font-size: 2.7vw;
     }
 }
-
 @media screen and (max-width: 500px) { 
     .desktopMain {
         display: none;

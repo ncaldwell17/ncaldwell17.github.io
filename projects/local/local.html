@@ -78,6 +78,12 @@
             fader.classList.remove('fade-in');
             });
     </script>
+    <script>
+        const element = document.querySelector('myHeader')
+        animateCSS('myHeader', 'fadeIn', function() {
+            element.classList.add('animated', 'bounceOutLeft')
+        })
+    </script>
 </body>
 
 

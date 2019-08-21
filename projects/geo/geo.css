@@ -95,7 +95,7 @@ body a {
     width: 100%;
     background-image: linear-gradient(#C17B55, #995538);
 }
-#nArchive {
+#nMaps {
     height: 900px;
     width: 100%;
     background-color: #995538;
@@ -281,6 +281,20 @@ body a {
     margin-top: 20px;
 }
 
+.mapTitle {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 50px;
+    color: white;
+}
+
+.map {
+    height: 80%;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
 
 @media screen and (max-width: 1200px) {
     .nCountry {

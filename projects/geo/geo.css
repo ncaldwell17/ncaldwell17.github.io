@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     margin-top: 0px;
@@ -38,158 +42,42 @@ body a {
     animation-name: fade-in;
 } 
 
-.desktopMain {
-    height: 950px;
-    background-image: url(images/globecopy.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 0px;
-}
 
-.logo {
-    width: 40%;
-    font-size: 50px;
-    font-family: 'Geostar Fill', cursive;
-    color: white;
-    text-shadow:
-		-1px -1px 0 #184017,
-		1px -1px 0 #184017,
-		-1px 1px 0 #184017,
-		1px 1px 0 #184017;
-    margin-left: 50px;
-    padding-top: 20px;
-}
-
-.header a {
-    text-decoration: none;
-}
-
-.logo:hover {
-    text-shadow:
-		-2px -2px 0 #184017,
-		2px -2px 0 #184017,
-		-2px 2px 0 #184017,
-		2px 2px 0 #184017;
-}
-
-.trendingContainer {
-    background-color: #184017;
-    opacity: 0.3;
-    height: 5%;
-}
-
-.central {
-    height: 50%;
+.nSelector {
+    float: left;
+    margin-left: 150px;
     width: 50%;
-    margin-left: 25%;
-    margin-top: 8%;
-    background-color: rgb(41,76,25,0.5);
-    font-family: acme;
-}
-
-.subtitle {
-    width: 98%;
-    font-size: 44px;
-    color: white;
-    opacity: 1;
     text-align: center;
-    border-bottom: 2px solid white;
-    margin-left: 1%;
-    padding-top: 5%;
-    font-weight: bold;
-    text-shadow:
-		-1px -1px 0 #184017,
-		1px -1px 0 #184017,
-		-1px 1px 0 #184017,
-		1px 1px 0 #184017;
 }
-
-.cSelect {
-    background-color: rgb(0, 0, 0, 0.8);
-    padding: 3%;
-    color: white;
-    border: 2px solid white;
-    border-radius: 20px;
-    width: 40%;
-    text-align: center;
-    font-size: 30px;
-    margin: auto;
-    margin-top: 5%;
-}
-
-.bSelect {
-    background-color: rgb(0, 0, 0, 0.8);
-    padding: 3%;
-    color: white;
-    border: 2px solid white;
-    border-radius: 20px;
-    width: 40%;
-    text-align: center;
-    font-size: 30px;
-    margin: auto;
-    margin-top: 5%;
-}
-.cSelect:hover {
-    background-color: white;
+.nSelector:hover .nOptions {
+    visibility: visible;
     transition: 1s;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-}
-.bSelect:hover {
-    background-color: white;
-    transition: 1s;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-.blog {
+.nOption {
+    font-family: 'PT Sans';
+    font-weight: bolder;
+    font-size: 40px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
     position: relative;
-    height: 84%;
-    width: 50%;
-    background-color: rgb(41,76,25,0.5);
-    margin-top: 2%;
-    overflow: auto;
 }
-
-.entry {
-    height: 20%;
-    width: 100%;
-    background-color: rgb(41,76,25,0.5);
-    margin-top: 2%;
-}
-.entry:hover {
-    background-color: rgb(41,76,25);
-    transition: 1s;
+.nOption:hover {
+    background-image: linear-gradient(#D0A97F, #C17B55);
+    transition: .5s;
     cursor: pointer;
+    color: white;
 }
 
-.countryImage {
-    height: 100%;
-    width: 30%;
-    background-position: center;
-    background-size: cover;
-    float: left;
-}
-
-.eTitle {
-    width: 60%;
-    font-size: 30px;
-    margin-left: 2%;
-    color: white;
-    font-family: acme;
-    border-bottom: 4px solid white;
-    float: left;
-}
-.time {
-    color: white;
-    font-size: 20px;
-    margin-left: 2%;
-    font-family: spectral;
-    font-style: italic;
-    float: left;
-    width: 60%;
+.nOptions {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: -80px;
+    z-index: 2;
+    position: relative;
+    visibility: hidden;
+    padding-bottom: 10px;
 }
 
 #nMain {
@@ -218,19 +106,9 @@ body a {
     font-family: Geostar Fill;
 }
 
-.nSelector {
-    float: left;
-    margin-left: 50px;
-    height: 50%;
-    text-align: center;
-    width: 50%;
-}
-
 .nLogo {
-    margin-left: 100px;
     text-align: center;
     width: 30%;
-    height: 50%;
     font-size: 50px;
     padding-top: 20px;
     float: left;
@@ -254,6 +132,7 @@ body a {
 
 .nPage {
     margin-top: 15px;
+    max-width: 300px;
     height: 300px;
     width: 20%;
     margin-left: 20px;
@@ -320,6 +199,7 @@ body a {
 }
 
 
+
 .descriptor {
     color: white;
     font-size: 18px;
@@ -332,51 +212,106 @@ body a {
     margin-top: 2%;
 }
 
-.phoneMain {
-    background-color: #6ACB82;
-    height: 950px;
-    display: none;
+.nTotal {
+    height: 90%;
+    width: 99%;
+    margin: auto;
 }
 
-.phoneHeader {
-    background-color: #284F1C;
-    color: white;
-    height: 50px;
-    text-align: center;
-    width: 100%;
-    font-family: 'Geostar Fill', cursive;
-    text-shadow:
-		-1px -1px 0 #184017,
-		1px -1px 0 #184017,
-		-1px 1px 0 #184017,
-		1px 1px 0 #184017;
-    font-size: 40px;
-    padding-top: 20px;
+.nPick {
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 100%;
+    width: 30%;
+    float: left;
 }
+
+.nPickTitle {
+    font-size: 30px;
+    text-align: center;
+    color: white; 
+    font-weight: bolder;
+    font-family: 'PT Sans';
+    margin-bottom: 75px;
+}
+.aPick {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: white;
+    height: 40px;
+    color: #995538;
+}
+.optionWrapper:hover .aPick {
+    color: white;
+    background-color: #995538;
+    transition: 1s;
+    cursor: pointer;
+}
+.eDate {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    color: #995538;
+    background-color: white;
+    margin-top: -5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    visibility: hidden;
+}
+.optionWrapper:hover .eDate {
+    visibility: visible;
+}
+
+.nWrapper {
+    height: 100%;
+    width: 60%;
+    float: left;
+    margin: auto;
+}
+
+.nContainer {
+    height: 750px;
+    width: 80%;
+    border: 1px solid tan;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
 @media screen and (max-width: 1200px) {
-    .eTitle {
-        font-size: 2vw;
+    .nCountry {
+        font-size: 16px;
+        padding-top: 2px;
+    }
+    .nPage {
+        min-width: 200px;
+    }
+    .nPage:hover {
+        margin-top: 15px;
+        height: 300px;
+    }
+    .nPage:hover .nSubtitle {
+        visibility: hidden;
+    }
+    #extra2 {
+        display: none;
+    }
+    .moreArrows {
+        font-size: 10vw;
     }
 }
 @media screen and (max-width: 800px) {
-    .countryImage {
+    .nSelector {
         display: none;
-    }
-    .eTitle, .time, .descriptor {
-        width: 96%;
-        font-size: 3vw;
-    }
-    .descriptor {
-        font-size: 2.7vw;
     }
 }
-@media screen and (max-width: 500px) { 
-    .desktopMain {
+@media screen and (max-width: 750px) {
+    #extra {
         display: none;
-    }
-    .phoneMain {
-        display: block;
-        
     }
 }
 

@@ -29,59 +29,6 @@
     
     <body>
         <svg id="fader">
-            <div class="desktopMain" style="display:none;">
-                <div class="header">
-                    <a href="/index.html"><div class="logo">NCG.com</div></a>
-                </div>
-                <div class="trendingContainer">
-                        <div class="aTrend"></div>
-                        <div class="aTrend"></div>
-                        <div class="aTrend"></div>
-                        <div class="aTrend"></div>
-                        <div class="aTrend"></div>
-                </div>
-                <div class="central" id="ccc" style='display: block';>
-                    <div class="subtitle">Go to Country Terminal</div>
-                    <a href="terminal.html"><div class="cSelect">Launch Terminal</div></a>
-                    <div class="subtitle">Or Go to Blog</div>
-                    <div class="bSelect" onclick="launchBlog()">- - ></div>
-                </div>
-                <div class="blog" id="bbb" style="display: none;">
-                    <div class="subtitle">Most Recent Reports</div>
-                    <a href="/projects/geo/posts/geo_bp4.html">
-                        <div class="entry">
-                            <div class="countryImage" style="background-image: url(images/italymap.gif); background-color: white; background-position: bottom;"></div>
-                            <div class="eTitle"><strong>Italy</strong> - Political Turmoil</div>
-                            <div class="time">Today</div>
-                            <div class="descriptor">Matteo Salvini's miscalculation just kept Italy in the E.U. for another five years.</div>
-                        </div>
-                    </a>
-                    <a href="/projects/geo/posts/geo_bp3.html">
-                        <div class="entry">
-                            <div class="countryImage" style="background-image: url(images/hongkongmap.gif)"></div>
-                            <div class="eTitle"><strong>Hong Kong</strong> - Economic Vulnerability</div>
-                            <div class="time">Yesterday</div>
-                            <div class="descriptor">What economic leverage does Beijing hold over Hong Kong and will they use it?</div>
-                        </div>
-                    </a>
-                    <a href="/projects/geo/posts/geo_bp2.html">
-                        <div class="entry">
-                            <div class="countryImage" style="background-image: url(images/israelmap.gif)"></div>
-                            <div class="eTitle"><strong>Israel</strong> - Banning U.S. MOCs</div>
-                            <div class="time">Last Week</div>
-                            <div class="descriptor">Why Did Israel Just Ban Two U.S. Members of Congress from Entering the Country?</div>
-                        </div>
-                    </a>
-                    <a href="/projects/geo/posts/geo_bp1.html">
-                        <div class="entry">
-                            <div class="countryImage" style="background-image: url(images/hongkongmap.gif)"></div>
-                            <div class="eTitle"><strong>Hong Kong</strong> - Mass Protests</div>
-                            <div class="time">Two Weeks Ago</div>
-                            <div class="descriptor">How a Complex Geopolitical Calculus Informs all of Beijing's Decisions</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
             
             <div id="nMain">
                 <div class="nHeader">
@@ -89,10 +36,14 @@
                     <div class="nLogo">NCG.com</div>
                     </a>
                     <div class="nSelector">
-                        <div class="nOption"></div>
+                        <div class="nOption" style="border-top: 10px solid white">Main Terminal</div>
+                        <div class="nOptions">
+                            <div class="nOption">Main Terminal</div>
+                            <a href="#eWatch"><div class="nOption">Election Watch</div></a>
+                            <div class="nOption">Maps</div>
+                        </div>
                     </div>
                 </div>
-                <div class="nTrending"></div>
                 <div class="nBackground"></div>
                 <div class="nGradient"></div>
                 <div class="nContent">
@@ -112,7 +63,7 @@
                             <div class="nSubtitle">Beijing has other tools at its disposal to bring Hong Kong into line. Will it use them?</div>
                         </div>
                     </a>
-                    <a href="/projects/geo/posts/geo_bp2.html">
+                    <a href="/projects/geo/posts/geo_bp2.html" id="extra">
                         <div class="nPage">
                             <div class="preview" style="background-image: url(/projects/geo/images/israelmap.gif)"></div>
                             <div class="nCountry">ISRAEL</div>
@@ -120,10 +71,51 @@
                             <div class="nSubtitle">Why did the Israeli Government just ban two Members of Congress from entering the country?</div>
                         </div>
                     </a>
+                    <a href="/projects/geo/posts/geo_bp1.html" id="extra2">
+                        <div class="nPage">
+                            <div class="preview" style="background-image: url(/projects/geo/images/hongkongmap.gif)"></div>
+                            <div class="nCountry">HONG KONG</div>
+                            <div class="nCaption">Why is Beijing Afraid?</div>
+                            <div class="nSubtitle">What inspired the protests currently consuming the island?</div>
+                        </div>
+                    </a>
                 </div>
                 <div class="nFooter"></div>
             </div>
-            <div id="eWatch"></div>
+            <div id="eWatch">
+                <div class="nTotal">
+                    <div class="nPick">
+                        <div class="nPickTitle">Foreign Election Watch 2019</div>
+                        <div class="optionWrapper">
+                            <div class="aPick">Italy</div>
+                            <div class="eDate">To Be Determined...</div>
+                        </div>
+                        <div class="optionWrapper">
+                            <div class="aPick">Israel</div>
+                            <div class="eDate">Parliamentary in September</div>
+                        </div>
+                        <div class="optionWrapper">
+                            <div class="aPick">Russia</div>
+                            <div class="eDate">Local in September</div>
+                        </div>
+                        <div class="optionWrapper">
+                            <div class="aPick">Canada</div>
+                            <div class="eDate">Parliamentary in October</div>
+                        </div>
+                        <div class="optionWrapper">
+                            <div class="aPick">Argentina</div>
+                            <div class="eDate">General in October</div>
+                        </div>
+                        <div class="optionWrapper">
+                            <div class="aPick">Poland</div>
+                            <div class="eDate">Parliamentary in October</div>
+                        </div>
+                    </div>
+                    <div class="nWrapper">
+                        <div class="nContainer"></div>
+                    </div>
+                </div>
+            </div>
             <div id="nArchive"></div>
             
             

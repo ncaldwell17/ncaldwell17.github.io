@@ -12,9 +12,10 @@
             <!-- insert font here --> 
             <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Notable&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- JS -->
             <script src="index.js"></script>
+            <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     </head>
     
     <body>
@@ -266,7 +267,12 @@
         blog.classList.remove("active");
         contact.classList.remove("active-bottom");
         } 
-    }
+    };
+        
+    // Alters the page height and width to accomodate new viewport sizes
+    var page_height = String(window.innerHeight)+"px";
+    console.log(page_height);
+    window.onload = fit_to_view(page_height, "section1");
     
     </script>
 </html>

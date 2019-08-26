@@ -65,7 +65,7 @@ the_footer = faderf+bodyf+htmlf
 
 
 # helper functions
-def create_post(atype):
+def create_post(atype, tag1, tag2, tag3, tag4):
     num_in_dir = len([name for name in os.listdir('.')])
     if atype == 'geo':
         np_idx = num_in_dir-1
@@ -74,7 +74,10 @@ def create_post(atype):
     # for some reason, num_in_dir seems to think there's always at least 1 file
         np_idx = (num_in_dir -2) + 1
     str(np_idx)
-    blog_loc = "{0}_bp{1}".format(atype, np_idx)
+    blog_loc = "{0}_bp{1}-{2}-{3}-{4}-{5}".format(atype, np_idx, tag1, 
+                                                                 tag2,
+                                                                 tag3,
+                                                                 tag4)
     return blog_loc
 
 
@@ -139,14 +142,14 @@ if __name__ == "__main__":
     document = str(the_head+the_body+the_footer)
     # need a variable holding the dataframe as pd_dataframe
     if post_type == 'elections':
-        pd_dataframe = pd.read_csv('templateBlog.csv', index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
+        pd_dataframe = pd.read_csv('pythonBlog/templateBlog.csv', index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
         print("Currently working with the Elections dataframe")
     elif post_type == 'ai':
-        pd_dataframe = pd.read_csv("aiBlog.csv", index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
+        pd_dataframe = pd.read_csv("pythonBlog/aiBlog.csv", index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
         myid = myid-1
         print("Currently working with the AI dataframe")
     elif post_type == 'geo':
-        pd_dataframe = pd.read_csv("geoBlog.csv", index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
+        pd_dataframe = pd.read_csv("pythonBlog/geoBlog.csv", index_col=0, encoding="ISO-8859-1", engine='python', na_filter=False)
         print("Currently working with the Geopolitics dataframe")
     # need a variable creating the list of dataframes 
     df_list = [pd_dataframe['title'][myid], pd_dataframe['subtitle'][myid], pd_dataframe['aut_href'][myid],
@@ -168,7 +171,7 @@ if __name__ == "__main__":
     unique_header = decide_header(post_type)
     # formatting the new file
     os.chdir("projects/%s/posts/" % post_type)
-    bidx = create_post(post_type)
+    bidx = create_post(post_type, newlist[16], newlist[17], newlist[18], newlist[19])
     wf = open("{0}.html".format(bidx), "a", encoding='utf-8')
     # main function
     wf.write(format_html(newlist, document, unique_header))

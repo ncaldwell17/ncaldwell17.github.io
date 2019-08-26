@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <title>An Overview of U.S.-Denmark Relations</title>
+    <head>
+        <meta name="description" content="Understanding U.S. Denmark Relations from the 19th Century to the Modern Day.">
+        
+        <!-- Meta Tags  -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS -->
+            <link rel="stylesheet" href="/projects/geo/relations.css">
+        <!-- insert font here --> 
+            <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+            <link href='https://fonts.googleapis.com/css?family=PT+Sans&display=swap' rel='stylesheet'>
+            <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">        
+        <!-- Social Media icons --> 
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JS -->
+            <script src="/projects/geo/relations.js"></script>
+        <!-- Twitter Card --> 
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@ncaldwellgatsos">
+        <meta name="twitter:creator" content="@noahcaldwell">
+        <meta name="twitter:title" content="An Overview of U.S.-Denmark Relations"/> 
+        <meta name="twitter:description" content="Understanding U.S. Denmark Relations from the 19th Century to the Modern Day."/>
+        <meta name="twitter:image:src" content="www.ncaldwellgatsos.com/projects/geo/images/denmark.jpg"/>
+    </head>
+    
+    
+    <body>
+        <svg id="fader">
+            <div id="main">
+                <div id="topMain">
+                    <div id="myHeader">
+                        <div id="myLogo">&#127758</div>
+                        <div id="myLinks">
+                            <div class="aLink">My Blog</div>
+                            <div class="aLink">My Data</div>
+                            <div class="aLink">Countries</div>
+                            <div class="aLink">Predictions</div>
+                        </div>
+                    </div>
+                    <div id="myTitle">
+                        <div id="myTag">
+                            <div class="aTag">Relationship Overview</div>
+                        </div>
+                        <div class="aTitle">U.S. - Danish Relations</div>
+                    </div>
+                </div>
+                <div id="middleMain">
+                    <div id="introWrapper">
+                        <div id="metaContainer">
+                            <div id="subtitle">A Responsive & Compatible Ally</div>
+                            <div id="author">Research & Text by Noah Caldwell-Gatsos</div>
+                            <div id="introText">As one of the founding members of the North Atlantic Treaty Organization, Denmark is a historical and formal ally of the United States. With many shared cultural, economic, and governing values, both nations have worked well together repeatedly in modern history.</div>
+                        </div>
+                        <div id="introContainer">
+                            <div class="block" id="myIntro">Denmark has been a highly reliable, modern, and capable military ally from the first Gulf War to countering the Islamic State. Denmark has been involved in every major U.S. military campaign for the last 30 years - to the point of sending Arctic-based ships to the Gulf not equipped with air conditioning. Since 1951, Denmark has hosted the U.S. Thule Air Base in Greenland. Small, secure powers like Denmark have been safe, long-term investments for American money and influence for more than a half-century (i.e. one that won’t confiscate it and destroy property in the midst of a war).</div><br>
+                            <div class="block">The Danish value their relationship with the United States highly, acknowledging the mutual benefits that result from such a partnership. They have been willing  to realign various aspects of their power projection - both militaristically and economically, to suit American needs.</div>
+                        </div>
+                    </div>
+                    <div id="recWrapper">
+                        <div id="recImage"></div>
+                        <div id="recContainer">
+                            <div id="recTitle">Policy Recommendations for Future Presidential Administrations</div>
+                            <div id="positions">
+                                <ol class="aList">
+                                    <li>Denmark is highly sensitive of their minor position in NATO, and their government actively tries to find ways of making meaningful contributions to the alliance beyond sums of money. Future presidential administrations should value and acknowledge this reality instead of disparaging them.</li>
+                                    <li>Take advantage of Danish naval expertise by seeking ways to bring both navies closer together through joint military exercises and increased communication.</li>
+                                    <li>Don't try and buy Greenland. Invest in it instead, or offer to assist the Danish in subsidizing the living costs of the island's native inhabitants.</li>
+                                    <li>Nominate an ambassador knowledgeable in commercial shipping. Diplomats in Copenhagen are often political appointees, so if a career diplomat isn't an option, select one with expertise in sea trade.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dataWrapper"></div>
+                    <div id="americaWrapper"></div>
+                </div>
+                <div id="bottomMain"></div>
+                <div id="footerMain"></div>
+            </div>
+        </svg>
+    <script>
+            fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+            }
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+            return;
+            }
+                    var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+    </script>
+    </body>
+</html>

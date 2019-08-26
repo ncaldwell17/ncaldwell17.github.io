@@ -1,0 +1,290 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    margin-top: 0px;
+    background-color: rgba(245, 242, 228,  0.5);
+}
+
+body a {
+    text-decoration: none;
+}
+
+/* fader */
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+} 
+
+#main {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    min-width: 1000px;
+}
+
+#topMain {
+    height: 600px;
+    width: 100%;
+    background-image: url(/projects/geo/backgrounds/denmark.jpeg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#myHeader {
+    height: 100px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#myLogo {
+    height: 75px;
+    width: 70px;
+    margin-left: 2%;
+    margin-right: 7%;
+    color: white;
+    font-size: 69px;
+    text-align: center;
+    float: left;
+    margin-top: 15px;
+}
+#myLinks {
+    height: 75px;
+    width: 65%;
+    float: left;
+    margin-left: 15%;
+    margin-top: 15px;
+}
+.aLink {
+    height: 33px;
+    width: 23%;
+    margin-left: 2%;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 40px;
+    float: left;
+    border-bottom: 2px solid white;
+    color: white;
+} .aLink:hover {
+    color: #de7942;
+    border-bottom: 2px solid #de7942;
+    transition: 1s;
+    cursor: pointer;
+}
+#myTitle {
+    height: 300px;
+    width: 40%;
+    margin-right: 5%;
+    margin-top: 150px;
+    float: right;
+}
+#myTag {
+    height: 25px;
+    width: 100%;
+    font-family: 'News Cycle', sans-serif;
+}
+.aTag {
+    height: 30px;
+    font-weight: bolder;
+    width: 45%;
+    background-color: #de7942;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    float: right;
+}
+.aTitle {
+    font-size: 80px;
+    text-align: right;
+    color: white;
+    float: right;
+    background-color: rgba(222, 121, 66, 0.7);
+    font-family: 'Lato';
+}
+
+#middleMain {
+    width: 100%;
+    background-color: #f5f2e4;
+}
+
+#introWrapper {
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    background-color: #f5f2e4;
+    color: #114561;
+}
+#metaContainer {
+    height: 360px;
+    width: 45%;
+    float: left;
+    margin-top: 70px;
+}
+#subtitle {
+    height: 150px;
+    font-size: 56px;
+    text-align: right;
+    font-family: 'Lato';
+    font-weight: bolder;
+    border-left: 10px solid #114561;
+    width: 95%;
+}
+#author {
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: right;
+    font-weight: bold;
+    color: #de7942;
+    width: 98%;
+}
+#introText {
+    font-size: 18px;
+    font-family: 'News Cycle';
+    text-align: right;
+    margin-top: 15px;
+    font-weight: bold;
+    font-style: italic;
+    width: 98%;
+}
+#introContainer {
+    height: 400px;
+    width: 55%;
+    float: left;
+    margin-top: 50px;
+}
+.block {
+    width: 70%;
+    margin: auto;
+    font-family: 'News Cycle';
+    font-size: 15px;
+}
+#myIntro {
+    margin-top: 10px;
+}
+
+#recWrapper {
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    color: #114561;
+    /* background-color: #f5f2e4; */
+}
+#recImage {
+    height: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40%;
+    float: left;
+    background-image: url(backgrounds/denmark2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+#recContainer {
+    height: 500px;
+    width: 50%;
+    float: left;
+}
+#recTitle {
+    width: 95%;
+    font-size: 40px;
+    font-family: 'Lato';
+    font-weight: bolder;
+    border-right: 5px solid #114561;
+    padding-right: 5px;
+}
+#positions {
+    width: 95%;
+}
+.aList {
+    font-family: 'News Cycle';
+    font-size: 15px;
+}
+
+
+#dataWrapper {
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    background-color: #f5f2e4;
+}
+#americaWrapper {
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    background-color: #f5f2e4;
+}
+
+#bottomMain {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(33, 134, 189);
+}
+#footerMain {
+    width: 100%;
+    height: 100px;
+    background-color: #de7942;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1300px) { 
+    #introWrapper, #recWrapper {
+        width: 99%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,10 +9,12 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- CSS -->
             <link rel="stylesheet" href="index.css">
-            <!-- insert font here --> 
+            <link rel="stylesheet" href="animate.min.css">
+        <!-- insert font here --> 
             <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Notable&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans&display=swap' rel='stylesheet'>
         <!-- JS -->
             <script src="index.js"></script>
             <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -35,6 +37,155 @@
                                      style="border-bottom: none;">Contact</div></a>
         </div>
         <div class="main" id="section2">
+            <div class="photoWrapper" id="myPhoto">
+                <div class="mainWrapper">
+                    <div class="void"></div>
+                    <div class="myAnimation">
+                        <div class="anAccomp" id="default">
+                            <div class="AccompTitle" style="font-size: 80px; background-color: rgba(0,0,0,0.7)">About Me</div>
+                            <div class="InfoWrapper" style="text-align: center; background-color: rgba(0,0,0,0.7); padding-top: 50px;">
+                                <div class="AccompDescrip" style="width: 100%; margin-top: -50px;margin-bottom: 20px;">I'm a programmer/economist/aspiring Chopped contestant based out of Chicago.</div> 
+                                <a href="iResume.html">
+                                <span id="SeeMore" 
+                                      style="margin: auto; padding: 10px; font-size: 30px; width: 100%;"
+                                      onclick="revealDiv('adefault')">| Drag the Icon Below |</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="anAccomp" id="aMoscow">
+                            <div class="AccompTitle">U.S. State Department</div>
+                            <div class="InfoWrapper">
+                                <div class="AccompLogo" style="background-image: url(/images/state.png)"></div>
+                                <div class="AccompDescrip">Political  Affairs and Communications Intern with the U.S. Embassy in Moscow
+                                <span id="SeeMore" onclick="revealDiv('moscow')">| See More |</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anAccomp" id="aDC">
+                            <div class="AccompTitle">The App Association</div>
+                            <div class="InfoWrapper">
+                                <div class="AccompLogo" style="background-image: url(/images/state.png)"></div>
+                                <div class="AccompDescrip">Technology and Public Policy Intern on China and U.S. Computer Science Education
+                                <span id="SeeMore"
+                                      style
+                                      onclick="revealDiv('dc')">| See More |</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anAccomp" id="aMexico">
+                            <div class="AccompTitle" style="font-size: 80px;">Miami University</div>
+                            <div class="InfoWrapper">
+                                <div class="AccompLogo" style="background-image: url(/images/state.png)"></div>
+                                <div class="AccompDescrip">Student Researcher on the Chinese and Mexican Informal Economies and Supply Chains
+                                <span id="SeeMore" 
+                                      style="margin-left: 20px;"
+                                      onclick="revealDiv('mexico')">| See More |</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anAccomp" id="aNW">
+                            <div class="AccompTitle">Northwestern University</div>
+                            <div class="InfoWrapper">
+                                <div class="AccompLogo" style="background-image: url(/images/state.png)"></div>
+                                <div class="AccompDescrip">Master's Candidate in Artificial Intelligence, Thesis on Synthetic Data Manipulation
+                                <span id="SeeMore" 
+                                      style="margin-left: 40px;"
+                                      onclick="revealDiv('nw')">| See More |</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anAccomp" id="aQuid">
+                            <div class="AccompTitle">Quiddity Solutions</div>
+                            <div class="InfoWrapper">
+                                <div class="AccompLogo" style="background-image: url(/images/state.png)"></div>
+                                <div class="AccompDescrip">Machine Learning Engineer and Natural Language Processing Specialist
+                                <span id="SeeMore" onclick="revealDiv('quid')">| See More |</span>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            function revealDiv(idName) {
+                                var v = document.getElementById('void');
+                                var sm = document.getElementById('SeeMore');
+                                var div = document.getElementById(idName);
+                                if (div.style.display === "none") {
+                                    v.style.display = "none";
+                                    div.style.display = "block";
+                                    sm.innerHTML = "| See Less |";
+                                }
+                                else {
+                                    v.style.display = "block";
+                                    div.style.display = "none";
+                                    sm.innerHTML = "| See More |";
+                                }
+                            };    
+                        </script>
+                    </div>
+                    <div class="expanded" id="adefault" style="display: none;"></div>
+                    <div class="expanded" id="moscow" style="display: none;"></div>
+                    <div class="expanded" id="dc" style="display: none;"></div>
+                    <div class="expanded" id="mexico" style="display: none;"></div>
+                    <div class="expanded" id="nw" style="display: none;"></div>
+                    <div class="expanded" id="quid" style="display: none;"></div>
+                    <div id="void" style="height: 250px;"></div>
+                    <div id="alterBar">
+                        <div id="dragg" ondragstart="dragStart(event)" draggable="True">Drag-></div>
+                        <div class="draggdrop" id="two014" ondrop="drop(event, 'default', 'Me!')" ondragover="allowDrop(event)"></div>
+                        <div class="draggdrop" id="two015" ondrop="drop(event, 'aMoscow', '2015')" ondragover="allowDrop(event)"></div>
+                        <div class="draggdrop" id="two016" ondrop="drop(event, 'aDC', '2016')" ondragover="allowDrop(event)"></div>
+                        <div class="draggdrop" id="two016" ondrop="drop(event, 'aMexico', '2017')" ondragover="allowDrop(event)"></div>
+                        <div class="draggdrop" id="two016" ondrop="drop(event, 'aNW', '2018')" ondragover="allowDrop(event)"></div>
+                        <div class="draggdrop" id="two016" ondrop="drop(event, 'aQuid', '2019')" ondragover="allowDrop(event)"></div>
+                        <script>
+                            function dragStart(event) {
+                              event.dataTransfer.setData("Text", event.target.id);
+                                var back = document.getElementById('myPhoto')
+                                back.style.backgroundImage = "url(/images/moscowbackground.jpg)";
+                            }
+
+                            function allowDrop(event) {
+                              event.preventDefault();
+                            }
+
+                            function drop(event, accompID, sometext) {
+                                var myLst = ['default','aMoscow','aDC','aMexico','aNW','aQuid']; 
+                                event.preventDefault();
+                                
+                                var eLst = ['adefault','moscow','dc','mexico','nw','quid'];
+                                var data = event.dataTransfer.getData("Text");
+                                var depo = document.getElementById('dragg');
+                                event.target.appendChild(document.getElementById(data));
+                                depo.innerHTML = sometext;
+                                var target = document.getElementById(accompID);
+                                var fLen = myLst.length;
+                                console.log(fLen);
+                                
+                                
+                                for (i in myLst){
+                                   // document.getElementById(myLst[i]).classList.add('animated', 'rollOut');
+                                    document.getElementById(myLst[i]).style.display = "none";
+                                }
+                                for (i in eLst) {
+                                    var v = document.getElementById('void');
+                                    var sm = document.getElementById('SeeMore');
+                                    document.getElementById(eLst[i]).style.display = "none";
+                                    v.style.display = "block";
+                                    sm.innerHTML = '| See More |';
+                                }
+                                
+                                target.style.display = "block";
+                                if (target === 'default'){
+                                    var sm = document.getElementById('SeeMore');
+                                    sm.innerHTML = '| See Full Resume |'
+                                };
+                                //target.classList.add('animated', 'rollIn');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main" id="section2" style="display: none;">
             
             <div class="blankSpace2"></div>
             <div id="convWrapper">
@@ -80,7 +231,7 @@
                 <a href="/projects/geo/geo.html">
                     <div class="aProject"><br class="break">Geopolitics</div>
                 </a>
-                <div class="aProject">Development and Informal <br class="break">Economics</div>
+                <div class="aProject">Development & Informal <br class="break">Economics</div>
                 <div class="aProject"><br class="break">Cybersecurity</div>
                 <div class="aProject"><br class="break">Local Issues</div>
           
@@ -92,6 +243,26 @@
         </div>
         <div class="main" id="section4">
             <div class="blogContainer">
+                <div class="phoneBlogHeader" id="pbh" onclick="trigSel()">
+                    <div class="selector">
+                        <div class="aPhoneOption">See More</div>
+                        <div class="trigger">>></div>
+                    </div>
+                    <script> function trigSel() {
+                                var pbh = document.getElementById("pbh");
+                                var see = document.getElementById("selectee");
+                                pbh.style.display = "none";
+                                see.style.display = "block";
+                             }
+                    </script>
+                </div>
+                <div id="selectee">
+                    <div class="aPhoneOption2">Recent</div>
+                    <div class="aPhoneOption2">Archive</div>
+                    <div class="aPhoneOption2">Videos</div>
+                    <div class="aPhoneOption2">Travel</div>
+                    <div class="aPhoneOption2">About</div>
+                </div>
                 <div class="blogHeader">
                     <div class="option">Archive</div>
                     <div class="option">Videos</div>
@@ -101,35 +272,42 @@
                 
                 
                 </div>
-                <div class="blogFront" style="background-image: url(/projects/geo/images/bp4front.jpeg);
+                <div class="blogFront" style="background-image: url(/projects/geo/images/bp5front.jpeg);
                                               background-position: top;"></div>
                 
-                <a href="/projects/geo/posts/geo_bp4.html"><div class="blogPost">
-                    <div class="myTitle"><b>ITALY - Matteo Salvini Just Kept Italy in the E.U. For Another Five Years</b></div>
-                    <div class="bpDate">8/20/2019 @ 4:11PM CST</div>
-                    <div class="bpPreview">Euroskeptic Far-Right Deputy Prime Minister Matteo Salvini just played a very good hand extremely badly. The Italian Left has the potential to get rid of him once and for all.</div>
+                <a href="/projects/geo/posts/geo_bp5-%20Neo-Colonial-%20Trump-%20Greenland-%20Denmark.html"><div class="blogPost">
+                    <div class="myTitle"><b>GREENLAND - Why Trump Trying to Buy Greenland Wasn't Completely Absurd</b></div>
+                    <div class="bpDate">8/26/2019 @ 11:58AM CST</div>
+                    <div class="bpPreview">Greenland has new importance in the 21st Century. But did Trump just ruin any expansion of American interests?</div>
                 </div></a>
-                
+
                 <div class="blogArchive">
                     <div class="baHeader">See Recent Posts</div>
                     <div class="baMatrix">
+                        <a href="/projects/geo/posts/geo_bp4.html">
+                            <div class="aPost">
+                                <div class="aPostDate">Last Week</div>
+                                <div class="aPostImage" style="background-image: url(/projects/geo/images/bp4front.jpeg)"></div>
+                                <div class="aPostCaption">Italy's Salvini Made<br>a Big Mistake</div>
+                            </div>
+                        </a>     
                         <a href="/projects/geo/posts/geo_bp3.html">
                             <div class="aPost">
-                                <div class="aPostDate">Yesterday</div>
+                                <div class="aPostDate">Last Week</div>
                                 <div class="aPostImage" style="background-image: url(/projects/geo/images/bp3front.jpeg)"></div>
                                 <div class="aPostCaption">What are Beijing's<br>Options in Hong Kong?</div>
                             </div>
                         </a>
                         <a href="/projects/elections/posts/elections_bp7.html">
                             <div class="aPost">
-                                <div class="aPostDate">Yesterday Morning</div>
+                                <div class="aPostDate">Last Week</div>
                                 <div class="aPostImage" style="background-image: url(/projects/elections/images/bp7front.png)"></div>
                                 <div class="aPostCaption">A  Look Inside the<br>2020 Democratic Campaigns</div>
                             </div>
                         </a>
                         <a href="/projects/ai/posts/ai_bp6.html">
                             <div class="aPost">
-                                <div class="aPostDate">Yesterday Morning</div>
+                                <div class="aPostDate">Last Week</div>
                                 <div class="aPostImage" style="background-image: url(/projects/ai/images/bp6front.jpeg)"></div>
                                 <div class="aPostCaption">Don't Say You're Using 'AI'<br>When You're Pitching an Idea</div>
                             </div>
@@ -141,14 +319,7 @@
                                 <div class="aPostCaption">Why Do Progressives<br>Lose Senate Races?</div>
                             </div>
                         </a>
-                        <a href="/projects/ai/posts/ai_bp5.html">
-                            <div class="aPost">
-                                <div class="aPostDate">Last Week</div>
-                                <div class="aPostImage" style="background-image: url(/projects/ai/images/bp5front.jpg)"></div>
-                                <div class="aPostCaption">A short overview of<br>Deep Reinforcement Learning</div>
-                            </div>
-                        </a>     
-                    </div>
+                        </div>
                 
                 </div>
             
@@ -197,11 +368,6 @@
             
             
         </div>
-    
-    
-    
-    
-    
     </body>
     <script>
     // When the user scrolls the page, execute myFunction 
@@ -223,7 +389,8 @@
 
     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function myFunction() {
-        if (window.pageYOffset > 550 && window.pageYOffset < 1900) {
+        var ph = window.innerHeight;
+        if (window.pageYOffset > 550 && window.pageYOffset < (ph*2 - 50)) {
             header.classList.add("sticky");
             resume.innerHTML = '<div>Resume</div>';
             resume.classList.add("active-top");
@@ -232,7 +399,7 @@
             contact.classList.remove("active-bottom");
         }
         
-        else if (window.pageYOffset > 1900 && window.pageYOffset < 2850) {
+        else if (window.pageYOffset > (ph*2) && window.pageYOffset < (ph*3 - 50)) {
             header.classList.add("sticky");
             resume.innerHTML = '<div>Resume</div>';
             resume.classList.remove("active-top");
@@ -241,7 +408,7 @@
             contact.classList.remove("active-bottom");
         }
 
-        else if (window.pageYOffset > 2850 && window.pageYOffset < 3800) {
+        else if (window.pageYOffset > (ph*3) && window.pageYOffset < (ph*4 - 50)) {
             header.classList.add("sticky");
             resume.innerHTML = '<div>Resume</div>';
             resume.classList.remove("active-top");
@@ -250,7 +417,7 @@
             contact.classList.remove("active-bottom");
         } 
         
-        else if (window.pageYOffset > 3800) {
+        else if (window.pageYOffset > (ph*4 - 50)) {
             header.classList.add("sticky");
             resume.innerHTML = '<div>Resume</div>';
             resume.classList.remove("active-top");
@@ -273,6 +440,8 @@
     var page_height = String(window.innerHeight)+"px";
     console.log(page_height);
     window.onload = fit_to_view(page_height, "section1");
+    window.onload = fit_to_view(page_height, "section2");
+    window.onload = fit_to_view(page_height, "section3");
     
     </script>
 </html>

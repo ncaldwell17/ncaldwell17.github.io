@@ -137,9 +137,130 @@ body {
 
 
 #section2 {
-    background-color: #6297CA;
+    background-color: #4682b4;
     /*color: #1D4058;*/
     color: white;
+}
+.void {
+    height: 100px;
+}
+.photoWrapper {
+    background-image: url(/images/moscow2.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.myAnimation {
+    height: 400px;
+}
+.mainWrapper {
+    height: 100%;
+    width: 78%;
+    margin-left: 2%;
+}
+
+#alterBar {
+    background-color: steelblue;
+    height: 50px;
+    border: 5px solid white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.expanded {
+    background-color: white;
+    height: 250px;
+    display: none;
+}
+#two014 {
+    margin-left: 20px;
+}
+#dragg {
+    height: 50px;
+    width: 11vw;
+    background-color: white;
+    color: steelblue;
+    font-family: 'PT Sans';
+    font-size: 40px;
+    text-align: center;
+    float: left;
+    position: absolute;
+}
+.draggdrop {
+    height: 50px;
+    width: 11vw;
+    float: left;
+    border-right: 10px solid white;
+}
+
+#SeeMore {
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 100px;
+}
+#SeeMore:hover {
+    background-color: steelblue;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.anAccomp {
+    height: 350px;
+    width: 550px;
+    padding-top: 60px;
+    margin: auto;
+    font-family: 'PT Sans';
+    color: white;
+}
+#default {
+    display: block;
+}
+#aMoscow {
+    display: none;
+}
+#aDC {
+    display: none;
+}
+#aMexico {
+    display: none;
+}
+#aNW {
+    display: none;
+}
+#aQuid {
+    display: none;
+}
+
+.AccompTitle {
+    font-size: 70px;
+    text-align: center;
+    font-weight: bolder;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(100,100,100,0.5);
+}
+.InfoWrapper {
+    height: 100px;
+    background-color: rgba(100,100,100,0.5);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.AccompLogo {
+    height: 100%;
+    width: 20%;
+    float: left;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.AccompDescrip {
+    font-size: 25px;
+    margin-left: 10px;
+    width: 75%;
+    float: left;
 }
 
 #downloadit {
@@ -230,21 +351,22 @@ body {
 }
 
 .projectMatrix  {
-    height: 830px;
+    height: 90%;
     width: 80%;
     margin-left: 2vw;
 }
 
 .aProject {
-    height: 300px;
+    height: 33%;
     padding-top: 100px;
     width: 32%;
     float: left;
     margin-right: 1vw;
-    background-color: #6297CA;
+    background-color: #4682b4;
     margin-bottom: 20px;
     font-size: 40px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .aProject:hover {
@@ -256,7 +378,7 @@ body {
 
 
 #section4 {
-    background-color: #6297CA;
+    background-color: #4682b4;
     
 }
 
@@ -311,13 +433,23 @@ body {
   font-style: italic;
 }
 
+#selectee {
+    display: none;
+}
+
 .blogContainer {
     margin-left: 20px;
     padding-top: 20px;
-    width: 80%;
+    width: 95%;
+    margin: auto;
 }
 
-
+.phoneBlogHeader {
+    display: none;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
 .blogHeader {
     height: 50px;
     margin-left: 50px;
@@ -340,22 +472,22 @@ body {
 
 .blogFront {
     height: 500px;
-    width: 126%;
-    margin-left: -30px;
+    width: 110%;
+    margin-left: -40px;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 }
 .blogPost {
     height: 260px;
     margin-top: -400px;
-    width: 30vw;
     margin-left: 50px;
-    background-color: #6297CA;
+    background-color: rgba(70,130,180, 0.5);
 }
 
 .blogArchive {
     height: 300px;
-    margin-top: 220px;
+    width: 80%;
+    margin-top: 175px;
 }
 
 .myTitle {
@@ -465,7 +597,7 @@ body {
     text-align: center;
     font-weight: bold;
     color: white;
-    background-color: #6297CA;
+    background-color: #4682b4;
     border-radius: 15px;
     margin-right: 20px;
 }
@@ -684,11 +816,53 @@ body {
     
     
     /* Section 4 */ 
+    .phoneBlogHeader {
+        display: block;
+        background-color: #4682B4;
+        height: 50px;
+        font-weight: bolder;
+    }
+    .selector {
+        width: 60%;
+        margin: auto;
+    }
+    .aPhoneOption {
+        height: 45px;
+        width: 60%;
+        float: left;
+        text-align: center;
+        font-size: 25px;
+        padding-top: 5px;
+    }
+    .trigger {
+        width: 39%;
+        float: left;
+        text-align: center;
+        font-size: 30px;
+    }
+    #selectee {
+        height: 250px;
+        margin-bottom: -200px;
+        position: relative;
+        display: none;
+    }
+    .aPhoneOption2 {
+        background-color: white;
+        color: #4682B4;
+        font-size: 35px;
+        padding-top: 5px;
+        border-bottom: 5px solid #4682B4;
+        text-align: center;
+        
+    }
+    .blogFront {
+        width: 100%;
+        margin: auto;
+    }
     .blogHeader {
-        margin-left: -5px;
+        display: none;
     }
     .option {
-        font-size: 20px;
         margin-right: 45px;
         margin-left: 20px;
     }
@@ -708,12 +882,18 @@ body {
     .blogPost {
         margin-top: 50px;
         margin-left: 0px;
-        width: 110%;
+        width: 100%;
         height: 240px;
         margin-bottom: 50px;
+        text-align: center;
     }
     .myTitle {
         font-size: 30px;
+    }
+    .bpDate {
+        text-align: center;
+        margin-right: 125px;
+        margin-top:  30px;
     }
     
     

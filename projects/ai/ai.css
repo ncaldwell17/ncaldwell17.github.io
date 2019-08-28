@@ -107,6 +107,30 @@ a {
     font-family: 'PT Sans', sans-serif;
 }
 
+#myOptions {
+    background-color: #999999;
+    height: 80px;
+    color: black;
+    margin-top: 50px;
+}
+.myOption {
+    height: 71px;
+    border: 2px solid white;
+    width: 49.59%;
+    font-family: 'PT Sans';
+    font-weight: bolder;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 5px;
+    float: left;
+}
+.myOption:hover {
+    background-color: white;
+    cursor: pointer;
+    transition: 1s;
+    border: 2px solid #999999;
+}
+
 .options {
     background-color: #999999;
     margin-top: 20px;

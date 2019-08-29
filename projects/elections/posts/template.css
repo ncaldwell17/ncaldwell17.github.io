@@ -247,6 +247,8 @@ p a {
     border-collapse: collapse;
     width: 70%;
     margin: auto;
+    table-layout: fixed;
+    box-sizing: border-box;
 }
 
 #candidates td, #candidates th {

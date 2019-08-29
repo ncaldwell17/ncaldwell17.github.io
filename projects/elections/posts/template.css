@@ -242,6 +242,35 @@ p a {
     height:  200px;
 }
 
+#candidates {
+    font-family: 'PT Sans';
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+}
+
+#candidates td, #candidates th {
+    border: 1px solid white;
+    padding: 8px;
+    color: #384D8A;
+}
+
+#candidates tr:nth-child(even) {
+    background-color: #f2f2f2;
+    
+}
+#candidates tr:hover {
+    background-color: #ddd;
+}
+
+#candidates th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #384D8A;
+    color: white;
+}
+
 @media screen and (max-width: 750px) {
     .header {
         visibility: hidden;

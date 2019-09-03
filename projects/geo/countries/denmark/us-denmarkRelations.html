@@ -9,23 +9,64 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- CSS -->
             <link rel="stylesheet" href="/projects/geo/relations.css">
-        <!-- insert font here --> 
-            <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-            <link href='https://fonts.googleapis.com/css?family=PT+Sans&display=swap' rel='stylesheet'>
-            <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">        
-        <!-- Social Media icons --> 
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- insert font here --> 
+                <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+                <link href='https://fonts.googleapis.com/css?family=PT+Sans&display=swap' rel='stylesheet'>
+                <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">        
+            <!-- Social Media icons --> 
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- JS -->
             <script src="/projects/geo/relations.js"></script>
+            <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <!-- Twitter Card --> 
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:site" content="@ncaldwellgatsos">
-        <meta name="twitter:creator" content="@noahcaldwell">
-        <meta name="twitter:title" content="An Overview of U.S.-Denmark Relations"/> 
-        <meta name="twitter:description" content="Understanding U.S. Denmark Relations from the 19th Century to the Modern Day."/>
-        <meta name="twitter:image:src" content="www.ncaldwellgatsos.com/projects/geo/images/denmark.jpg"/>
+            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:site" content="@ncaldwellgatsos">
+            <meta name="twitter:creator" content="@noahcaldwell">
+            <meta name="twitter:title" content="An Overview of U.S.-Denmark Relations"/> 
+            <meta name="twitter:description" content="Understanding U.S. Denmark Relations from the 19th Century to the Modern Day."/>
+            <meta name="twitter:image:src" content="www.ncaldwellgatsos.com/projects/geo/images/denmark.jpg"/>
     </head>
     
+    <!-- Unique Page Style --> 
+    <style>
+        body a {
+            text-decoration: none;
+            color: #114561;
+            font-weight: bold;
+        }
+        #topMain {
+            height: 600px;
+            width: 100%;
+            background-image: url(/projects/geo/backgrounds/denmark.jpeg);
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #middleMain {
+            width: 100%;
+            background-color: #f5f2e4;
+            color: #114561;
+        }
+        #bottomMain {
+            width: 100%;
+            height: 200px;
+            background-color: rgba(33, 134, 189);
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        #footerMain {
+            width: 100%;
+            height: 100px;
+            background-color: #de7942;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-bottom: 50px;
+        }
+    
+    </style>
     
     <body>
         <svg id="fader">
@@ -34,9 +75,9 @@
                     <div id="myHeader">
                         <div id="myLogo">&#127758</div>
                         <div id="myLinks">
-                            <div class="aLink">My Blog</div>
-                            <div class="aLink">My Data</div>
-                            <div class="aLink">Countries</div>
+                            <div class="aLink">Election Page</div>
+                            <div class="aLink">Leader Profile</div>
+                            <div class="aLink">Investment</div>
                             <div class="aLink">Predictions</div>
                         </div>
                     </div>
@@ -50,8 +91,8 @@
                 <div id="middleMain">
                     <div id="introWrapper">
                         <div id="metaContainer">
-                            <div id="subtitle">A Responsive & Compatible Ally</div>
-                            <div id="author">Research & Text by Noah Caldwell-Gatsos</div>
+                            <div id="subtitle" style="border-left: 10px solid #114561;">A Responsive & Compatible Ally</div>
+                            <div id="author" style="color: #de7942;">Research & Text by Noah Caldwell-Gatsos</div>
                             <div id="introText">As one of the founding members of the North Atlantic Treaty Organization, Denmark is a historical and formal ally of the United States. With many shared cultural, economic, and governing values, both nations have worked well together repeatedly in modern history.</div>
                         </div>
                         <div id="introContainer">
@@ -62,7 +103,7 @@
                     <div id="recWrapper">
                         <div id="recImage"></div>
                         <div id="recContainer">
-                            <div id="recTitle" style="margin-left: -15px;">Policy Recommendations for Future Presidential Administrations</div>
+                            <div id="recTitle" style="margin-left: -15px; border-right: 5px solid #114561;">Policy Recommendations for Future Presidential Administrations</div>
                             <div id="positions">
                                 <ol class="aList">
                                     <li>Denmark is highly sensitive of their minor position in NATO, and their government actively tries to find ways of making meaningful contributions to the alliance beyond sums of money. Future presidential administrations should value and acknowledge this reality instead of disparaging them.</li>
@@ -73,11 +114,214 @@
                             </div>
                         </div>
                     </div>
-                    <div id="dataWrapper"></div>
-                    <div id="americaWrapper"></div>
+                    <div id="geoWrapper">
+                        <div id="geoTitle" style="color: #de7942;
+                                                  border-left: 5px solid #de7942">Larger Geopolitical Implications</div>
+                        <ul class="geotextWrapper">
+                            <li class="geoText">Denmark is at the forefront of American strategy against Russia.</li>
+                            <li class="geoText">Aside from their control of the geopolitically important Skagerrak Strait, Denmark hosts several U.S. bases and contributes to American military operations worldwide.</li>
+                            <li class="geoText">Their naval presence and sea borders essentially restrict Russia from exercising naval power out of their second largest city and major economic center, St. Petersburg.</li>
+                            <li class="geoText">A good relationship with Denmark allows us to limit Russian extensions of soft and hard power by having Copenhagen block projects like the Nord Stream 2 gas pipeline while alerting our naval commanders to Russian submarine movements.</li>
+                        </ul>
+                        <div id="geoPhoto" style="background-image: url(/projects/geo/backgrounds/denmark3.jpeg)"></div>
+                    </div>
+                    <div id="americaWrapper">
+                        <div id="americaTitle" style="border-right: 10px solid #114561;
+                                                      border-left: 10px solid #114561;">Past Presidential Administrations'<br>Policies towards Denmark</div>
+                        <div class="anAdministration" style="background-color: #114561;">
+                            <div class="adminName">The Trump Administration [2017 - ????]</div>
+                            <i class="fa fa-minus moreIcon" id="trumpIcon" onclick="togAdmin('trump')" style="color: #de7942;
+                                                                  font-size: 40px"></i>
+                        </div>
+                        <div class="adminWrapper" id="trump" style="display: block">
+                            <div class="adminPhoto" style="background-image: url(/projects/geo/backgrounds/trump.jpg)"></div>
+                            <div class="adminInfo" style="margin-top: 10px;"><b>Party: </b>Republican</div>
+                            <div class="adminInfo"><b>Foreign Policy Ideology: </b>Bilateral Isolationist</div>
+                            <div class="adminInfo"><b>Secretary of State: </b> 
+                                <a href="https://en.wikipedia.org/wiki/Rex_Tillerson">Rex Tillerson</a> (2017-2018)
+                                , 
+                                <a href="https://en.wikipedia.org/wiki/Mike_Pompeo">Mike Pompeo</a> (2018-????)</div>
+                            <div class="adminInfo"><b>Ambassador: </b> 
+                                Carla Sands (2018 - ????)</div>
+                            <ul class="adminText">
+                                <li>The Trump Administration has a distrust of Denmark and other NATO allies for their percieved lack of concrete contributions to mutual defense.</li>
+                                <li>In August 2019, the Trump Administrated tweeted an offer to buy Greenland, which was rebuffed by the Frederiksen Government. Trump subsequently cancelled a state visit to Copenhagen.</li>
+                                <li>Secretary of State Pompeo has since made a call to his Danish counterpart, Jeppe Kofod, and reaffirmed the close relationship between the two countries.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="anAdministration" style="background-color: #114561;">
+                            <div class="adminName">The Obama Administration [2009 - 2017]</div>
+                            <i class="fa fa-plus moreIcon" id="obamaIcon" onclick="togAdmin('obama')" style="color: #de7942;
+                                                                  font-size: 40px"></i>
+                        </div>
+                        <div class="adminWrapper" id="obama" style="display: none">
+                            <div class="adminPhoto" style="background-image: url(/projects/geo/backgrounds/obama.jpg)"></div>
+                            <div class="adminInfo" style="margin-top: 10px;"><b>Party: </b>Democratic</div>
+                            <div class="adminInfo"><b>Foreign Policy Ideology: </b>Multilateral Internationalist</div>
+                            <div class="adminInfo"><b>Secretary of State: </b> 
+                                <a href="https://en.wikipedia.org/wiki/Hillary_Clinton">Hillary Clinton</a> (2009-2012)
+                                , 
+                                <a href="https://en.wikipedia.org/wiki/John_Kerry">John Kerry</a> (2012-2017)</div>
+                            <div class="adminInfo"><b>Ambassador: </b> 
+                                Laurie S. Fulton (2009-2013)
+                                , 
+                                Rufus Gillford (2013-2017)</div>
+                            <ul class="adminText">
+                                <li>The Obama Administration interacted with Denmark in a similar manner as the rest of the European Union, emphasizing climate change, mutual collaboration, and the NATO alliance.</li>
+                                <li>The duration of Obama's term was marked by relative stability in Western Europe, with no major geopolitical shifts happening.</li>
+                                <li>The Obama Administration supported Danish Prime Minister Anders Rasmussen's bid to become the Secretary General of NATO in 2009.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="anAdministration" style="background-color: #114561;">
+                            <div class="adminName">The W. Bush Administration [2001 - 2009]</div>
+                            <i class="fa fa-plus moreIcon" id="bushIcon" onclick="togAdmin('bush')" style="color: #de7942;
+                                                                  font-size: 40px"></i>
+                        </div>
+                        <div class="adminWrapper" id="bush" style="display: none">
+                            <div class="adminPhoto" style="background-image: url(/projects/geo/backgrounds/bush.jpeg)"></div>
+                            <div class="adminInfo" style="margin-top: 10px;"><b>Party: </b>Republican</div>
+                            <div class="adminInfo"><b>Foreign Policy Ideology: </b>Multilateral Interventionist</div>
+                            <div class="adminInfo"><b>Secretary of State: </b> 
+                                <a href="https://en.wikipedia.org/wiki/Colin_Powell">Colin Powell</a> (2001 - 2005)
+                                , 
+                                <a href="https://en.wikipedia.org/wiki/Condolezza_Rice">Condolezza Rice</a> (2005 - 2009)</div>
+                            <div class="adminInfo"><b>Ambassador: </b> Stuart Bernstein (2001 - 2005), James Cain (2005 - 2009)</div>
+                            <ul class="adminText">
+                                <li>The Bush Administration considered Denmark a close ally when it came to security.</li>
+                                <li>Denmark was quick to support the War in Iraq and defended intelligence (since debunked) that Iraq possessed weapons of mass destruction.</li>
+                                <li>U.S. Secretary of Defense Donald Rumsfeld bluntly divided Europe into 'Old Europe' and 'New Europe' based on who supported Operation Iraqi Freedom, but included Denmark in the latter.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="anAdministration" style="background-color: #114561;">
+                            <div class="adminName">The Clinton Administration [1993 - 2001]</div>
+                            <i class="fa fa-plus moreIcon" id="clintonIcon" onclick="togAdmin('clinton')" style="color: #de7942;
+                                                                  font-size: 40px"></i>
+                        </div>
+                        <div class="adminWrapper" id="clinton" style="display: none">
+                            <div class="adminPhoto" style="background-image: url(/projects/geo/backgrounds/clinton.jpg)"></div>
+                            <div class="adminInfo" style="margin-top: 10px;"><b>Party: </b>Democratic</div>
+                            <div class="adminInfo"><b>Foreign Policy Ideology: </b>Unilateral Internationalist</div>
+                            <div class="adminInfo"><b>Secretary of State: </b> 
+                                <a href="https://en.wikipedia.org/wiki/Madeline_Albright">Madeline Albright</a> (1997-2001)
+                                , 
+                                <a href="https://en.wikipedia.org/wiki/Warren_Christopher">Warren Christopher</a> (1993-1997)</div>
+                            <div class="adminInfo"><b>Ambassador: </b> 
+                                Edward Elson (1993 - 1997)
+                                , 
+                                Richard Swett (1997 - 2001)</div>
+                            <ul class="adminText">
+                                <li>Danish leaders reacted to the end of the Cold War by adopting an activist and militarized foreign policy and helped to manage instability in European flashpoints.</li>
+                                <li>The Clinton  Administration pursuaded Copenhagen to contribute to U.N. peacekepping missions in the Balkans and support U.S. military strikes in the region.</li>
+                                <li>Danish actions in the 90s solidified the U.S.-Danish military alliance.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="anAdministration" style="background-color: #114561;">
+                            <div class="adminName">The Truman Administration [1945 - 1953]</div>
+                            <i class="fa fa-plus moreIcon" id="trumanIcon" onclick="togAdmin('truman')" style="color: #de7942;
+                                                                  font-size: 40px"></i>
+                        </div>
+                        <div class="adminWrapper" id="truman" style="display: none">
+                            <div class="adminPhoto" style="background-image: url(/projects/geo/backgrounds/truman.jpg)"></div>
+                            <div class="adminInfo" style="margin-top: 10px;"><b>Party: </b>Democratic</div>
+                            <div class="adminInfo"><b>Foreign Policy Ideology: </b>Multilateral Interventionist</div>
+                            <div class="adminInfo"><b>Secretary of State: </b> 
+                                <a href="https://en.wikipedia.org/wiki/James_Byrnes">James Byrnes</a> (1945 - 1947)
+                                , 
+                                <a href="httpss://en.wikipedia.org/wiki/George_Marshall">George Marshall</a> (1947 - 1949)
+                                ,
+                                <a href="https://en.wikipedia.org/wiki/Dean_Acheson">Dean Acheson</a> (1949 - 1953)</div>
+                            <div class="adminInfo"><b>Ambassador: </b> 
+                                Josiah Marvel, Jr. (1945 - 1947)
+                                , 
+                                Eugenie Anderson (1947 - 1953)</div>
+                            <ul class="adminText">
+                                <li>The Truman Administration offered Denmark USD $100 million in gold to buy Greenland after World War II.</li>
+                                <li>Ambassador Anderson was the first woman promoted to a high rank in the State Department, and her popularity in Denmark allowed her to exert pressure on Copenhagen to accept American demands like increased NATO spending and strengthening the Greenland Treaty.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div id="bottomMain"></div>
-                <div id="footerMain"></div>
+                <div id="bottomMain">
+                    <div id="postSection">Recent Articles</div>
+                    <div id="postWrapper">
+                        <a href="/projects/geo/posts/geo_bp5-%20Neo-Colonial-%20Trump-%20Greenland-%20Denmark.html">
+                            <div class="aPost">
+                                <div class="aPost-Photo" style="background-image: url(/projects/geo/images/bp5front.jpeg)"></div>
+                                <div class="aPost-Title">Why Did Trump Want to Buy Greenland?</div>
+                                <div class="aPost-Date">08/26/2019</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="footerMain">
+                    <div class="aContact" style="margin-left: 5%">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-facebook" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aContact">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-twitter" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aContact">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-reddit" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aContact">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-google" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aContact">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-instagram" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aContact">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-tencent-weibo" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aContact">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-tumblr" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aContact">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-mail-forward" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aContact">
+                        <a href="#">
+                            <div class="contactIcon">
+                                <i class="fa fa-credit-card" style="color: white"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </svg>
     <script>

@@ -8,10 +8,6 @@ body {
     background-color: rgba(245, 242, 228,  0.5);
 }
 
-body a {
-    text-decoration: none;
-}
-
 /* fader */
 #fader {
     position: fixed;
@@ -50,17 +46,7 @@ body a {
     min-width: 1000px;
 }
 
-#topMain {
-    height: 600px;
-    width: 100%;
-    background-image: url(/projects/geo/backgrounds/denmark.jpeg);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    margin-top: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+
 #myHeader {
     height: 100px;
     width: 100%;
@@ -134,17 +120,12 @@ body a {
     font-family: 'Lato';
 }
 
-#middleMain {
-    width: 100%;
-    background-color: #f5f2e4;
-}
 
 #introWrapper {
     height: 500px;
     width: 80%;
     margin: auto;
     background-color: #f5f2e4;
-    color: #114561;
 }
 #metaContainer {
     height: 360px;
@@ -158,7 +139,6 @@ body a {
     text-align: right;
     font-family: 'Lato';
     font-weight: bolder;
-    border-left: 10px solid #114561;
     width: 95%;
 }
 #author {
@@ -166,7 +146,6 @@ body a {
     font-family: 'Lato';
     text-align: right;
     font-weight: bold;
-    color: #de7942;
     width: 98%;
 }
 #introText {
@@ -221,7 +200,6 @@ body a {
     font-size: 40px;
     font-family: 'Lato';
     font-weight: bolder;
-    border-right: 5px solid #114561;
     padding-right: 15px;
 }
 #positions {
@@ -233,31 +211,170 @@ body a {
 }
 
 
-#dataWrapper {
+#geoWrapper {
     height: 500px;
     width: 80%;
     margin: auto;
     background-color: #f5f2e4;
 }
-#americaWrapper {
-    height: 500px;
-    width: 80%;
+#geoTitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 100px;
+    font-family: 'Lato';
+    padding-left: 30px;
+}
+.geotextWrapper {
+    width: 90%;
     margin: auto;
-    background-color: #f5f2e4;
+    margin-top: 20px;
+    padding-left: 100px;
+}
+.geoText {
+    font-family: 'News Cycle'
+}
+#geoPhoto {
+    height: 200px;
+    margin-top: 50px;
+    background-size: cover;
+    background-position: center;
+    
 }
 
-#bottomMain {
-    width: 100%;
-    height: 200px;
-    background-color: rgba(33, 134, 189);
+#americaWrapper {
+    width: 80%;
+    margin: auto;
+    background-color: #f5f2e4;
+    padding-bottom: 20px;
 }
-#footerMain {
-    width: 100%;
-    height: 100px;
-    background-color: #de7942;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-bottom: 50px;
+#americaTitle {
+    font-size: 40px;
+    font-family: 'Lato';
+    padding-right: 30px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.anAdministration {
+    height: 50px;
+    margin-top: 25px;
+}
+.adminName {
+    padding-left: 25px;
+    padding-top: 4px;
+    font-size: 25px;
+    color: white;
+    width: 90%;
+    float: left;
+    font-family: 'News Cycle'
+}
+.moreIcon {
+    padding-top: 5px;
+    padding-left: 15px;
+}
+.moreIcon:hover {
+    cursor: pointer;
+}
+
+.adminWrapper {
+    height: 320px;
+    border: 5px solid #114561;
+}
+.adminPhoto {
+    height: 320px;
+    float: left;
+    width: 30%;
+    background-size: cover;
+    border-right: 5px solid #114561;
+}
+.adminInfo {
+    font-family: 'News Cycle';
+    font-size: 16px;
+    margin-left: 25px;
+    float: left;
+    width: 65%;
+}
+.adminText {
+    float: left;
+    width: 60%;
+    font-family: 'News Cycle';
+    font-size: 15px;
+}
+
+
+#postSection {
+    font-family: 'PT Sans';
+    color: white;
+    font-size: 25px;
+    padding-top: 70px;
+    padding-left: 2%;
+    width: 8%;
+    height: 140px;
+    float: left;
+}
+#postWrapper {
+    height: 200px;
+    width: 90%;
+    float: left;
+}
+.aPost {
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 20%;
+    border-radius: 5px;
+}
+.aPost:hover {
+    background-color: transparent;
+    transition: 1s;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.aPost:hover .aPost-Title {
+    background-color: transparent;
+    transition: 1s;
+    color: white;
+}
+.aPost-Photo {
+    height: 110px;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.aPost-Title {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'PT Sans';
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bolder;
+    background-color: white;
+}
+.aPost-Date {
+    text-align: right;
+    padding-right: 10px;
+    font-family: 'Pt Sans';
+    background-color: rgba(33, 134, 189);
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+
+.aContact {
+    height: 56px;
+    width: 7%;
+    float: left;
+    margin-right: 3%;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 10px;
+    border: 2px solid white;
 }
 
 @media screen and (max-width: 1300px) { 

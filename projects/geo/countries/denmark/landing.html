@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <title>Denmark</title>
+    <head>
+        <meta name="description" content="A Comprehensive Overview of Denmark">
+        
+        <!-- Meta Tags  -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS -->
+            <link rel="stylesheet" href="/projects/geo/landing.css">
+            <!-- insert font here --> 
+                <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+                <link href='https://fonts.googleapis.com/css?family=PT+Sans&display=swap' rel='stylesheet'>
+                <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">        
+            <!-- Social Media icons --> 
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JS -->
+            <script src="/projects/geo/landing.js"></script>
+            <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <!-- Twitter Card --> 
+            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:site" content="@ncaldwellgatsos">
+            <meta name="twitter:creator" content="@noahcaldwell">
+            <meta name="twitter:title" content="An Overview of Denmark"/> 
+            <meta name="twitter:description" content="A Comprehensive Overview of Denmark"/>
+            <meta name="twitter:image:src" content="www.ncaldwellgatsos.com/projects/geo/images/denmark.jpg"/>
+    </head>
+    <!-- Unique Page Style --> 
+    <style>
+        body {
+            background-color: #114561;
+        }
+        #mainTitle {
+            font-size: 100px;
+            font-family: 'Lato';
+            color: #de7942;
+            margin-top: 300px;
+            animation-delay: 2s;
+            margin-left: 30%;
+        }
+        
+    </style>
+    <body>
+        <svg id="fader">
+            <div id="main">
+                <div id="mainTitle">DENMARK</div>
+                <div id="optionsWrapper">
+                    <a href="us-denmarkRelations.html"><div class="anOptionWrapper" id="relations">
+                        <div class="fa fa-globe" style="float: left;
+                                                        padding-top: 15px;
+                                                        font-size: 50px;"></div>
+                        <div class="aoText" style="margin-left: 30px;">U.S.-Danish Foreign Relations</div>
+                    </div></a>
+                    <div class="anOptionWrapper" id="elections">
+                        <div class="fa fa-flag" style="float: left;
+                                                        padding-top: 15px;
+                                                        font-size: 50px;"></div>
+                        <div class="aoText">Danish Elections</div>
+                    </div>
+                    <div class="anOptionWrapper" id="investment" style="margin-left: -600px;">
+                        <div class="fa fa-euro" style="float: left;
+                                                        padding-top: 15px;
+                                                        font-size: 50px;"></div>
+                        <div class="aoText" style="margin-left: 40px;">Foreign Direct Investment in Denmark</div>
+                    </div>
+                    <div class="anOptionWrapper" id="profile">
+                        <div class="fa fa-female" style="float: left;
+                                                        padding-top: 15px;
+                                                        font-size: 50px;"></div>
+                        <div class="aoText" style="margin-left: 32px;">Leader Profile: Mette Frederiksen</div>
+                    </div>
+                    <div class="anOptionWrapper" id="predictions">
+                        <div class="fa fa-rocket" style="float: left;
+                                                        padding-top: 15px;
+                                                        font-size: 50px;"></div>
+                        <div class="aoText" style="margin-left: 22px;">Predictions for Denmark</div>
+                    </div>
+                    <div class="anOptionWrapper" id="resources">
+                        <div class="fa fa-info" style="float: left;
+                                                        padding-top: 15px;
+                                                        font-size: 50px;"></div>
+                        <div class="aoText" style="margin-left: 50px;">Resources</div>
+                    </div>
+                </div>
+                <div id="resourceWrapper">
+                    <div id="resourceTitle">Academic Resources for Denmark:</div>
+                    <div id="goBack" class="fa fa-arrow-circle-left" style="color: #de7942;
+                                                                            margin-top: 20px;"> Go Back</div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    $('#mainTitle').delay(800).animate({marginLeft: '100px',
+                                                        marginTop: '100px',
+                                                        fontSize: '50px'}, 1000, 'linear');
+                    $('#relations').delay(1400).animate({marginLeft: '200px'}, 1500, 'linear');
+                    $('#elections').delay(1600).animate({marginLeft: '200px'}, 1500, 'linear');
+                    $('#investment').delay(1800).animate({marginLeft: '200px'}, 1500, 'linear');
+                    $('#profile').delay(2000).animate({marginLeft: '200px'}, 1500, 'linear');
+                    $('#predictions').delay(2200).animate({marginLeft: '200px'}, 1500, 'linear');
+                    $('#resources').delay(2400).animate({marginLeft: '200px'}, 1500, 'linear');
+                })
+                
+                $('#resources').click(function() {
+                    $('#optionsWrapper').animate({marginTop: '-800px'}, 500, 'linear');
+                })
+                $('#goBack').click(function() {
+                    $('#optionsWrapper').animate({marginTop: '0px'}, 500, 'linear');
+                })
+            </script>
+        </svg>
+        <script>
+            fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+            }
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+            return;
+            }
+                    var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+        </script>
+    </body>
+</html>

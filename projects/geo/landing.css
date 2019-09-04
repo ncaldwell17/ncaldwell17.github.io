@@ -1,0 +1,87 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    margin-top: 0px;
+    background-color: rgba(245, 242, 228,  0.5);
+}
+
+/* fader */
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+
+
+.anOptionWrapper {
+    height: 75px;
+    width: 600px;
+    color: white;
+    margin-left: -600px;
+    margin-top: 30px;
+}
+.aDis {
+    display: block;
+}
+
+.aoText {
+    font-size: 30px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-family: 'Lato';
+}
+.anOptionWrapper:hover {
+    color: #de7942;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#resourceWrapper {
+    margin-top: 200px;
+    margin-left: 150px;
+    height: 600px;
+    width: 800px;
+}
+#resourceTitle {
+    font-family: 'Lato';
+    font-size: 35px;
+    color: white;
+}
+#goBack {
+    font-size: 35px;
+}
+#goBack:hover {
+    cursor: pointer;
+}
+
+

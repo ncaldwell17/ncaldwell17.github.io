@@ -296,6 +296,44 @@ body a {
     margin: auto;
 }
 
+#xCountries {
+    
+}
+
+#xMain {
+    height: 850px;
+    width: 100%;
+    background-image: linear-gradient(#995538, #D0A97F);
+    color: #50331D;
+}
+#xTitle {
+    font-family: 'Lato';
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    border-bottom: 5px dotted white;
+}
+.xCountry {
+    height: 200px;
+    width: 350px;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.xHover {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 200px;
+    width: 350px;
+    visibility: hidden;
+}
+
+.xCountry:hover .xHover {
+    visibility: visible;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
     .nCountry {
         font-size: 16px;

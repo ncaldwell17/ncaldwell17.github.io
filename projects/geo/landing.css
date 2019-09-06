@@ -60,11 +60,6 @@ body {
     padding-top: 10px;
     font-family: 'Lato';
 }
-.anOptionWrapper:hover {
-    color: #de7942;
-    transition: 1s;
-    cursor: pointer;
-}
 
 #resourceWrapper {
     margin-top: 200px;

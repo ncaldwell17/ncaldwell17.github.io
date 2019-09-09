@@ -11,13 +11,14 @@
             <link rel="stylesheet" href="local.css">
             <link rel="stylesheet" href="/animate.min.css">
         <!-- insert font here --> 
-            <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Geostar+Fill&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+                <link href='https://fonts.googleapis.com/css?family=PT+Sans&display=swap' rel='stylesheet'>
+                <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet"> 
         <!-- Social Media icons --> 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- JS -->
             <script src="local.js"></script>
+            <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <!-- Twitter Card --> 
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@ncaldwellgatsos">             
@@ -30,10 +31,39 @@
 <body>
     <svg id="fader">
         <div id="main">
-            <div id="blankSpace"></div>
             <div id="myHeader" class="animated fadeIn delay-1s">Chicago Edition</div>
+            <script>
+                $(document).ready(function() {
+                    $('#myHeader').delay(2000).animate({marginTop: '10px'}, 1000, 'linear');
+                })
+            </script> 
             
-            <div id="content"></div>
+            <div id="content">
+                <div id="theme1" class="aTheme">
+                    <div class="themeTitle">The Reverse Great Migration</div>
+                    <div class="themeUpdate">Last Updated: Sept. 9th, 2019</div>
+                </div>
+                <div id="theme2" class="aTheme">
+                    <div class="themeTitle">Incidents of Gun Violence</div>
+                    <div class="themeUpdate">Last Updated: Sept. 9th, 2019</div>
+                </div>
+                <div id="theme3" class="aTheme">
+                    <div class="themeTitle">The Incoming Budget Crisis</div>
+                    <div class="themeUpdate">Last Updated: Sept. 9th, 2019</div>
+                </div>
+                <script>
+                    function initialSetup() {
+                        if (document.getElementById('theme1') != null) {
+                            setTimeout(function() {
+                                document.getElementById('theme1').style.display = 'block';
+                                document.getElementById('theme2').style.display = 'block';
+                                document.getElementById('theme3').style.display = 'block';
+                            }, 3000);
+                        }
+                    }
+                    initialSetup();
+                </script>
+            </div>
             
             <div id="footer"></div>
         </div>

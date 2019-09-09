@@ -37,23 +37,58 @@ body {
 }
 
 #main {
-    height: 900px;
+    height: 1000px;
     width: 100%;
     background-image: url(images/mainbackground.jpeg);
     background-size: cover;
     background-position: center;
     opacity: 0.9;
-}
-
-#blankSpace {
-    height: 350px;
+    position: absolute;
+    padding-bottom: 100px;
 }
 
 #myHeader {
+    font-family: 'Lato';
     margin: auto;
     width: 500px;
     font-weight: bolder;
     text-align: center;
     font-size: 40px;
     background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 350px;
+}
+#content {
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    height: 350px;
+    overflow: auto;
+}
+.aTheme {
+    height: 300px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+}
+#theme1 {
+    display: none;
+}
+#theme2 {
+    display: none;
+}
+#theme3 {
+    display: none;
+}
+
+.themeTitle {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    font-family: 'Lato';
+    text-align: center;
+}
+.themeUpdate {
+    font-family: 'News Cycle';
+    text-align: center;
+    font-size: 18px;
 }

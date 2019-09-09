@@ -141,6 +141,13 @@ body {
     /*color: #1D4058;*/
     color: white;
 }
+#easyGo {
+    height: 200px;
+    width: 80%;
+    margin: auto;
+    background-color: #4682b4;
+}
+
 .void {
     height: 100px;
 }
@@ -672,6 +679,7 @@ body {
 
 
 @media screen and (max-width: 900px) {
+    
  .igContent {
         background-size: cover;
         background-position: left;
@@ -702,7 +710,12 @@ body {
     .blogArchive {
         margin-top: -50px;
     }
-    
+    #section2 {
+        display: none;
+    }
+    #easyGo {
+        display: block;
+    }
 }
 /* handles iPhone screens */
 @media screen and (max-width: 700px) {
@@ -723,10 +736,7 @@ body {
     #section1 {
         background-image: none;
         background-color: slategray;
-    }
-    
-    #section2 {
-        height: 800px;
+        height: 200px;
     }
     
     .infoContainer {
@@ -802,8 +812,11 @@ body {
     /* section 3 */ 
     
     #section3 {
+        height: 950px;
         background-image: none;
         background-color: slategray;
+        position: relative;
+        
     }
     .projectMatrix {
         width: 98%;
@@ -816,6 +829,9 @@ body {
     
     
     /* Section 4 */ 
+    #section4 {
+        height: 500px;
+    }
     .phoneBlogHeader {
         display: block;
         background-color: #4682B4;
@@ -891,9 +907,9 @@ body {
         font-size: 30px;
     }
     .bpDate {
-        text-align: center;
-        margin-right: 125px;
-        margin-top:  30px;
+        width: 90%;
+        height: 50px;
+        margin: auto;
     }
     
     
@@ -901,6 +917,7 @@ body {
     #section5 {
         background-image: none;
         background-color: slategray;
+        padding-bottom: 40px;
     }
     .contactWrapper {
         width: 80%;

@@ -19,6 +19,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- JS -->
             <script src="elections.js"></script>
+            <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     </head>
     <body>
         <svg id="fader">
@@ -44,19 +45,35 @@
             </div>
             <div class="newContainer">
                 <div class="featured" style="border-right: 3px solid black;">
+                    <div class="front-photo" style="background-image: url(images/bp11front.jpg); background-position: bottom;"></div>
+                    <a href="/projects/elections/posts/elections_bp11-%20North%20Carolina-%20House-2020-%20Swing%20Seat.html">
+                    <div class="front-title">A Cheat Sheet to NC's Special Election</div></a>
+                    <div class="time">September 9th,  2019 @ 4:00PM CST</div>
+                </div>
+                <div class="featured">
                     <div class="front-photo" style="background-image: url(images/bp10front.jpeg); background-position: bottom;"></div>
                     <a href="/projects/elections/posts/elections_bp10-2020-Democrats-September-Tiers.html">
                     <div class="front-title">My End of the Summer Democratic Presidential Tiers</div></a>
                     <div class="time">August 29th,  2019 @ 11:00AM CST</div>
                 </div>
-                <div class="featured">
-                    <div class="front-photo" style="background-image: url(images/bp9front.jpeg); background-position: bottom;"></div>
-                    <a href="/projects/elections/posts/elections_bp9-2020-%20Georgia-%20Senate-%20McBath.html"><div class="front-title">How Georgia Senator Isakson's Retirement Will Change the 2020 Senate Race</div></a>
-                    <div class="time">August 28th,  2019 @ 3:46PM CST</div>
-                </div>
             </div>
             
             <div class="pastContainer">
+                <a href="posts/elections_bp9-2020-%20Georgia-%20Senate-%20McBath.html">
+                    <div class="aStory">
+                        <div class="storyPhoto" style="background-image: url(images/bp9front.jpeg)"></div>
+                        <div class="front-title" style="float: left; margin-left: 20px;">How Senator Isakson's Retirement Changes 2020 Senate Race</div>
+                        <div class="time2" style="width: 500px">August 28th,  2019 @ 3:46PM CST</div>
+                        <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
+
+                        <div class="tagContainer">
+                            <div class="aTag" style="margin-left: 30px;">Georgia</div>
+                            <div class="aTag">McBath</div>
+                            <div class="aTag">Senate</div>
+                            <div class="aTag">2020</div>
+                        </div>
+                    </div>
+                </a>
                 <a href="posts/elections_bp8-%20Primaries-%20Predictions-%20Polls-%20Horserace.html">
                     <div class="aStory">
                         <div class="storyPhoto" style="background-image: url(images/bp8front.jpeg)"></div>
@@ -147,80 +164,87 @@
                         </div>
                     </div>
                 </a> 
-                <a href="posts/elections_bp2.html">
+                <div id="togposts1" style="display: none">
+                    <a href="posts/elections_bp2.html">
+                        <div class="aStory">
+                            <div class="storyPhoto" style="background-image: url(images/rdebates.jpg)"></div>
+                            <div class="front-title" style="float: left; margin-left: 20px;">Diversity in American Politics</div>
+                            <div class="time2" style="width: 500px">July 29th,  2019 @ 6:58PM CST</div>
+                            <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
+
+                            <div class="tagContainer">
+                                <div class="aTag" style="margin-left: 30px;">Strategy</div>
+                                <div class="aTag">Race Relations</div>
+                                <div class="aTag">Bipartisanship</div>
+                                <div class="aTag">2020</div>
+                            </div>
+                        </div>
+</a>
+                    <a href="posts/elections_bp1.html">
+                        <div class="aStory">
+                            <div class="storyPhoto" style="background-image: url(images/wilmot.jpg)"></div>
+                            <div class="front-title" style="float: left; margin-left: 20px;">How to Win in Montana</div>
+                            <div class="time2" style="width: 500px">July 23rd,  2019 @ 12:13AM EST</div>
+                            <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
+
+                            <div class="tagContainer">
+                                <div class="aTag" style="margin-left: 30px;">Montana</div>
+                                <div class="aTag">Wilmot Collins</div>
+                                <div class="aTag">Senate</div>
+                                <div class="aTag">2020</div>
+                            </div>
+                        </div>
+</a>
                     <div class="aStory">
-                        <div class="storyPhoto" style="background-image: url(images/rdebates.jpg)"></div>
-                        <div class="front-title" style="float: left; margin-left: 20px;">Diversity in American Politics</div>
-                        <div class="time2" style="width: 500px">July 29th,  2019 @ 6:58PM CST</div>
+                        <div class="storyPhoto" style="background-image: url(images/collins.jpg)"></div>
+                        <div class="front-title" style="float: left; margin-left: 20px;">Susan Collins is in a Whole Bunch of Trouble</div>
+                        <div class="time2" style="width: 300px">July 21st,  2019 @ 8:00PM EST</div>
                         <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
 
                         <div class="tagContainer">
-                            <div class="aTag" style="margin-left: 30px;">Strategy</div>
-                            <div class="aTag">Race Relations</div>
-                            <div class="aTag">Bipartisanship</div>
+                            <div class="aTag" style="margin-left: 30px;">Maine</div>
+                            <div class="aTag">Susan Collins</div>
+                            <div class="aTag">Senate</div>
                             <div class="aTag">2020</div>
                         </div>
-                    </div>
-                </a>
-                <a href="posts/elections_bp1.html">
+</div>
                     <div class="aStory">
-                        <div class="storyPhoto" style="background-image: url(images/wilmot.jpg)"></div>
-                        <div class="front-title" style="float: left; margin-left: 20px;">How to Win in Montana</div>
-                        <div class="time2" style="width: 500px">July 23rd,  2019 @ 12:13AM EST</div>
+                        <div class="storyPhoto" style="background-image: url(images/squad.jpg)"></div>
+                        <div class="front-title" style="float: left; margin-left: 20px;">AOC and House Representatives' Attention Strategy</div>
+                        <div class="time2">July 21st,  2019 @ 2:00PM EST</div>
                         <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
 
                         <div class="tagContainer">
-                            <div class="aTag" style="margin-left: 30px;">Montana</div>
-                            <div class="aTag">Wilmot Collins</div>
+                            <div class="aTag" style="margin-left: 30px;">Media</div>
+                            <div class="aTag">The Squad</div>
+                            <div class="aTag">House</div>
+                            <div class="aTag">2020</div>
+                        </div>
+</div>
+                    <div class="aStory">
+                        <div class="storyPhoto" style="background-image: url(images/jones.jpg)"></div>
+                        <div class="front-title" style="float: left; margin-left: 20px;">Does Roy Moore have even the slightest chance of winning?</div>
+                        <div class="time2">July 18th, 2019  @ 4:00PM CST</div>
+                        <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
+                        <div class="tagContainer">
+                            <div class="aTag" style="margin-left: 30px;">Alabama</div>
+                            <div class="aTag">Roy Moore</div>
                             <div class="aTag">Senate</div>
                             <div class="aTag">2020</div>
                         </div>
                     </div>
-                </a>
-                <div class="aStory">
-                    <div class="storyPhoto" style="background-image: url(images/collins.jpg)"></div>
-                    <div class="front-title" style="float: left; margin-left: 20px;">Susan Collins is in a Whole Bunch of Trouble</div>
-                    <div class="time2" style="width: 300px">July 21st,  2019 @ 8:00PM EST</div>
-                    <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
-                
-                    <div class="tagContainer">
-                        <div class="aTag" style="margin-left: 30px;">Maine</div>
-                        <div class="aTag">Susan Collins</div>
-                        <div class="aTag">Senate</div>
-                        <div class="aTag">2020</div>
-                    </div>
                 </div>
-                <div class="aStory">
-                    <div class="storyPhoto" style="background-image: url(images/squad.jpg)"></div>
-                    <div class="front-title" style="float: left; margin-left: 20px;">AOC and House Representatives' Attention Strategy</div>
-                    <div class="time2">July 21st,  2019 @ 2:00PM EST</div>
-                    <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
-                
-                    <div class="tagContainer">
-                        <div class="aTag" style="margin-left: 30px;">Media</div>
-                        <div class="aTag">The Squad</div>
-                        <div class="aTag">House</div>
-                        <div class="aTag">2020</div>
-                    </div>
-                </div>
-                <div class="aStory">
-                    <div class="storyPhoto" style="background-image: url(images/jones.jpg)"></div>
-                    <div class="front-title" style="float: left; margin-left: 20px;">Does Roy Moore have even the slightest chance of winning?</div>
-                    <div class="time2">July 18th, 2019  @ 4:00PM CST</div>
-                    <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
-                    <div class="tagContainer">
-                        <div class="aTag" style="margin-left: 30px;">Alabama</div>
-                        <div class="aTag">Roy Moore</div>
-                        <div class="aTag">Senate</div>
-                        <div class="aTag">2020</div>
-                    </div>
-                </div>
-                <div class="aStory" style="display: none">
-                    <div class="storyPhoto" style="background-image: url(#)"></div>
-                    <div class="front-title" style="float: left; margin-left: 20px;">#################################</div>
-                    <div class="time" style="float: left; margin-left: 20px; width: 300px;">#### ##th, 2019  @ ####PM ###</div>
-                    <div class="author"><b>By</b> Noah Caldwell-Gatsos</div>
-                </div>
+                <div id="togMore" onclick="reveal()">Click to See More</div>
+                <script>
+                    function reveal() {
+                        if (document.getElementById('togposts1').style.display === 'none') {
+                            document.getElementById('togposts1').style.display = 'block';
+                        }
+                        else {
+                            document.getElementById('togMore').innerHTML = "There's no more to show";
+                        }
+                    }
+                </script>
             </div>
         </div>
         <div class="bottomSpace"></div>

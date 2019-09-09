@@ -50,10 +50,9 @@ body {
 #myHeader {
     font-family: 'Lato';
     margin: auto;
-    width: 500px;
     font-weight: bolder;
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     background-color: rgba(255, 255, 255, 0.7);
     margin-top: 350px;
 }
@@ -62,7 +61,6 @@ body {
     margin: auto;
     margin-top: 10px;
     height: 350px;
-    overflow: auto;
 }
 .aTheme {
     height: 300px;
@@ -91,4 +89,32 @@ body {
     font-family: 'News Cycle';
     text-align: center;
     font-size: 18px;
+}
+.themeIconWrapper {
+    padding-top: 10px;
+    height: 140px;
+    width: 95%;
+    margin: auto;
+}
+.iconContainer {
+    height: 115px;
+    width: 32.33%;
+    float: left;
+    padding-top: 20px;
+    background-color: navy;
+    text-align: center;
+    margin-right: 1%;
+    color: white;
+}
+.anIconTitle {
+    margin-top: 10px;
+    font-family: 'News Cycle';
+    background-color: white;
+    color: navy;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+    overflow: auto;
 }

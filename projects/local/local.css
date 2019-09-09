@@ -35,6 +35,15 @@ body {
     margin: 0;
     color: navy;
 }
+.phoneOnly {
+    display: none;
+}
+.desktopOnly {
+    display: none;
+}
+.bigOnly {
+    display: none;
+}
 
 #main {
     height: 1000px;
@@ -61,11 +70,12 @@ body {
     margin: auto;
     margin-top: 10px;
     height: 350px;
+    max-width: 1000px;
 }
 .aTheme {
     height: 300px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     margin-top: 20px;
 }
 #theme1 {
@@ -82,8 +92,11 @@ body {
     font-size: 40px;
     font-weight: bold;
     padding: 10px;
+    width: 70%;
+    margin: auto;
     font-family: 'Lato';
     text-align: center;
+    border-bottom: 3px solid navy;
 }
 .themeUpdate {
     font-family: 'News Cycle';
@@ -115,6 +128,112 @@ body {
     font-weight: bold;
 }
 
-@media screen and (max-width: 500px) {
-    overflow: auto;
+.infoWrapper {
+    height: 180px;
+    width: 30%;
+    margin-top: 10px;
+    margin-left: 1%;
+    float: left;
+}
+.anInfoContainer {
+    height: 72px;
+    width: 40%;
+    float: left;
+    background-color: navy;
+    margin: 2%;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 30px;
+    border: 3px solid slategray;
+}
+.anInfoTitle {
+    margin-top: 10px;
+    font-family: 'News Cycle';
+    background-color: white;
+    color: navy;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.themeText {
+    margin-top: 20px;
+    font-family: 'News Cycle';
+    text-align: center;
+    width: 40%;
+    float: left;
+    height: 180px;
+    font-size: 14px;
+}
+.postWrapper {
+    margin-top: 10px;
+    height: 180px;
+    width: 23%;
+    margin-left: 30px;
+    float: left;
+    text-align: center;
+    border: 2px solid navy;
+}
+.postHeader {
+    background-color: navy;
+    color: white;
+    padding: 0px 10px;
+    font-size: 20px;
+    font-family: 'Lato';
+}
+.postImage {
+    height: 110px;
+    background-color: green;
+}
+.postTitle {
+    background-color: navy;
+    color: white;
+    font-family: 'Lato';
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.postWrapper:hover {
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .5s;
+}
+.postWrapper:hover .postHeader  {
+    background-color: white;
+    color: navy;
+    transition: .5s;
+}
+.postWrapper:hover .postTitle {
+    background-color: white;
+    color: navy;
+    transition: .5s;
+}
+
+
+@media screen and (min-width: 1300px) {
+    .bigOnly {
+        display: block;
+    }
+}
+@media screen and (min-width: 900px) {
+    .phoneOnly {
+        display: none;
+    }
+    .desktopOnly {
+        display: block;
+    }
+}
+@media screen and (max-width: 900px) {
+    #content {
+       overflow: auto; 
+    }
+    .phoneOnly {
+        display: block;
+    }
+    .desktopOnly {
+        display: none;
+    }
+    .themeTitle {
+        width: 100%;
+    }
 }

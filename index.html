@@ -187,8 +187,12 @@
                 </div>
             </div>
         </div>
-        <div id="easyGo">
-        
+        <div class="main" id="section2media">
+            <a href="iResume.html">
+            <div id="easyGo">
+                <div class="easyGoTitle">See Full Interactive Resume</div>
+            </div>
+            </a>
         </div>
         <div class="main" id="section25" style="display: none;">
             
@@ -448,8 +452,9 @@
     // Alters the page height and width to accomodate new viewport sizes
     var page_height = String(window.innerHeight)+"px";
     console.log(page_height);
-    window.onload = fit_to_view(page_height, "section1");
-    window.onload = fit_to_view(page_height, "section2");
-    
+    if $(document).height > 500 {
+        window.onload = fit_to_view(page_height, "section1");
+        window.onload = fit_to_view(page_height, "section2");
+    }
     </script>
 </html>

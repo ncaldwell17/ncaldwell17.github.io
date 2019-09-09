@@ -141,12 +141,24 @@ body {
     /*color: #1D4058;*/
     color: white;
 }
+#section2media {
+    background-color: slategray;
+    display: none;
+}
 #easyGo {
     height: 200px;
     width: 80%;
     margin: auto;
     background-color: #4682b4;
+    border-radius: 5px;
 }
+.easyGoTitle {
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+
 
 .void {
     height: 100px;
@@ -654,6 +666,7 @@ body {
         margin-right: 20px;
     }
     
+    
 }
 @media screen and (max-width: 1200px) {
     .projectMatrix {
@@ -736,7 +749,7 @@ body {
     #section1 {
         background-image: none;
         background-color: slategray;
-        height: 200px;
+        height: 350px;
     }
     
     .infoContainer {
@@ -808,6 +821,9 @@ body {
         margin-left: -30px;
     }
     
+    #section2media {
+        display: block;
+    }
     
     /* section 3 */ 
     
@@ -830,7 +846,7 @@ body {
     
     /* Section 4 */ 
     #section4 {
-        height: 500px;
+        height: 600px;
     }
     .phoneBlogHeader {
         display: block;

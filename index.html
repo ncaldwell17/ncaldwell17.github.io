@@ -452,9 +452,9 @@
     // Alters the page height and width to accomodate new viewport sizes
     var page_height = String(window.innerHeight)+"px";
     console.log(page_height);
-    if $(document).height > 500 {
+    if (window.innerWidth > 600) {
         window.onload = fit_to_view(page_height, "section1");
-        window.onload = fit_to_view(page_height, "section2");
-    }
+        window.onload = fit_to_view(page_height, "section2"); }
+   
     </script>
 </html>

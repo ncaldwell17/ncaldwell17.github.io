@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <title>My 2020 Senate Predictions</title>
+    <head>
+        <!-- Meta Information --> 
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="Making sense of the 2020 Senate Elections">
+        <!-- Twitter Information --> 
+        <!-- CSS Information --> 
+            <link rel="stylesheet" href="senate.css">
+            <link rel="stylesheet" href="/animate.min.css">
+        <!-- FONT Information --> 
+            <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+        <!-- JavaScript Information --> 
+            <!-- JS --> <script src="senate.js"></script>
+            <!-- JQuery --> <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <!-- FA --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body {
+            color: #39ff14;
+            margin: 0;
+        }
+        body a {
+            text-decoration: none;
+        }
+    
+    </style>
+    <body>
+        <svg id="fader">
+            
+            <div id="main">
+                <div id="indexWrapper" class="hidden">
+                    
+                    <a href="#nh" onclick="vanish()">
+                        <div class="anIndex animated fadeInLeft" 
+                             style="margin-left: 0%;">
+                            <div class="indexEntry">New Hampshire</div>
+                        </div>
+                    </a>
+                    
+                    <div class="anIndex animated fadeInLeft delay-1s" style="margin-left: 10%;">
+                        <div class="indexEntry">Arizona</div>
+                    </div>
+                    <div class="anIndex animated fadeInLeft delay-2s" style="margin-left: 20%;">
+                        <div class="indexEntry">Georgia</div>
+                    </div>
+                    <div class="anIndex animated fadeInLeft delay-3s" style="margin-left: 30%;">
+                        <div class="indexEntry">Alabama</div>
+                    </div>
+                    <div class="anIndex animated fadeInLeft delay-4s" style="margin-left: 40%;">
+                        <div class="indexEntry">Texas</div>
+                    </div>
+                    <div class="anIndex animated fadeInLeft delay-5s" style="margin-left: 50%;">
+                        <div class="indexEntry">Maine</div>
+                    </div>
+                    <div class="anIndex animated fadeInLeft delay-4s" style="margin-left: 40%;">
+                        <div class="indexEntry">Colorado</div>
+                    </div>
+                    <div class="anIndex animated fadeInLeft delay-3s" style="margin-left: 30%;">
+                        <div class="indexEntry">Kansas</div>
+                    </div>
+                    <div class="anIndex animated fadeInLeft delay-2s" style="margin-left: 20%;">
+                        <div class="indexEntry">Massachusetts</div>
+                    </div>
+                    <div class="anIndex animated fadeInLeft delay-1s" style="margin-left: 10%;">
+                        <div class="indexEntry">Montana</div>
+                    </div>
+                </div>
+                <div id="titleWrapper">
+                    <div id="subtitle">My Predictions for</div>
+                    <div id="title">SENATE 2020</div>
+                    <div id="subtitle2">Last Updated: September 10th, 2019</div>
+                    <div id="seeMore" class="animated zoomIn delay-1s">See Data</div>
+                    <script>
+                    $("#seeMore").click(function() {
+                        $("#titleWrapper").addClass("animated fadeOut hidden");
+                        $("#indexWrapper").removeClass("hidden");
+                    })
+                    </script>
+                    
+                    <div id="socialTitle">FOR MORE UPDATES, FOLLOW ON SOCIAL MEDIA</div>
+                    <div id="socialWrapper">
+                        <div class="fa fa-medium"></div>
+                        <div class="fa fa-twitter"></div>
+                        <div class="fa fa-envelope"></div>
+                        <style>
+                            .fa {
+                                font-size: 50px;
+                                margin-right: 20px;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+            <div id="nh" class="aState">
+                
+            </div>
+            <script>
+                window.onload = fitHeight()
+            </script>
+        </svg>
+        <script>
+            fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+            }
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+            return;
+            }
+                    var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+        </script>
+    </body>
+</html>

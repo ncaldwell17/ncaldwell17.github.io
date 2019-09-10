@@ -39,7 +39,7 @@
             </script> 
             
             <div id="content">
-                <div id="theme1" class="aTheme">
+                <div id="theme1" class="aTheme animated fadeIn">
                     <div class="themeTitle">The Reverse Great Migration</div>
                     <div class="themeUpdate">Last Updated: Sept. 9th, 2019</div>
                     <div class="themeIconWrapper phoneOnly">
@@ -79,7 +79,7 @@
                         <div class="postTitle">Why is Urban Population Decline Such a Problem?</div>
                     </div>
                 </div>
-                <div id="theme2" class="aTheme">
+                <div id="theme2" class="aTheme animated fadeIn">
                     <div class="themeTitle">Gun <br class="phoneOnly">Violence</div>
                     <div class="themeUpdate">Last Updated: Sept. 9th, 2019</div>
                     <div class="themeIconWrapper phoneOnly">
@@ -119,7 +119,7 @@
                         <div class="postTitle">How to Perfect Resource Allocation Using DRL</div>
                     </div>
                 </div>
-                <div id="theme3" class="aTheme">
+                <div id="theme3" class="aTheme animated fadeIn">
                     <div class="themeTitle">The Pension Budget Crisis</div>
                     <div class="themeUpdate">Last Updated: Sept. 9th, 2019</div>
                     <div class="themeIconWrapper phoneOnly">
@@ -163,10 +163,11 @@
                     function initialSetup() {
                         if (document.getElementById('theme1') != null) {
                             setTimeout(function() {
-                                document.getElementById('theme1').style.display = 'block';
-                                document.getElementById('theme2').style.display = 'block';
-                                document.getElementById('theme3').style.display = 'block';
-                            }, 3000);
+                                document.getElementById('theme1').style.display = 'block';}, 3000);
+                            setTimeout(function() {
+                                document.getElementById('theme2').style.display = 'block';}, 3500);
+                            setTimeout(function() {
+                               document.getElementById('theme3').style.display = 'block';}, 4000); 
                         }
                     }
                     initialSetup();

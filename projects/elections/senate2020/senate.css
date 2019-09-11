@@ -168,12 +168,12 @@ html {
     background-repeat: no-repeat;
 }
 .mapCaption {
-    height: 25px;
+    height: 50px;
     width: 100%;
     text-align: center;
     background-color: #39ff14;
     color: black;
-    padding-top: 5px;
+    padding-top: 15px;
     font-weight: bolder;
     font-family: 'Arvo';
     margin-top: 20px;
@@ -181,7 +181,7 @@ html {
 
 .senatorWrapper {
     float: left;
-    height: 420px;
+    height: 460px;
     width: 100%;
     max-width: 450px;
     background-color: #39ff14;
@@ -196,7 +196,7 @@ html {
     width: 47.5%;
 }
 .senatorPhoto {
-    height: 300px;
+    height: 280px;
     background-size: cover;
     background-position: center;
 }
@@ -217,18 +217,18 @@ html {
     font-family: 'Arvo';
 }
 .senatorDate {
-    padding-top: 5px;
+    padding-top: 20px;
     height: 25px;
     text-align: center;
     color: white;
 }
 .upfor {
-    background-color: #39ff14;
+    background-color: deepskyblue;
     color: black;
     text-align: center;
     font-family: 'Arvo';
     font-size: 18px;
-    margin-top: -350px;
+    margin-top: -120px;
 }
 
 .textWrapper {
@@ -274,7 +274,7 @@ html {
     width: 100%;
     float: left;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 150px;
     margin-bottom: 50px;
     font-family: 'Arvo';
     font-size: 20px;
@@ -314,7 +314,7 @@ html {
     float: left;
     background-size: cover;
     background-position: center;
-    margin-top: 50px;
+    margin-top: 120px;
     margin-bottom: 50px;
 }
 
@@ -322,12 +322,13 @@ html {
     height: 700px;
     width: 100%;
     float: left;
+    margin-bottom: 60px;
 }
 .aResource {
     height: 75px;
     width: 100%;
     float: right;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     max-width: 500px;
 }
 .resourcePhoto {
@@ -392,18 +393,6 @@ html {
 .dateSub a:hover {
     text-decoration: underline;
 }
-.pollContainer {
-    width: 500px;
-    height: 250px;
-    float: left;
-    overflow: auto;
-}
-.graphWrapper {
-    width: 400px;
-    height: 250px;
-    background-color: yellow;
-    float: left;
-}
 
 .strategyWrapper {
     height: 400px;
@@ -415,7 +404,7 @@ html {
     width: 100%;
     float: left;
     font-family: 'Arvo';
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     margin-top: 20px;
 }

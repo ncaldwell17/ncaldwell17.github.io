@@ -176,11 +176,12 @@ html {
     padding-top: 5px;
     font-weight: bolder;
     font-family: 'Arvo';
+    margin-top: 20px;
 }
 
 .senatorWrapper {
     float: left;
-    height: 400px;
+    height: 420px;
     width: 100%;
     max-width: 450px;
     background-color: #39ff14;
@@ -230,13 +231,6 @@ html {
     margin-top: -350px;
 }
 
-.buffer {
-    height: 10px;
-    width: 100%;
-    background-color: #39ff14;
-    float: left;
-    margin-bottom: 5px;
-}
 .textWrapper {
     width: 100%;
     float: left;
@@ -281,7 +275,7 @@ html {
     float: left;
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     font-family: 'Arvo';
     font-size: 20px;
 }
@@ -320,12 +314,12 @@ html {
     float: left;
     background-size: cover;
     background-position: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .resourceWrapper {
-    height: 600px;
+    height: 700px;
     width: 100%;
     float: left;
 }
@@ -333,7 +327,7 @@ html {
     height: 75px;
     width: 100%;
     float: right;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     max-width: 500px;
 }
 .resourcePhoto {
@@ -402,6 +396,7 @@ html {
     width: 500px;
     height: 250px;
     float: left;
+    overflow: auto;
 }
 .graphWrapper {
     width: 400px;

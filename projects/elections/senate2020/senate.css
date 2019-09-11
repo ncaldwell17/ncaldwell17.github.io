@@ -133,10 +133,278 @@ html {
 }
 
 .aState {
-    height: 900px;
+    width: 100%;
     background-color: black;
+    position: absolute;
+}
+.stateTitle {
+    font-size: 50px;
+    font-family: 'Arvo';
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 1vh;
+    border-bottom: 3px solid #39ff14;
+    margin-bottom: 2vh;
+     margin-top: 20px;
+}
+.stateContent {
+    width: 90%;
+    margin: auto;
+    max-width: 900px;
+}
+.stateMapWrapper {
+    width: 100%;
+    max-width: 450px;
+    float: left;
+}
+.stateMap {
+    height: 390px;
+    width: 100%;
+    max-width: 450px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mapCaption {
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    background-color: #39ff14;
+    color: black;
+    padding-top: 5px;
+    font-weight: bolder;
+    font-family: 'Arvo';
 }
 
+.senatorWrapper {
+    float: left;
+    height: 400px;
+    width: 100%;
+    max-width: 450px;
+    background-color: #39ff14;
+    border-top: 20px solid #39ff14;
+}
+.profileWrapper {
+    width: 90%;
+    margin: auto;
+}
+.aSenator {
+    float: left;
+    width: 47.5%;
+}
+.senatorPhoto {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.sectionTitle {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Arvo';
+    font-weight: bold;
+}
+.senatorTitle {
+    padding-top: 5px;
+    height: 25px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Arvo';
+}
+.senatorDate {
+    padding-top: 5px;
+    height: 25px;
+    text-align: center;
+    color: white;
+}
+.upfor {
+    background-color: #39ff14;
+    color: black;
+    text-align: center;
+    font-family: 'Arvo';
+    font-size: 18px;
+    margin-top: -350px;
+}
+
+.buffer {
+    height: 10px;
+    width: 100%;
+    background-color: #39ff14;
+    float: left;
+    margin-bottom: 5px;
+}
+.textWrapper {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.textTitle {
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Arvo';
+    margin-bottom: 10px;
+    width: 70%;
+    float: left;
+    border-bottom: 2px solid;
+}
+.textContent {
+    height: 350px;
+}
+.opponentWrapper {
+    width: 50%;
+    float: left;
+    max-width: 420px;
+}
+.opponentPhoto {
+    height: 320px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.opponentName {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Arvo';
+}
+
+.linkToPolls {
+    height: 30px;
+    width: 100%;
+    float: left;
+    margin: auto;
+    margin-top: 30px;
+    font-family: 'Arvo';
+    font-size: 16px;
+}
+.linkToPolls:hover {
+    background-color: #39ff14;
+    cursor: pointer;
+}
+
+.textContainer {
+    width: 47%;
+    height: 98%;
+    padding-left: 2%;
+    max-width: 420px;
+    float: right;
+    font-family: 'Arvo';
+    font-size: 15px;
+}
+.districtWrapper {
+    height: 300px;
+    width: 70%;
+    float: left;
+    font-family: 'Arvo'; 
+    font-size: 15px;
+}
+.districtPhoto {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 30%;
+    float: left;
+}
+
+.background-photo {
+    height: 400px;
+    width: 100%;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.resourceWrapper {
+    height: 600px;
+    width: 100%;
+    float: left;
+}
+.aResource {
+    height: 75px;
+    width: 100%;
+    float: right;
+    margin-bottom: 15px;
+    max-width: 500px;
+}
+.resourcePhoto {
+    height: 75px;
+    width: 20%;
+    float: right;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.resourcePhoto:hover .twitterAvatar {
+    visibility: visible;
+    cursor: pointer;
+}
+.twitterAvatar {
+    height: 60px;
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 25%;
+    padding-top: 15px;
+    z-index: 2;
+    position: relative;
+    visibility: hidden;
+}
+
+.resourceInfoWrapper {
+    height: 75px;
+    width: 80%;
+    float: right;
+}
+.resourceInfoWrapper a:hover {
+    text-decoration: underline;
+}
+
+.resourceTitle {
+    font-family: 'Arvo';
+    font-size: 15px;
+    font-weight: bolder;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.resourceInfo {
+    font-family: 'Arvo';
+    font-size: 13px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.pollWrapper {
+    height: 400px;
+    width: 100%;
+    float: left;
+}
+.strategyWrapper {
+    height: 400px;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .opponentWrapper {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .desktopOnly {
+        display: none;
+    }
+    .buffer {
+        display: none;
+    }
+    
+}
 @media screen and (max-width: 800px) {
     #subtitle {
         margin-top: 10vh;
@@ -148,4 +416,8 @@ html {
         margin-left: 10vh;
         width: 80%;
     }
+    .mapCaption {
+        border-bottom: 5px solid black;
+    }
+    
 }

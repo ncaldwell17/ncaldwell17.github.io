@@ -73,7 +73,7 @@
                         </div>
                     </div>
                     <a href="#thePolls">
-                    <button class="linkToPolls">See Match Up in the Polls</button></a>
+                    <button class="linkToPolls" onclick="animatePolls()">See Match Up in the Polls</button></a>
                     <div class="textWrapper" style="margin-bottom: 30px;">
                         <div class="textTitle">State Profile</div>
                         <div class="districtWrapper">New Hampshire is an outlier from the rest of New England. It only recently grew more Democratic, with the election of a completely blue congressional delegation from mostly rural voters.<br>
@@ -159,7 +159,91 @@
                     
                     <div class="pollWrapper">
                         <div class="textTitle" id="thePolls">The Polls</div>
+                        <div class="dateSub">Most Recent: 
+                            <a href="https://www.wmur.com/article/nh-primary-source-bolduc-campaign-poll-shows-him-tied-with-lewandowski-in-gop-senate-primary/28702621#"><b>Real Clear Politics</b></a>
+                            on
+                            <i>September 11th, 2019</i></div>
+                        <div class="pollContainer">
+                            <div class="pollTitle">Sen. Jeanne Shaheen 
+                                (<i>Democratic Incumbent</i>)</div>
+                            <div class="pollAnimationContainer">
+                                <div class="candidateCircle" style="background-image: url(images/senShaheen.jpg)"></div> 
+                                <div class="graphContainer">
+                                    <div class="graphBar" id="jeanneBar" style="width: 50%;"></div>
+                                    <div class="markerContainer" style="margin-left: 9.3%;">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">10%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">20%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">30%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">40%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">50%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">60%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">70%</div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="pollTitle">Corey Lewandowski 
+                                (<i>Republican Challenger</i>)</div>
+                            <div class="pollAnimationContainer">
+                                <div class="candidateCircle" style="background-image: url(images/oppo.jpeg);
+                                                                    background-color: red;"></div> 
+                                <div class="graphContainer">
+                                    <div class="graphBar" id="coreyBar" style="background-color: red;
+                                                                 width: 37%"></div>
+                                    <div class="markerContainer" style="margin-left: 10%;">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">10%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">20%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">30%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">40%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">50%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">60%</div>
+                                    </div>
+                                    <div class="markerContainer">
+                                        <div class="aMarker"></div>
+                                        <div class="aValue">70%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graphWrapper desktopOnly">
+                    
+                        </div>
                     </div>
+                   
                     <div class="strategyWrapper">
                         <div class="textTitle" style="float: right;
                                                       text-align: right;">Race Summary</div>

@@ -276,13 +276,14 @@ html {
 }
 
 .linkToPolls {
-    height: 30px;
+    height: 50px;
     width: 100%;
     float: left;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     font-family: 'Arvo';
-    font-size: 16px;
+    font-size: 20px;
 }
 .linkToPolls:hover {
     background-color: #39ff14;
@@ -386,9 +387,95 @@ html {
     width: 100%;
     float: left;
 }
+.dateSub {
+    width: 100%;
+    float: left;
+    height: 20px;
+    font-family: 'Arvo';
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+.dateSub a:hover {
+    text-decoration: underline;
+}
+.pollContainer {
+    width: 500px;
+    height: 250px;
+    float: left;
+}
+.graphWrapper {
+    width: 400px;
+    height: 250px;
+    background-color: yellow;
+    float: left;
+}
+
 .strategyWrapper {
     height: 400px;
+    width: 100%;
+    float: left;
 }
+.pollTitle {
+    height: 20px;
+    width: 100%;
+    float: left;
+    font-family: 'Arvo';
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.pollAnimationContainer {
+    height: 60px;
+    float: left;
+    width: 100%;
+    max-width: 500px;
+}
+.candidateCircle {
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: blue;
+    width: 12%;
+    border-radius: 50%;
+    float: left;
+    background-size: cover;
+    background-position: top;
+    max-width: 50px;
+}
+.graphContainer {
+    height: 48px;
+    margin-top: 12px;
+    margin-left: 10px;
+    width: 80%;
+    float: left;
+}
+.graphBar {
+    background-color: blue;
+    height: 30px;
+    margin-left: 18px;
+    position: relative;
+    width: 1%;
+}
+
+.markerContainer {
+    height: 20px;
+    width: 10px;
+    margin-right: 8.3%;
+    float: left;
+}
+.aMarker {
+    height: 5px;
+    background-color: white;
+    width: 7px;
+    margin: auto;
+}
+.aValue {
+    height: 15px;
+    font-family: 'Arvo';
+    font-size: 12px;
+}
+
+
 
 
 @media screen and (min-width: 1000px) {

@@ -21,6 +21,7 @@ function vanish() {
     $("#main").addClass("hidden");
 }
 
+/* make this flexible */ 
 function animatePolls() {
     var jWidth = String(document.getElementById("jeanneBar").offsetWidth)+"px"; 
     var cWidth = String(document.getElementById("coreyBar").offsetWidth)+"px";

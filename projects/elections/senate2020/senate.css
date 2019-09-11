@@ -128,6 +128,46 @@ html {
     cursor: pointer;
 }
 
+#indexWrapperPhone {
+    height: 1000px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+}
+.phoneTitle {
+    font-family: 'Arvo';
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.phoneIndexContainer {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+.aStateFront {
+    width: 45%;
+    float: left;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+.aPhoneImage {
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    
+}
+.aPhoneIndex {
+    font-size: 18px;
+    text-align: center;
+    background-color: #39ff14;
+    color: black;
+    font-family: 'Arvo';
+}
+
 .hidden {
     display: none;
 }
@@ -479,9 +519,14 @@ html {
 @media screen and (max-width: 800px) {
     #subtitle {
         margin-top: 10vh;
+        display: none;
     }
     #title {
+        margin-top: 30px;
         font-size: 50px;
+    }
+    #socialTitle {
+        background-color: black;
     }
     #indexWrapper {
         margin-left: 10vh;

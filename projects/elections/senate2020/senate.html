@@ -292,6 +292,34 @@
                         <div class="indexEntry">Montana</div>
                     </div>
                 </div>
+                
+                <div id="indexWrapperPhone" class="hidden">
+                    <div class="phoneTitle">STATE PROFILES</div>
+                    <div class="phoneIndexContainer">
+                    <a href="#nh" id="nhPhoneTrig" onclick="vanish()">
+                        <div class="aStateFront">
+                            <div class="aPhoneImage" style="background-image: url(images/nhFront.png)"></div>
+                            <div class="aPhoneIndex">New Hampshire</div>
+                            <script>$("#nhPhoneTrig").click(function() {
+                                    $("#nh").removeClass("hidden");
+                                })</script>
+                        </div>
+                    </a>
+                    <a href="#ga" id="gaPhoneTrig" onclick="vanish()">
+                        <div class="aStateFront">
+                            <div class="aPhoneImage" style="background-image: url(images/gaFront.png)"></div>
+                            <div class="aPhoneIndex">Georgia</div>
+                            <script>$("#gaPhoneTrig").click(function() {
+                                $("#ga").removeClass("hidden");
+                            })</script>
+                        </div> 
+                    </a>
+                        
+                    </div>
+                    
+                
+                
+                </div>
                 <div id="titleWrapper">
                     <div id="subtitle">My Predictions for</div>
                     <div id="title">SENATE 2020</div>
@@ -300,7 +328,12 @@
                     <script>
                     $("#seeMore").click(function() {
                         $("#titleWrapper").addClass("animated fadeOut hidden");
+                        if (window.innerWidth < 1000) {
+                            $("#indexWrapperPhone").removeClass("hidden");
+                        }
+                        else {
                         $("#indexWrapper").removeClass("hidden");
+                        }
                     })
                     </script>
                     

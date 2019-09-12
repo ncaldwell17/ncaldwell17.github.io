@@ -158,6 +158,7 @@ html {
     height: 150px;
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     
 }
 .aPhoneIndex {
@@ -169,6 +170,9 @@ html {
 }
 
 .hidden {
+    display: none;
+}
+.phoneOnly {
     display: none;
 }
 
@@ -197,7 +201,6 @@ html {
 .stateMapWrapper {
     width: 100%;
     max-width: 450px;
-    float: left;
 }
 .stateMap {
     height: 390px;
@@ -219,155 +222,120 @@ html {
     margin-top: 20px;
 }
 
-.senatorWrapper {
-    float: left;
-    height: 460px;
-    width: 100%;
-    max-width: 450px;
-    background-color: #39ff14;
-    border-top: 20px solid #39ff14;
-}
-.profileWrapper {
-    width: 90%;
-    margin: auto;
-}
-.aSenator {
-    float: left;
-    width: 47.5%;
-}
-.senatorPhoto {
-    height: 280px;
-    background-size: cover;
-    background-position: center;
-}
-.sectionTitle {
-    font-size: 25px;
-    color: black;
-    text-align: center;
-    padding-bottom: 10px;
-    font-family: 'Arvo';
-    font-weight: bold;
-}
-.senatorTitle {
-    padding-top: 5px;
-    height: 25px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-family: 'Arvo';
-}
-.senatorDate {
-    padding-top: 20px;
-    height: 25px;
-    text-align: center;
-    color: white;
-}
-.upfor {
-    background-color: deepskyblue;
-    color: black;
-    text-align: center;
-    font-family: 'Arvo';
-    font-size: 18px;
-    margin-top: -120px;
-}
-
-.textWrapper {
-    width: 100%;
-    float: left;
-    margin-top: 20px;
-}
 .textTitle {
     text-align: left;
     font-size: 30px;
     font-family: 'Arvo';
     margin-bottom: 10px;
     width: 70%;
-    float: left;
     border-bottom: 2px solid;
 }
-.textContent {
-    height: 350px;
-}
-.opponentWrapper {
-    width: 50%;
-    float: left;
-    max-width: 420px;
-}
-.opponentPhoto {
-    height: 320px;
+.mainPhoto {
+    height: 300px;
     width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
-.opponentName {
+
+.senatorWrapper {
     width: 100%;
+    max-width: 450px;
+    margin-bottom: 50px;
+    font-family: 'Arvo';
+}
+.incumbentWrapper {
+    width: 100%;
+}
+.incumbentName {
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
     font-size: 20px;
+}
+.incumbentData {
+    margin-top: 10px;
+    font-size: 15px;
+}
+.incumbentText {
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.oppositionWrapper {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 50px;
+    font-family: 'Arvo';
+    height: 650px;
+}
+.challengerWrapper {
+    width: 100%;
+}
+.challengerName {
+    width: 100%;
     text-align: center;
     background-color: crimson;
     color: white;
-    font-weight: bolder;
-    font-family: 'Arvo';
+    font-size: 20px;
+}
+.challengerText {
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: justify;
+    float: right;
 }
 
 .linkToPolls {
-    height: 50px;
     width: 100%;
-    float: left;
+    height: 50px;
     margin: auto;
-    margin-top: 150px;
-    margin-bottom: 50px;
     font-family: 'Arvo';
     font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .linkToPolls:hover {
     background-color: #39ff14;
     cursor: pointer;
 }
 
-.textContainer {
-    width: 47%;
-    height: 98%;
-    padding-left: 2%;
-    max-width: 420px;
-    float: right;
+.profileWrapper {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 50px;
     font-family: 'Arvo';
-    font-size: 15px;
 }
-.districtWrapper {
+.profilePhoto {
     height: 300px;
-    width: 70%;
-    float: left;
-    font-family: 'Arvo'; 
-    font-size: 15px;
-}
-.districtPhoto {
+    width: 100%;
     background-size: cover;
     background-position: center;
-    height: 300px;
-    width: 30%;
-    float: left;
+}
+.profileText {
+    text-align: justify;
+    font-size: 15px;
+    margin-top: 15px;
 }
 
 .background-photo {
     height: 400px;
     width: 100%;
-    float: left;
     background-size: cover;
     background-position: center;
-    margin-top: 120px;
     margin-bottom: 50px;
 }
 
 .resourceWrapper {
     height: 700px;
     width: 100%;
-    float: left;
     margin-bottom: 60px;
 }
 .aResource {
     height: 75px;
     width: 100%;
-    float: right;
+    float: left;
     margin-bottom: 50px;
     max-width: 500px;
 }
@@ -420,7 +388,6 @@ html {
 .pollWrapper {
     height: 400px;
     width: 100%;
-    float: left;
 }
 .dateSub {
     width: 100%;
@@ -432,12 +399,6 @@ html {
 }
 .dateSub a:hover {
     text-decoration: underline;
-}
-
-.strategyWrapper {
-    height: 400px;
-    width: 100%;
-    float: left;
 }
 .pollTitle {
     height: 20px;
@@ -480,7 +441,6 @@ html {
     position: relative;
     width: 1%;
 }
-
 .markerContainer {
     height: 20px;
     width: 10px;
@@ -497,6 +457,18 @@ html {
     height: 15px;
     font-family: 'Arvo';
     font-size: 12px;
+}
+
+.strategyWrapper {
+    height: 600px;
+    width: 100%;
+    font-family: 'Arvo';
+    font-size: 15px;
+    text-align: justify;
+}
+.strategyText {
+    margin-top: 15px;
+    float: right;
 }
 
 
@@ -516,7 +488,7 @@ html {
     }
     
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     #subtitle {
         margin-top: 10vh;
         display: none;
@@ -535,5 +507,34 @@ html {
     .mapCaption {
         border-bottom: 5px solid black;
     }
-    
+    .stateContent {
+        width: 85%;
+    }
+    .senatorWrapper {
+        margin-top: 50px;
+    }
+    .opponentWrapper {
+        width: 100%;
+    }
+    .textContainer {
+        width: 98%;
+        margin-top: 30px;
+        text-align: justify; 
+    }
+    .resourceWrapper {
+        margin-bottom: 100px;
+    }
+    .resourcePhoto {
+        margin-top: 10px;
+    }
+    .resourceInfo {
+        padding-right: 15px;
+        height: 60px;
+    }
+    .linkToPolls {
+        margin-top: -70px;
+    }
+    .phoneOnly {
+        display: block;
+    }
 }

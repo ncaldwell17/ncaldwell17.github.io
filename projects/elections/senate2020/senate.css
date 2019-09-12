@@ -239,7 +239,6 @@ html {
 
 .senatorWrapper {
     width: 100%;
-    max-width: 450px;
     margin-bottom: 50px;
     font-family: 'Arvo';
 }
@@ -264,10 +263,9 @@ html {
 
 .oppositionWrapper {
     width: 100%;
-    max-width: 450px;
     margin-bottom: 50px;
     font-family: 'Arvo';
-    height: 650px;
+    height: 575px;
 }
 .challengerWrapper {
     width: 100%;
@@ -278,6 +276,7 @@ html {
     background-color: crimson;
     color: white;
     font-size: 20px;
+    max-width: 450px;
 }
 .challengerText {
     font-size: 15px;
@@ -293,7 +292,6 @@ html {
     font-family: 'Arvo';
     font-size: 20px;
     font-weight: bold;
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 .linkToPolls:hover {
@@ -328,7 +326,7 @@ html {
 }
 
 .resourceWrapper {
-    height: 700px;
+    height: 800px;
     width: 100%;
     margin-bottom: 60px;
 }
@@ -361,7 +359,6 @@ html {
     position: relative;
     visibility: hidden;
 }
-
 .resourceInfoWrapper {
     height: 75px;
     width: 80%;
@@ -370,7 +367,6 @@ html {
 .resourceInfoWrapper a:hover {
     text-decoration: underline;
 }
-
 .resourceTitle {
     font-family: 'Arvo';
     font-size: 15px;
@@ -471,14 +467,6 @@ html {
     float: right;
 }
 
-
-
-
-@media screen and (min-width: 1000px) {
-    .opponentWrapper {
-        margin-top: 30px;
-    }
-}
 @media screen and (max-width: 1000px) {
     .desktopOnly {
         display: none;
@@ -487,6 +475,17 @@ html {
         display: none;
     }
     
+}
+@media screen and (min-width: 600px) {
+    .mainPhoto {
+        max-width: 451px;
+    }
+    .incumbentName {
+        max-width: 451px;
+    }
+    .challengerName {
+        max-width: 451px;
+    }
 }
 @media screen and (max-width: 600px) {
     #subtitle {

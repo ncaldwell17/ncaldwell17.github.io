@@ -382,7 +382,7 @@ html {
 }
 
 .pollWrapper {
-    height: 400px;
+    height: 450px;
     width: 100%;
 }
 .dateSub {
@@ -397,13 +397,13 @@ html {
     text-decoration: underline;
 }
 .pollTitle {
-    height: 20px;
-    width: 100%;
+    width: 90%;
     float: left;
     font-family: 'Arvo';
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .pollAnimationContainer {
     height: 60px;
@@ -422,6 +422,7 @@ html {
     background-size: cover;
     background-position: top;
     max-width: 50px;
+    border: 2px solid #39ff14;
 }
 .graphContainer {
     height: 48px;
@@ -436,6 +437,7 @@ html {
     margin-left: 18px;
     position: relative;
     width: 1%;
+    border: 3px solid white;
 }
 .markerContainer {
     height: 20px;

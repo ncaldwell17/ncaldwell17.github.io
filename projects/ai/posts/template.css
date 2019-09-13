@@ -180,7 +180,7 @@ p a {
     color: #8E3D38;
 }
 
-body ol {
+body ol, ul {
     color: black;
     font-family: 'PT Sans', sans-serif;
     text-align: justify;

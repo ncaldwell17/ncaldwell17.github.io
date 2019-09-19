@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+    .circle {
+        height: 25px;
+        width: 25px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: 1s;
+    }
+    .rotateY {
+        transform: perspective(400px) rotateY(45deg);
+    }
+</style>
+<body>
+    <span id="one" class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <script>
+        $(window).ready(function() {
+            $('one').addClass("rotateY");
+        })
+    </script>
+</body>
+
+
+</html>

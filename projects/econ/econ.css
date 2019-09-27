@@ -1,0 +1,109 @@
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: [ auto | smooth ];
+}
+body {
+    background-color: #1D1D1D;
+    color: #429CC3;
+    font-family: sans-serif;
+}
+
+
+/* header */
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+#mainTitle {
+    font-size: 60px;
+    margin-top: 50px;
+    text-align: center;
+    text-rendering: auto;
+    width: 100%;
+    font-family: 'Turret Road', cursive;
+    font-weight: bold;
+    border-bottom: 5px solid;
+}
+#workingOn {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+}
+#projectContainer {
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.aProjectWrapper {
+    width: 350px;
+    height: 380px;
+    border: 5px solid white;
+    margin: auto;
+    margin-bottom: 20px;
+    color: white;
+}
+.projectTitle {
+    text-align: center;
+    height: 40px;
+    font-size: 30px;
+    padding-top: 10px;
+}
+.projectImage {
+    height: 200px;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+}
+.projectSummary {
+    padding-top: 10px;
+    height: 120px;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    font-size: 15.5px;
+}
+
+.aProjectWrapper:hover {
+    border: 5px solid #429CC3;
+    transition: 1s;
+    cursor: pointer;
+    background-color: white;
+}
+.aProjectWrapper:hover .projectTitle {
+    color: white;
+    transition: 1s;
+    color: #429CC3;
+}
+.aProjectWrapper:hover .projectSummary {
+    color: white;
+    transition: 1s;
+    color: #429CC3;
+}

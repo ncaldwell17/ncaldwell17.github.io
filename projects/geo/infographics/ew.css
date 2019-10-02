@@ -1,0 +1,38 @@
+#header {
+    height: 75px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid slategray;
+    box-shadow: 0px 4px 5px lightgray;
+}
+#logo {
+    margin-left: 50px;
+    width: 230px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    float: left;
+}
+.subject {
+    float: left;
+    padding-right: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid gray;
+    font-family: 'Saira', sans-serif;
+    font-size: 25px;
+}
+.subject:hover {
+    background-color: skyblue;
+    transition: 1s;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) { 
+    .centerPhone {
+        width: 0px;
+    }
+    .desktopOnly {
+        display: none;
+    }
+}

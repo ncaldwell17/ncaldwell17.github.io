@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<title>Election Watch 2019</title>
+<head>
+    <meta name="description" content="#">
+
+    <!-- Meta Tags  -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+        <link rel="stylesheet" href="ew.css">
+    <!-- insert font here --> 
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Saira&display=swap" rel="stylesheet">
+    <!-- Social Media icons --> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JS -->
+        <script src="#"></script>
+        <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+    <!-- Twitter Card --> 
+    <meta name="twitter:card" content="summary-large-image"/>
+    <meta name="twitter:site" content="ncaldwellgatsos.com">
+    <meta name="twitter:creator" content="Noah Caldwell-Gatsos">
+    <meta name="twitter:title" content="#"/> 
+    <meta name="twitter:description" content="#"/>
+    <meta name="twitter:image:src" content="#"/>
+</head>
+<style>
+    html {
+    scroll-behavior: smooth;
+    scroll-behavior: [ auto | smooth ];
+}
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+}
+body a {
+    text-decoration: none;
+}
+
+
+/* header */
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+    
+</style>
+<body>
+    <svg id="fader">
+        <div id="header">
+            <div id="logo" class="centerPhone">NCG.com</div>
+            <div class="subject desktopOnly" style="font-weight: bold">geopolitics</div>
+            <div class="subject desktopOnly">infographics</div>
+        </div>
+        <div id="indonesia" class="content"></div>
+        <div id="ukraine" class="content"></div>
+        <div id="spain" class="content"></div>
+        <div id="india" class="content"></div>
+        <div id="southAfrica" class="content"></div>
+        <div id="european" class="content"></div>
+        <div id="denmark" class="content"></div>
+        <div id="greece" class="content"></div>
+        <div id="uk" class="content"></div>
+        <div id="italy" class="content"></div>
+        <div id="russia" class="content"></div>
+        <div id="israel" class="content"></div>
+        <div id="austria" class="content"></div>
+        <div id="canada" class="content"></div>
+        <div id="poland" class="content"></div>
+        <div id="argentina" class="content"></div>
+        <div id="footer"></div>
+    </svg>
+    <script>
+        function fadeInPage() {
+            if (!window.AnimationEvent) { return; }
+            var fader = document.getElementById('fader');
+            fader.classList.add('fade-out');
+        }
+    </script>
+    <script>
+        fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+            }
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+            return;
+            }
+                    var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+    </script>
+</body>
+</html>

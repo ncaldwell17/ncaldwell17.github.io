@@ -7,6 +7,9 @@ body {
     color: #429CC3;
     font-family: sans-serif;
 }
+body a {
+    text-decoration: none;
+}
 
 
 /* header */

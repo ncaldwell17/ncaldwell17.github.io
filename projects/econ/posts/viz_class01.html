@@ -177,7 +177,17 @@ body a {
                 },
                 options: {
                     scales: {
+                        xAxes: [{ 
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Types of Bacteria',
+                            }
+                        }],
                         yAxes: [{
+                            scaleLabel: {
+                               display: true,
+                            labelString: 'Minimum Inhibitory Concentration', 
+                            },
                             type: 'logarithmic',
                         }],
                     }

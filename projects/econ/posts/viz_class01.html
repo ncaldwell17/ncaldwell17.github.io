@@ -2,20 +2,20 @@
 <html>
 <title>Visualization Project #01</title>
 <head>
-    <!-- Meta Tags  -->
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- CSS -->
-            <link rel="stylesheet" href="visualization.css">
-            <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
-            <!-- insert font here --> 
-                <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet">
-            <!-- additional CSS styling here --> 
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- JS -->
-            <!-- J Query Selector -->
-            <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"></script>
+<!-- Meta Tags  -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- CSS -->
+<link rel="stylesheet" href="visualization.css">
+<link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+<!-- insert font here --> 
+<link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet">
+<!-- additional CSS styling here --> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- JS -->
+<!-- J Query Selector -->
+<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 </head>
 <style>
     html {
@@ -24,11 +24,13 @@
 }
 body {
     background-color: #1D1D1D;
-    color: #429CC3;
+    color: white;
     font-family: sans-serif;
 }
 body a {
     text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
 
@@ -65,9 +67,126 @@ body a {
 }
 </style>
 <body>
+    <!-- 'rgba(54, 162, 235, 1)', -->
     <svg id="fader">
-        <canvas id="myChart"></canvas>
+        <div class="title">World War II-era Antibiotics and Their Effects</div>
+        <div class="author">By: Noah Caldwell-Gatsos</div>
+        <div [hidden]="!chart">
+            <canvas id="myChart" width="300" height="200"></canvas>
+        </div>
+        <div class="paragraphWrapper">
+            <p>I created this visualization using <a href="https://www.chartjs.org/">chart.js</a>.</p>
+            <p class="sectionTitle">Data Observations</p>
+            <ul>
+                <li><b>Bacteria: </b>Abstract, Nominal (i.e. Labels)</li>
+                    <ul>
+                        <li>Mapped to X-Axis</li>
+                    </ul>
+                <li><b>Drug Type: </b>Abstract, Nominal (i.e. Labels)</li>
+                    <ul>
+                        <li>Color Coded Per Label</li>
+                    </ul>
+                <li><b>MIC: </b>Physical, Quantitative-Ratio (i.e. Integers)</li>
+                    <ul>
+                        <li>Mapped to Y-Axis</li>
+                    </ul>
+                <li><b>Stain?: </b>Abstract, Nominal (i.e. Labels)</li>
+                    <ul>
+                        <li>Unmapped, planning on highlighting x-axis text if I can figure out how to alter the element.</li>
+                    </ul>
+            </ul>
+        </div>
+        <div class="paragraphWrapper">
+            <p class="sectionTitle">Initial Questions</p>
+            <p class="question">What question do I want to answer?</p>
+                <p class="writeup">What drug works most effectively for which bacterial infection given a measure: minimum inhibitory concentration, of the effectiveness of the antibiotic. On a secondary note, is there any correlation between low doses and pos/neg gram staining?</p>
+            <p class="question">What problem am I trying to solve?</p>
+                <p class="writeup">Low levels of a drug needed to kill something probably mean that it’s effective, so higher concentrations of the drug probably signify that it’s not effective against a bacteria. </p>
+            <p class="question">What decisions am I trying to make?</p>
+                <p class="writeup">What drug to choose when given a certain bacteria?</p>
+            <p class="question">What outcomes am I hoping for? </p>
+                <p class="writeup">An easy-to-read diagram that demonstrates both what antibiotics are best applied to each bacteria (i.e which antibiotics in the lowest concentration prevent growth in vitro). Also, a display of some sort to identify a pattern with gram staining and low doses needed to prevent growth.</p>
+            <p class="question">What story do I want to tell?</p>
+                <p class="writeup">I’m trying to demonstrate that X drug is most affective against Y bacteria because it requires such a low concentration of the drug (therefore, less resource intensive) to prevent growth. I also want to see if there’s a correlation between negative gram stains and lower doses needed to kill it. </p>
+            <p class="question">What are my main challenges?</p>
+            <ol>
+                <li>The MIC Quantitative value has a massive range, from 0.001 to 870.00.</li>
+                <li>Larger numbers aren’t good - smaller numbers are. This is counterintuitive to how we normally read graphs, and I don’t want to alter the data because I don’t know a way to normalize them to make the smaller values appear larger.</li>
+                <li>The data isn’t positional - it isn’t multidimensional. There isn’t an easy way to make a second axis.</li>
+                <li>There are four different variables, so I’m at risk of over plotting if I attempt to put them on the same graph. </li>
+            </ol>
+        </div>
+        <div class="paragraphWrapper">
+            <div class="sectionTitle">Solutions</div>
+            <ol>
+                <li>The MIC is only useful as a comparison. The integer itself isn’t as helpful for the story that I’m trying to tell. The task is to demonstrate which antibiotic is most helpful for each type of bacteria, not the exact ratios needed. The raw MIC can be secondary, so the data’s range isn’t as large of an issue if I can properly demonstrate what the lowest MIC for each bacteria was (and what antibiotic was associated with it).
+                    <ul>
+                        <li>Because the range of the MICs is so vast, I decided to set the y-axis on a logarithmic scale to help the reader better visualize patterns in the data.</li>
+                    </ul> 
+                </li>
+                <li>I decided that a line graph would be the best way to demonstrate the differences among the MICs of the varying drug types. While I can't explicitly signal to the reader that lower MICs are better without involving some sort of prior knowledge, it becomes obvious what the low scores are based on their position on the graph.</li>
+                <li>After deliberating over several rough designs, I figured that even though there are a variety of labels for the drugs used in the experiment, they would still make a good identifier for varying points (even though intervals of time are usually better suited to these kinds of graphs). The graph might mistakenly give the impression of some kind of development over time as a result.</li>
+                <li>Mapping the binary classifier of the gram stain was the most difficult decision of the design. Eventually I decided on a simple highlight on the x-axis to indicate whether a bacteria was a positive or negative stain (TBD if I can get it done, it's hard getting ahold of each of Chart.js's individual elements).</li>
+            </ol>
+        </div>
+        
+        <script>
+            var ctx = document.getElementById('myChart');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Aerobacter aerogenes', 
+                             'Brucella abortus', 
+                             'Brucella anthracis',
+                             'Diplococcus pneumoniae', 
+                             'Escherichia coli', 
+                             'Klebsiella pneumoniae',
+                             'Mycobacterium tuberculosis',
+                             'Proteus vulgaris',
+                             'Pseudomonas aeruginosa ',
+                             'Salmonella typhosa ',
+                             'Salmonella schottmuelleri',
+                             'Staphylococcus albus',
+                             'Staphylococcus aureus ',
+                             'Streptococcus fecalis ',
+                             'Streptococcus hemolyticus ',
+                             'Streptococcus viridans',
+                            ],
+                    datasets: [{
+                        label: 'Penicilin',
+                        data: [870, 1, 0.001, 0.005, 100, 850,
+                              800, 3, 850, 1, 10, 0.007,
+                              0.03, 1, 0.001, 0.005],
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Streptomycin',
+                        data: [1, 2, 0.01, 11, 0.4, 1.2,
+                              5, 0.1, 2, 0.4, 0.8, 0.1,
+                              0.03, 1, 14, 10],
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Neomycin',
+                        data: [1.6, 0.02, 0.007, 10, 0.1, 1,
+                              2, 0.1, 0.4, 0.008, 0.09, 0.001,
+                              0.001, 0.1, 10, 40],
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            type: 'logarithmic',
+                        }],
+                    }
+                }
+            });
+        </script>
+        
     </svg>
+    
     <script>
         function fadeInPage() {
             if (!window.AnimationEvent) { return; }
@@ -115,15 +234,7 @@ body a {
             fader.classList.remove('fade-in');
             });
     </script>
-    <script>
-        var ctx = $('#myChart');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {/* Data here */},
-            options: {/* Options here */}
-        });
     
-    </script>
     
 </body>
 </html>

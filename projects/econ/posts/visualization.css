@@ -1,0 +1,29 @@
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+.author {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+#myChart {
+    margin-top: 100px;
+}
+
+.paragraphWrapper {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.sectionTitle {
+    margin-top: 50px;
+    font-size: 30px;
+}
+.question {
+    margin-top: 5px;
+    font-weight: bold;
+}
+.writeup {
+}

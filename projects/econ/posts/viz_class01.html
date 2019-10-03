@@ -15,6 +15,7 @@
         <!-- JS -->
             <!-- J Query Selector -->
             <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"></script>
 </head>
 <style>
     html {
@@ -65,7 +66,7 @@ body a {
 </style>
 <body>
     <svg id="fader">
-    
+        <canvas id="myChart"></canvas>
     </svg>
     <script>
         function fadeInPage() {
@@ -114,5 +115,15 @@ body a {
             fader.classList.remove('fade-in');
             });
     </script>
+    <script>
+        var ctx = $('#myChart');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {/* Data here */},
+            options: {/* Options here */}
+        });
+    
+    </script>
+    
 </body>
 </html>

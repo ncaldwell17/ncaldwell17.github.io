@@ -12,6 +12,24 @@
     font-size: 50px;
     float: left;
 }
+#tocWrapper {
+    width: 85%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.tocHeader {
+    font-family: 'Saira', sans-serif; 
+    font-size: 20px;
+}
+.tocLink {
+    font-size: 18px;
+    font-family: ;
+    text-indent: 50px;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
 .subject {
     float: left;
     padding-right: 20px;
@@ -27,10 +45,54 @@
     color: white;
     cursor: pointer;
 }
+.content {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 50px;
+}
 
+.contentTitle {
+    font-family: 'Saira', sans-serif;
+    font-size: 35px;
+}
+.codeWrapper {
+    width: 50%;
+    float: left;
+}
+.countryCodesWrapper {
+    height: 150px;
+    background-color: dimgray;
+}
+.countryDescription {
+    height: 350px;
+    background-color: darkslategray;
+}
+.countryMap {
+    width: 50%;
+    height: 500px;
+    background-color: slategray;
+    float: left;  
+}
+.electionDescription {
+    width: 100%;
+    height: 100px;
+    background-color: yellow;
+    float: left;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 900px) {
+    .unfloat {
+        float: none;
+    }
+    .maxWidth {
+        width: 100%;
+    }
+}
 @media screen and (max-width: 700px) { 
-    .centerPhone {
-        width: 0px;
+    #logo {
+        float: none;
+        margin: auto;
     }
     .desktopOnly {
         display: none;

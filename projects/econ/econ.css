@@ -82,7 +82,7 @@ body a {
 .projectImage {
     height: 200px;
     background-color: white;
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 .projectSummary {

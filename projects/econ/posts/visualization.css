@@ -14,7 +14,16 @@
 .gramWrapper {
     height: 100px;
     width: 100%;
-    background-color: red;
+}
+.icon {
+    float: left;
+    font-size: 80px;
+    margin-left: 35vw;
+}
+.iconLabel {
+    margin-left: 41vw;
+    font-size: 30px;
+    margin-bottom: 50px;
 }
 
 .paragraphWrapper {

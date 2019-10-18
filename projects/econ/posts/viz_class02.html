@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Saira&display=swap" rel="stylesheet">
     <!-- Social Media icons --> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <!-- JS -->
         <script src="visualization.js"></script>
         <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
@@ -83,86 +83,159 @@ body a {
             <div id="filter" class="bigOnly">
                 <div id="filterContainer">
                     <div class="filterTitle">See Design Process</div>
-                    <div id="firstDraft" class="aFilter"></div>
-                    <div id="secondDraft" class="aFilter"></div>
-                    <div id="finalDraft" class="aFilter"></div>
+                    <div id="firstDraft" class="aFilter">First Draft</div>
+                    <div id="secondDraft" class="aFilter">Second Draft</div>
+                    <div id="finalDraft" class="aFilter active2">Final Draft</div>
                 </div>
-                <div class="filterTitle">See Design Process</div>
-                <div class="explanation"></div>
-                <div class="explanation"></div>
-                <div class="explanation"></div>
-                <div class="explanation"></div>
-                <div class="explanation"></div>
-                <div class="explanation"></div>
-                <div class="explanation"></div>
-                <div class="explanation"></div>
+                <div class="filterTitle" style="color: white">Visualization Methodology Explainer</div>
+                <div class="explanation">
+                    <p class="exp_text" style="color: white;">I chose to use bubbles to demonstrate the gender disparities in Congress because I felt that the contrast was better expressed through size than numerical comparisons.</p>
+                    <p class="exp_text" style="color: white;">I establish the use of color to denote political parties. I will continue to use this schema for the rest of the visuals, relying on the  knowledge of the viewer (i.e. that they know Democrats' colors are blue and white and Republicans' colors are red and white).</p>
+                </div>
+                <div class="explanation" style="margin-top: 300px">
+                    <p class="exp_text" style="color: white;">I didn't use a bubble graph to visualize the distribution of members based on race because I wanted to emphasize the numerical contrasts between each column and because there were too many values. The initial drafts (see second draft above) looked too chaotic to properly compare the information.</p>
+                    <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
+                </div>
+                <div class="explanation" style="margin-top: 420px;">
+                    <p class="exp_text" style="color: white">I chose to keep the scale between 0 and n-Members (n = number of members in the largest grouping) because having the scale between 0 and 435 concealed the values of the lower groupings. I decided that it was more important to clearly demonstrate the number of representatives in a particular group than contrast the number with the total number of representatives. </p>
+                </div>
+                <div class="explanation">
+                    <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
+                </div>
+                <div class="explanation">
+                    <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
+                </div>
+                <div class="explanation" style="margin-bottom: 290px;">
+                    <p class="exp_text" style="color: white">I chose to make a horizontal bar graph instead of a vertical one because it was easier to match the length of the bar to the number of representatives with four different categories.</p>
+                    <p class="exp_text" style="color: white">I made sure to order each bar graph from most members of a group to least to make the contrast clear.</p>
+                </div>
+                <div class="explanation" style="margin-bottom: 480px;">
+                    <p class="exp_text" style="color: white">Despite the amount of information in this graph, I decided to keep the contrast between the parties to demonstrate that even members of different parties have similar backgrounds when they first enter politics. I thought that was an important aspect to communicate to viewers.</p>
+                    <p class="exp_text" style="color: white">I also thought it was interesting in the smaller amounts contrasting the prior careers of Republicans and Democrats (i.e. a pastor vs. an activist).</p>
+                </div>
+                <div class="explanation" style="margin-bottom: 120px;">
+                    <p class="exp_text" style="color: white;">I chose to display this data with a treemap because I wanted to display the quantiative-ratio data with size, which I couldn't accomplish with a bar chart. I also felt like the design choice was useful to distinguish between each of the idealogues in the same dimmension.</p>
+                    <p class="exp_text" style="color: white;">I originally wanted to display this information using a radar map, but I couldn't find an easy implementation of it using Tableau.</p>
+                </div>
             </div>
             <div id="main">
-                <div class="title">Qualities of the Average Member of the 116th Congress</div>
+                <div class="title">What Does the Average Member of the U.S. House of Representatives Look Like?</div>
                 <div id="partyFilter">
-                    <div class="partyOption dem">
+                    <div id="dem" class="partyOption dem">
                         <div class="partyText">
                         Democratic</div></div>
-                    <div class="partyOption rep">
-                        <div class="partyText">
-                        Republican</div></div>
+                    <div id="rep" class="partyOption rep">
+                        Republican</div>
+                    <div id="both" class="partyOption active">
+                        <div class="partyText">Both
+                        </div>
+                    </div>
                 </div>
                 <div class="prelimWrapper">
                     <div class="verticalWrapper" style="width: 30%">
-                        <a href="#gender"><div class="horizontalWrapper"></div></a>
-                        <a href="#race"><div class="horizontalWrapper"></div></a>
-                        <a href="#education"><div class="horizontalWrapper"></div></a>
-                        <a href="#military"><div class="horizontalWrapper"></div></a>
+                        <a href="#gender"><div class="horizontalWrapper">
+                            <i class="fas fa-venus-mars"></i>    
+                        </div></a>
+                        <a href="#race"><div class="horizontalWrapper">
+                            <i class="fas fa-user"></i>    
+                        </div></a>
+                        <a href="#education"><div class="horizontalWrapper">
+                            <i class="fas fa-graduation-cap"></i>    
+                        </div></a>
+                        <a href="#military"><div class="horizontalWrapper">
+                            <i class="fas fa-fighter-jet"></i>    
+                        </div></a>
                     </div>
                     <div class="verticalWrapper" style="width: 40%">
-                        <div class="portrait"></div>
+                        <div class="portrait" style="background-image: url(../images/swalwell.jpg)"></div>
+                        <p class="infotext" style="text-align: center">Most Average Member of Congress: 
+                        Eric Swallwell</p>
                     </div>
                     <div class="verticalWrapper" style="width: 30%">
-                        <a href="#dynasty"><div class="horizontalWrapper"></div></a>
-                        <a href="#election"><div class="horizontalWrapper"></div></a>
-                        <a href="#careers"><div class="horizontalWrapper"></div></a>
-                        <a href="#ideology"><div class="horizontalWrapper"></div></a>
+                        <a href="#dynasty"><div class="horizontalWrapper">
+                            <i class="fas fa-crown"></i>
+                        </div></a>
+                        <a href="#election"><div class="horizontalWrapper">
+                            <i class="fas fa-person-booth"></i>
+                        </div></a>
+                        <a href="#careers"><div class="horizontalWrapper">
+                            <i class="fas fa-landmark"></i>
+                        </div></a>
+                        <a href="#ideology"><div class="horizontalWrapper">
+                            <i class="fas fa-democrat"></i>
+                        </div></a>
                     </div>
                 </div>
                 <div class="sectionTitle" id="gender">Distribution of Gender in the 116th Congress</div>
                 <div class="infographicWrapper">
-                    <div class="infographic"></div>
-                    <div class="infotextWrapper"></div>
+                    <div class="infographic" style="background-image: url(viz_02-graphs/both/gender_both.jpg)"></div>
+                    <div class="infotextWrapper">
+                        <p class="infotext">2018 was known as the 'Year of the Woman' by political pundits. I wanted to examine what the effect of the election was on the average member of congress.</p>
+                        <p class="infotext">One feature I noted was that Democrats are inching closer to gender parity between men and women while the Republicans seem to be heading in the opposite direction.</p>
+                    </div>
                 </div>
                 <div class="sectionTitle" id="race">Distribution of Race in the 116th Congress</div>
                 <div class="infographicWrapper">
-                    <div class="infotextWrapper desktopOnly"></div>
-                    <div class="infographic"></div>
-                    <div class="infotextWrapper mobileOnly"></div>
+                    <div class="infographic-spread" style="background-image: url(viz_02-graphs/both/race_both.jpg); background-size: contain"></div>
+                    <div class="infotext-spread">
+                        <p class="infotext">The 2018 Elections made headlines for being the most diverse congressional class ever. I wanted to see how much of a dent the election actually made in reducing racial disparities in Congress.</p>
+                        <p class="infotext">Despite the progress in multiracial candidates competing and winning that the 2018 Election brought, there is still a massive gap between White representatives and people of Color in Congress.</p>
+                        <p class="infotext">I constructed my 2016 dataset from scratch, but in future iterations of this research, I would like to investigate the racial makeup of Congress over time as a comparison exercise. I think it would be interesting to find percentage changes as time goes on, and then examine the relationship between multiracial candidates running and winning with the political atmosphere at the time. In other words, I'd like to compare if Democratic or Republican presidential administrations encourage POCs to run for office.</p>
+                        <p class="infotext">One trend noted in my visualization is the disparity between racial representation in the Republican Party. The party is almost exclusively white, with a few Hispanic and African American exceptions. One interesting finding was that there are an equal number of Native American politicians from both the Democratic and Republican parties.</p>
+                    </div>
                 </div>
-                <div class="sectionTitle" id="education">Distribution of Education in the 116th Congress</div>
+                <div class="sectionTitle" id="education">Ivy League Graduates in the 116th Congress</div>
                 <div class="infographicWrapper">
-                    <div class="infographic"></div>
-                    <div class="infotextWrapper"></div>
+                    <div class="infographic" style="background-image: url(viz_02-graphs/both/education_both.jpg)"></div>
+                    <div class="infotextWrapper">
+                        <p class="infotext">Political pundits often comment that someone's Ivy League background makes them an ideal recruit for the House. I knew offhand that the majority of my congressional representatives from North Carolina and Illinois didn't go to an Ivy League, so I wanted to see if there was a trend that the majority of government officials went to Ivy Leagues.</p>
+                        <p class="infotext">There's also a stereotype of Democrats as being elitist and going to these elite schools, so I wanted to see if there were more Democrats who went to Ivies than Republicans.</p>
+                    </div>
                 </div>
                 <div class="sectionTitle" id="military">Distribution of Military Service in the 116th Congress</div>
                 <div class="infographicWrapper">
-                    <div class="infotextWrapper desktopOnly"></div>
-                    <div class="infographic"></div>
-                    <div class="infotextWrapper mobileOnly"></div>
+                    <div class="infotextWrapper desktopOnly">
+                        <p class="infotext">I was reading a book on House election strategy and noted that several candidates were recruited by Democrats because they were veterans. It seemed that the party leaders in D.C. believe that Democrats who served in the military make better candidates against incumbent Republicans. What I wanted to see was if military Democrats represent more conservative districts or were first elected by beating an incumbent.</p>
+                    </div>
+                    <div class="infographic" style="background-image: url(viz_02-graphs/both/military_both.jpg)"></div>
+                    <div class="infotextWrapper mobileOnly">
+                        <p class="infotext">I was reading a book on House election strategy and noted that several candidates were recruited by Democrats because they were veterans. It seemed that the party leaders in D.C. believe that Democrats who served in the military make better candidates against incumbent Republicans. What I wanted to see was if military Democrats represent more conservative districts or were first elected by beating an incumbent.</p>
+                    </div>
                 </div>
-                <div class="sectionTitle" id="dynasty">Distribution of Political Dynasties in the 116th Congress</div>
+                <div class="sectionTitle" id="dynasty">Previous Family Member Being a Politician in the 116th Congress</div>
                 <div class="infographicWrapper">
-                    <div class="infographic"></div>
-                    <div class="infotextWrapper"></div>
+                    <div class="infographic" style="background-image: url(viz_02-graphs/both/dynasty_both.jpg)"></div>
+                    <div class="infotextWrapper">
+                        <p class="infotext">The district I live in (IL-03) is represented by a congressman whose father was also the congressman before him, and he practically gave him the seat by running in the primary and then retiring. I was interested in seeing how many members of congress had family members represent their district (or a neighboring one). I was pleasantly surprised to find that it there were a very small number of hereditary politicians.</p>
+                        <p class="infotext">There wasn't a large discrepancy between Democrats and Republicans in hereditary positions (Democrats had maybe 5 more).</p>
+                    </div>
                 </div>
-                <div class="sectionTitle" id="election">Distribution of Election Victory in the 116th Congress</div>
+                <div class="sectionTitle" id="election">Method of Victory in their First Election </div>
                 <div class="infographicWrapper">
-                    <div class="infotextWrapper desktopOnly"></div>
-                    <div class="infographic"></div>
-                    <div class="infotextWrapper mobileOnly"></div>
+                    <div class="infotextWrapper desktopOnly">
+                        <p class="infotext">How a member first won their seat can be very informative. If they waged a successful primary against a tenured member, it can indicate that big shifts are happening in the party. If they won through redistricting, it means that demographic shifts favored that kind of candidate. If they beat an incumbent, it can represent shifts in favor of that party in the national political atmosphere.</p>
+                        <p class="infotext">Most members won their seats after its previous holder retired, pursued another office, passed away, or resigned due to scandal.</p>
+                    </div>
+                    <div class="infographic" style="background-image: url(viz_02-graphs/both/election_both.jpg)"></div>
+                    <div class="infotextWrapper mobileOnly">
+                        <p class="infotext">How a member first won their seat can be very informative. If they waged a successful primary against a tenured member, it can indicate that big shifts are happening in the party. If they won through redistricting, it means that demographic shifts favored that kind of candidate. If they beat an incumbent, it can represent shifts in favor of that party in the national political atmosphere.</p>
+                        <p class="infotext">Most members won their seats after its previous holder retired, pursued another office, passed away, or resigned due to scandal.</p>
+                    </div>
                 </div>
                 <div class="sectionTitle" id="careers">Distribution of Prior Careers in the 116th Congress</div>
-                <div class="infographic-spread"></div>
-                <div class="infotext-spread"></div>
+                <div class="infographic-spread" style="background-image: url(viz_02-graphs/both/career_both.jpg)"></div>
+                <div class="infotext-spread">
+                    <p class="infotext">I really wanted to see what the most common prior career Representatives had before they entered Congress. To no surprise, more than a third were already involved in government as members of State Legislatures. It is apparently common for state lawmakers to make the transition to national government when a seat becomes available.</p>
+                    <p class="infotext">I was surprised at how many Democrats and Republicans shared origins. I expected the both parties were going to have lots of members who were state lawmakers, but I was interested that nearly identical numbers of Democrats and Republicans had also been attorneys, state executives, mayors, and businesspeople.</p>
+                    <p class="infotext">The only real noticeable differences came at the bottom rung of information (i.e. only had a count of 5 or less), where congresspeople who had previously been pastors were exclusively Republican while congresspeople who had previously been activists and professors were exclusively Democratic.</p>
+                </div>
                 <div class="sectionTitle" id="ideology">Distribution of Ideological Wings in the 116th Congress</div>
-                <div class="infographic-spread"></div>
-                <div class="infotext-spread"></div>
+                <div class="infographic-spread" style="background-image: url(viz_02-graphs/both/ideology_both.jpg); overflow: auto;"></div>
+                <div class="infotext-spread">
+                    <p class="infotext">Arguably the most subjective aspect of my dataset, the ideological parings of each House representative were a subjective choice based on three factors: 1) their membership in one of several ideological caucuses (such as the Blue Dog Coalition or the Freedom Caucus) - whose votes tracked with whatever leading figure, 2) their public affiliation with a particular candidate through endorsements, 3) their Lugar Center Bipartisan Score.</p>
+                    <p class="infotext">As you can see from this dataset - which because Democrats currently hold the majority in the House, it is biased towards left-leaning political figures - most members identify ideologically with former President Barack Obama. Most Republicans identify with former President George W. Bush.</p>
+                    <p class="infotext">This visualization is interesting because it displays the contrast between the actual majority ideology and minority ideologies that wield an outsized influence on media discourse. That leads many people to believe that a single mindset describes many members of the House, when in reality, they represent a variety of differing viewpoints.</p>
+                </div>
             </div>
         </div>
     </svg>

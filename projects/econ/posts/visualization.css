@@ -69,7 +69,7 @@
 }
 #main-background {
     width: 100%;
-    height: 4800px;
+    height: 5700px;
     background-image: url(../images/straws.png);
     padding-top: 30px;
 }
@@ -80,9 +80,11 @@
     margin-left: 100px;
 }
 #filter {
+    background-image: linear-gradient(white, blue, purple, red, purple, blue);
     width: 400px;
     float: left;
     margin-left: 50px;
+    padding-bottom: 435px;
 }
 #filterContainer {
     height: 400px;
@@ -97,7 +99,7 @@
 }
 
 .aFilter {
-    background-color: black;
+    background-image: linear-gradient(to right, blue, red);
     height: 12%;
     margin-bottom: 10%;
     color: white;
@@ -106,13 +108,9 @@
     padding-top: 10px;
     border: 2px solid black;
 }
-#finalDraft {
-    background-color: white;
-    border: 2px solid black;
-    color: black;
-}
+
 .aFilter:hover {
-    background-color: white;
+    background-image: none;
     border: 2px solid black;
     color: black;
     cursor: pointer;
@@ -120,20 +118,19 @@
 
 .explanation {
     width: 400px;
-    background-color: green;
     height: 350px;
     margin-bottom: 60px;
 }
 
 #partyFilter {
     height: 30px;
-    width: 60%;
+    width: 80%;
     margin: auto;
     margin-top: 15px;
     border: 3px solid black;
 }
 .partyOption {
-    width: 50%;
+    width: 33.33%;
     height: 27.5px;
     float: left;
     font-family: saira;
@@ -142,20 +139,32 @@
     font-weight: bold;
 }
 .partyOption:hover {
-    opacity: .4;
-    color: black;
+    background-image: none;
     cursor: pointer;
-    transition: 1s;
+    color: black;
 }
-.partyText {
-    color: white;
+
+.active {
+    background-color: transparent;
+    color: black;
+}
+.active2 {
+    background-color: white;
+    background-image: none;
+    color: black;
 }
 
 .dem {
-    background-color: blue;
+    background-image: linear-gradient(to right, blue, red);
+    color: white;
 }
 .rep {
-    background-color: red;
+    background-image: linear-gradient(to right, red, purple);
+    color: white;
+}
+.both {
+    background-image: linear-gradient(to right, purple, blue);
+    color: white;
 }
 
 .prelimWrapper {
@@ -169,11 +178,16 @@
     float: left;
 }
 .horizontalWrapper {
-    background-color: blue;
     height: 20%;
     width: 50%;
     margin: auto;
     margin-top: 15px;
+    color: black;
+    font-size: 70px;
+    text-align: center;
+}
+.horizontalWrapper:hover {
+    color: red; 
 }
 .portrait {
     height: 350px;
@@ -181,6 +195,8 @@
     margin: auto;
     margin-top: 25px;
     background-color: blue;
+    background-size: cover;
+    background-position: center;
 }
 
 .sectionTitle {
@@ -193,32 +209,43 @@
     margin-bottom: 50px;
 }
 .infographic {
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-color: blue;
     height: 300px;
     width: 50%;
     float: left;
 }
 .infotextWrapper {
-    background-color: orange;
     height: 300px;
     width: 50%;
     float: left;
 }
 .infographic-spread {
-    background-color: blue;
     width: 100%;
-    background-position: center;
+    background-position: top;
     background-size: cover;
-    height: 400px;
+    background-repeat: no-repeat;
+    height: 500px;
     margin-top: 20px;
 }
 .infotext-spread {
-    background-color: orange;
-    height: 300px;
-    
+
+    height: 300px;    
+}
+.infotext {
+    font-family: saira;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+.exp_text {
+    font-family: saira;
+    font-size: 20px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .subject {
@@ -263,7 +290,7 @@
         display: block;
     }
     #main-background {
-        height: 7000px;
+        height: 8000px;
     }
     .portrait {
         height: 200px;
@@ -274,5 +301,8 @@
     }
     .infotextWrapper {
         width: 100%;
+    }
+    .horizontalWrapper {
+        font-size: 40px;
     }
 }

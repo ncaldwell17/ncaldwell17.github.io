@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<title>Avg Member of 116th Congress</title>
+<head>
+    <meta name="description" content="#">
+
+    <!-- Meta Tags  -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+        <link rel="stylesheet" href="visualization.css">
+    <!-- insert font here --> 
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Saira&display=swap" rel="stylesheet">
+    <!-- Social Media icons --> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JS -->
+        <script src="visualization.js"></script>
+        <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+    <!-- Twitter Card --> 
+    <meta name="twitter:card" content="summary-large-image"/>
+    <meta name="twitter:site" content="ncaldwellgatsos.com">
+    <meta name="twitter:creator" content="Noah Caldwell-Gatsos">
+    <meta name="twitter:title" content="#"/> 
+    <meta name="twitter:description" content="#"/>
+    <meta name="twitter:image:src" content="#"/>
+</head>
+<style>
+    html {
+    scroll-behavior: smooth;
+    scroll-behavior: [ auto | smooth ];
+}
+body {
+    background-color: white;
+    margin: 0;
+}
+body a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* header */
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+</style>
+<body>
+    <svg id="fader">
+        <div id="header">
+            <a href="/index.html"><div id="logo">NCG.com</div></a>
+            <a href="/projects/elections/elections.html"><div class="subject desktopOnly" style="font-weight: bold">politics</div></a>
+            <div class="subject desktopOnly">visualizations</div>
+        </div>
+        <div id="main-background">
+            <div id="filter" class="bigOnly">
+                <div id="filterContainer">
+                    <div class="filterTitle">See Design Process</div>
+                    <div id="firstDraft" class="aFilter"></div>
+                    <div id="secondDraft" class="aFilter"></div>
+                    <div id="finalDraft" class="aFilter"></div>
+                </div>
+                <div class="filterTitle">See Design Process</div>
+                <div class="explanation"></div>
+                <div class="explanation"></div>
+                <div class="explanation"></div>
+                <div class="explanation"></div>
+                <div class="explanation"></div>
+                <div class="explanation"></div>
+                <div class="explanation"></div>
+                <div class="explanation"></div>
+            </div>
+            <div id="main">
+                <div class="title">Qualities of the Average Member of the 116th Congress</div>
+                <div id="partyFilter">
+                    <div class="partyOption dem">
+                        <div class="partyText">
+                        Democratic</div></div>
+                    <div class="partyOption rep">
+                        <div class="partyText">
+                        Republican</div></div>
+                </div>
+                <div class="prelimWrapper">
+                    <div class="verticalWrapper" style="width: 30%">
+                        <a href="#gender"><div class="horizontalWrapper"></div></a>
+                        <a href="#race"><div class="horizontalWrapper"></div></a>
+                        <a href="#education"><div class="horizontalWrapper"></div></a>
+                        <a href="#military"><div class="horizontalWrapper"></div></a>
+                    </div>
+                    <div class="verticalWrapper" style="width: 40%">
+                        <div class="portrait"></div>
+                    </div>
+                    <div class="verticalWrapper" style="width: 30%">
+                        <a href="#dynasty"><div class="horizontalWrapper"></div></a>
+                        <a href="#election"><div class="horizontalWrapper"></div></a>
+                        <a href="#careers"><div class="horizontalWrapper"></div></a>
+                        <a href="#ideology"><div class="horizontalWrapper"></div></a>
+                    </div>
+                </div>
+                <div class="sectionTitle" id="gender">Distribution of Gender in the 116th Congress</div>
+                <div class="infographicWrapper">
+                    <div class="infographic"></div>
+                    <div class="infotextWrapper"></div>
+                </div>
+                <div class="sectionTitle" id="race">Distribution of Race in the 116th Congress</div>
+                <div class="infographicWrapper">
+                    <div class="infotextWrapper desktopOnly"></div>
+                    <div class="infographic"></div>
+                    <div class="infotextWrapper mobileOnly"></div>
+                </div>
+                <div class="sectionTitle" id="education">Distribution of Education in the 116th Congress</div>
+                <div class="infographicWrapper">
+                    <div class="infographic"></div>
+                    <div class="infotextWrapper"></div>
+                </div>
+                <div class="sectionTitle" id="military">Distribution of Military Service in the 116th Congress</div>
+                <div class="infographicWrapper">
+                    <div class="infotextWrapper desktopOnly"></div>
+                    <div class="infographic"></div>
+                    <div class="infotextWrapper mobileOnly"></div>
+                </div>
+                <div class="sectionTitle" id="dynasty">Distribution of Political Dynasties in the 116th Congress</div>
+                <div class="infographicWrapper">
+                    <div class="infographic"></div>
+                    <div class="infotextWrapper"></div>
+                </div>
+                <div class="sectionTitle" id="election">Distribution of Election Victory in the 116th Congress</div>
+                <div class="infographicWrapper">
+                    <div class="infotextWrapper desktopOnly"></div>
+                    <div class="infographic"></div>
+                    <div class="infotextWrapper mobileOnly"></div>
+                </div>
+                <div class="sectionTitle" id="careers">Distribution of Prior Careers in the 116th Congress</div>
+                <div class="infographic-spread"></div>
+                <div class="infotext-spread"></div>
+                <div class="sectionTitle" id="ideology">Distribution of Ideological Wings in the 116th Congress</div>
+                <div class="infographic-spread"></div>
+                <div class="infotext-spread"></div>
+            </div>
+        </div>
+    </svg>
+    <script>
+        function fadeInPage() {
+            if (!window.AnimationEvent) { return; }
+            var fader = document.getElementById('fader');
+            fader.classList.add('fade-out');
+        }
+    </script>
+    <script>
+        fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+            }
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+            return;
+            }
+                    var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+    </script>
+</body>
+</html>

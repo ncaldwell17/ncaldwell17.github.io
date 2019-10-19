@@ -79,17 +79,27 @@
     float: left;
     margin-left: 100px;
 }
-#filter {
-    background-image: linear-gradient(white, blue, purple, red, purple, blue);
-    width: 400px;
+#dataExploration {
+    width: 80%;
+    max-width: 800px;
     float: left;
-    margin-left: 50px;
+    margin-left: 100px;
+    height: 1000px;
+}
+.filterAll {
+    float: left;
+    margin-left: 100px;
+}
+#explainer {
+    background-image: linear-gradient(blue, purple, red, purple, blue);
+    width: 400px;
     padding-bottom: 435px;
 }
 #filterContainer {
     height: 400px;
-    margin-bottom: 150px;
+    width: 400px;
     font-family: saira;
+    margin-bottom: 150px;
 }
 .filterTitle {
     font-size: 30px;
@@ -269,11 +279,38 @@
     margin-bottom: 50px;
 }
 
-@media screen and (max-width: 1100px) { 
+.downloadWrapper {
+    height: 300px;
+    width: 100%;
+    display: inline-block;
+}
+.downloadPreview {
+    height: 300px;
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 2%;
+    background-size: cover;
+    background-position: top;
+    float: left;
+}
+.downloadIcon {
+    height: 200px;
+    width: 15%;
+    float: left;
+    font-size: 70px;
+    margin-top: 45px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) { 
     .bigOnly {
         display: none
     }
     #main {
+        margin: auto;
+        float: none;
+    }
+    #dataExploration {
         margin: auto;
         float: none;
     }

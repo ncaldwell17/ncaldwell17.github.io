@@ -83,42 +83,54 @@ body a {
             <div class="subject desktopOnly">visualizations</div>
         </div>
         <div id="main-background">
-            <div id="filter" class="bigOnly">
+            <div class="filterAll bigOnly">
                 <div id="filterContainer">
                     <div class="filterTitle">See Design Process</div>
+                    <div id="dataExp" class="aFilter" 
+                    onclick="reset_active('dataExp','firstDraft','secondDraft','finalDraft'),
+                    reset_display('main','dataExploration','explainer'),
+                    flip('dataExploration','dataExp')">Data Exploration</div>
+                    
                     <div id="firstDraft" class="aFilter">First Draft</div>
+                    
                     <div id="secondDraft" class="aFilter">Second Draft</div>
-                    <div id="finalDraft" class="aFilter active2">Final Draft</div>
+                    
+                    <div id="finalDraft" class="aFilter active2" onclick="reset_active('dataExp','firstDraft','secondDraft','finalDraft'),
+                            reset_display('main','dataExploration', 'explainer'),
+                            flip('main', 'finalDraft'),
+                            toggle('explainer')">Final Draft</div>
                 </div>
-                <div class="filterTitle" style="color: white">Visualization Methodology Explainer</div>
-                <div class="explanation">
-                    <p class="exp_text" style="color: white;">I chose to use bubbles to demonstrate the gender disparities in Congress because I felt that the contrast was better expressed through size than numerical comparisons.</p>
-                    <p class="exp_text" style="color: white;">I establish the use of color to denote political parties. I will continue to use this schema for the rest of the visuals, relying on the  knowledge of the viewer (i.e. that they know Democrats' colors are blue and white and Republicans' colors are red and white).</p>
-                </div>
-                <div class="explanation" style="margin-top: 300px">
-                    <p class="exp_text" style="color: white;">I didn't use a bubble graph to visualize the distribution of members based on race because I wanted to emphasize the numerical contrasts between each column and because there were too many values. The initial drafts (see second draft above) looked too chaotic to properly compare the information.</p>
-                    <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
-                </div>
-                <div class="explanation" style="margin-top: 420px;">
-                    <p class="exp_text" style="color: white">I chose to keep the scale between 0 and n-Members (n = number of members in the largest grouping) because having the scale between 0 and 435 concealed the values of the lower groupings. I decided that it was more important to clearly demonstrate the number of representatives in a particular group than contrast the number with the total number of representatives. </p>
-                </div>
-                <div class="explanation">
-                    <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
-                </div>
-                <div class="explanation">
-                    <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
-                </div>
-                <div class="explanation" style="margin-bottom: 290px;">
-                    <p class="exp_text" style="color: white">I chose to make a horizontal bar graph instead of a vertical one because it was easier to match the length of the bar to the number of representatives with four different categories.</p>
-                    <p class="exp_text" style="color: white">I made sure to order each bar graph from most members of a group to least to make the contrast clear.</p>
-                </div>
-                <div class="explanation" style="margin-bottom: 480px;">
-                    <p class="exp_text" style="color: white">Despite the amount of information in this graph, I decided to keep the contrast between the parties to demonstrate that even members of different parties have similar backgrounds when they first enter politics. I thought that was an important aspect to communicate to viewers.</p>
-                    <p class="exp_text" style="color: white">I also thought it was interesting in the smaller amounts contrasting the prior careers of Republicans and Democrats (i.e. a pastor vs. an activist).</p>
-                </div>
-                <div class="explanation" style="margin-bottom: 120px;">
-                    <p class="exp_text" style="color: white;">I chose to display this data with a treemap because I wanted to display the quantiative-ratio data with size, which I couldn't accomplish with a bar chart. I also felt like the design choice was useful to distinguish between each of the idealogues in the same dimmension.</p>
-                    <p class="exp_text" style="color: white;">I originally wanted to display this information using a radar map, but I couldn't find an easy implementation of it using Tableau.</p>
+                <div id="explainer">
+                    <div class="filterTitle" style="color: white">Visualization Methodology Explainer</div>
+                    <div class="explanation">
+                        <p class="exp_text" style="color: white;">I chose to use bubbles to demonstrate the gender disparities in Congress because I felt that the contrast was better expressed through size than numerical comparisons.</p>
+                        <p class="exp_text" style="color: white;">I establish the use of color to denote political parties. I will continue to use this schema for the rest of the visuals, relying on the  knowledge of the viewer (i.e. that they know Democrats' colors are blue and white and Republicans' colors are red and white).</p>
+                    </div>
+                    <div class="explanation" style="margin-top: 300px">
+                        <p class="exp_text" style="color: white;">I didn't use a bubble graph to visualize the distribution of members based on race because I wanted to emphasize the numerical contrasts between each column and because there were too many values. The initial drafts (see second draft above) looked too chaotic to properly compare the information.</p>
+                        <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
+                    </div>
+                    <div class="explanation" style="margin-top: 420px;">
+                        <p class="exp_text" style="color: white">I chose to keep the scale between 0 and n-Members (n = number of members in the largest grouping) because having the scale between 0 and 435 concealed the values of the lower groupings. I decided that it was more important to clearly demonstrate the number of representatives in a particular group than contrast the number with the total number of representatives. </p>
+                    </div>
+                    <div class="explanation">
+                        <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
+                    </div>
+                    <div class="explanation">
+                        <p class="exp_text" style="color: white">I decided against using a logarithmic scale in this diagram, despite the extreme disparity between one category and the rest, because I wanted the viewer to know the exact number of House Representatives of each race. A logarithmic scale would have led to an increased cognitive burden that this graph did not need to use.</p>
+                    </div>
+                    <div class="explanation" style="margin-bottom: 290px;">
+                        <p class="exp_text" style="color: white">I chose to make a horizontal bar graph instead of a vertical one because it was easier to match the length of the bar to the number of representatives with four different categories.</p>
+                        <p class="exp_text" style="color: white">I made sure to order each bar graph from most members of a group to least to make the contrast clear.</p>
+                    </div>
+                    <div class="explanation" style="margin-bottom: 480px;">
+                        <p class="exp_text" style="color: white">Despite the amount of information in this graph, I decided to keep the contrast between the parties to demonstrate that even members of different parties have similar backgrounds when they first enter politics. I thought that was an important aspect to communicate to viewers.</p>
+                        <p class="exp_text" style="color: white">I also thought it was interesting in the smaller amounts contrasting the prior careers of Republicans and Democrats (i.e. a pastor vs. an activist).</p>
+                    </div>
+                    <div class="explanation" style="margin-bottom: 120px;">
+                        <p class="exp_text" style="color: white;">I chose to display this data with a treemap because I wanted to display the quantiative-ratio data with size, which I couldn't accomplish with a bar chart. I also felt like the design choice was useful to distinguish between each of the idealogues in the same dimmension.</p>
+                        <p class="exp_text" style="color: white;">I originally wanted to display this information using a radar map, but I couldn't find an easy implementation of it using Tableau.</p>
+                    </div>
                 </div>
             </div>
             <div id="main">
@@ -239,6 +251,18 @@ body a {
                     <p class="infotext">As you can see from this dataset - which because Democrats currently hold the majority in the House, it is biased towards left-leaning political figures - most members identify ideologically with former President Barack Obama. Most Republicans identify with former President George W. Bush.</p>
                     <p class="infotext">This visualization is interesting because it displays the contrast between the actual majority ideology and minority ideologies that wield an outsized influence on media discourse. That leads many people to believe that a single mindset describes many members of the House, when in reality, they represent a variety of differing viewpoints.</p>
                 </div>
+            </div>
+            <div id="dataExploration" style="display: none">
+                <div class="title">Data Walkthrough & Analysis</div>
+                <p class="infotext">For this project, I used a self-coded dataset on House Congressional Representatives in the 116th Congress, drawing on information from individual congressional websites, MIT's election data, GitHub repositories, and news articles.</p>
+                <div class="downloadWrapper">
+                    <div class="downloadPreview" style="background-image: url(viz_02-graphs/dataPreview.png)"></div>
+                    <div class="downloadIcon">
+                        <a href="/data/US_House.xlsx"><i class="fas fa-download"></i></a>
+                        <p class="infotext desktopOnly" style="text-align: center">Download The Dataset Here</p>
+                    </div>
+                </div>
+                <p class="infotext">This dataset contains information on each of the 435 representatives in Congress, including their party affiliation, how long they've been serving, their gender, ethnicity, prospects for 2020, prior job, whether or not they served in the military or went to an ivy league university, their age, their ideological equivalent (i.e. a President or presidential candidate), whether they've had a prior failed campaign before they became representatives, their first method of election, whether or not they had family members that were also politicians, whether they've been accused of illegal activity, their twitter account, their Cook 2020 Political Rating, and their 115th Congress Lugar Center Bipartisan Rank.</p>
             </div>
         </div>
     </svg>

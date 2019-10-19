@@ -86,6 +86,20 @@
     margin-left: 100px;
     height: 1000px;
 }
+#draftContent {
+    width: 80%;
+    max-width: 800px;
+    float: left;
+    margin-left: 100px;
+    height: 1000px;
+}
+#draftContent2 {
+    width: 80%;
+    max-width: 800px;
+    float: left;
+    margin-left: 100px;
+    height: 1000px;
+}
 .filterAll {
     float: left;
     margin-left: 100px;
@@ -299,7 +313,17 @@
     float: left;
     font-size: 70px;
     margin-top: 45px;
+    margin-left: 2%;
     text-align: center;
+}
+
+.aDraft {
+    height: 400px;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center;
 }
 
 @media screen and (max-width: 1200px) { 
@@ -311,6 +335,14 @@
         float: none;
     }
     #dataExploration {
+        margin: auto;
+        float: none;
+    }
+    #draftContent {
+        margin: auto;
+        float: none;
+    }
+    #draftContent2 {
         margin: auto;
         float: none;
     }

@@ -86,19 +86,28 @@ body a {
             <div class="filterAll bigOnly">
                 <div id="filterContainer">
                     <div class="filterTitle">See Design Process</div>
+                    
                     <div id="dataExp" class="aFilter" 
-                    onclick="reset_active('dataExp','firstDraft','secondDraft','finalDraft'),
-                    reset_display('main','dataExploration','explainer'),
-                    flip('dataExploration','dataExp')">Data Exploration</div>
+onclick="reset_active('dataExp','firstDraft','secondDraft','finalDraft'),
+         reset_display('main','dataExploration','explainer', 'draftContent','draftContent2'),
+         flip('dataExploration','dataExp')"
+                         >Data Exploration</div>
                     
-                    <div id="firstDraft" class="aFilter">First Draft</div>
+                    <div id="firstDraft" class="aFilter"
+onclick="reset_active('dataExp','firstDraft','secondDraft','finalDraft'),
+         reset_display('main','dataExploration', 'explainer', 'draftContent', 'draftContent2'),
+         flip('draftContent', 'firstDraft')">First Draft</div>
                     
-                    <div id="secondDraft" class="aFilter">Second Draft</div>
+                    <div id="secondDraft" class="aFilter"
+onclick="reset_active('dataExp','firstDraft','secondDraft','finalDraft'),
+         reset_display('main','dataExploration', 'explainer', 'draftContent', 'draftContent2'),
+         flip('draftContent2', 'secondDraft')">Second Draft</div>
                     
-                    <div id="finalDraft" class="aFilter active2" onclick="reset_active('dataExp','firstDraft','secondDraft','finalDraft'),
-                            reset_display('main','dataExploration', 'explainer'),
-                            flip('main', 'finalDraft'),
-                            toggle('explainer')">Final Draft</div>
+                    <div id="finalDraft" class="aFilter active2" 
+onclick="reset_active('dataExp','firstDraft','secondDraft','finalDraft'),
+         reset_display('main','dataExploration', 'explainer','draftContent','draftContent2'),
+         flip('main', 'finalDraft'),
+         toggle('explainer')">Final Draft</div>
                 </div>
                 <div id="explainer">
                     <div class="filterTitle" style="color: white">Visualization Methodology Explainer</div>
@@ -263,6 +272,20 @@ body a {
                     </div>
                 </div>
                 <p class="infotext">This dataset contains information on each of the 435 representatives in Congress, including their party affiliation, how long they've been serving, their gender, ethnicity, prospects for 2020, prior job, whether or not they served in the military or went to an ivy league university, their age, their ideological equivalent (i.e. a President or presidential candidate), whether they've had a prior failed campaign before they became representatives, their first method of election, whether or not they had family members that were also politicians, whether they've been accused of illegal activity, their twitter account, their Cook 2020 Political Rating, and their 115th Congress Lugar Center Bipartisan Rank.</p>
+            </div>
+            <div id="draftContent" style="display: none">
+                <div class="title">First Draft of Project</div>
+                <div class="aDraft" style="background-image: url(../images/draftOne.jpg)"></div>
+                <div class="sectionTitle">Thought Process</div>
+                <p class="infotext">Since my data had geographic points (i.e. all the states that each representative was from), I initially tried to demonstrate my results overlaid on a map. I thought that I might be able to create a chloropleth heat map for each district where I could indicate the variance between each category that I had mapped out. However, once I started mapping it became clear that I couldn't organize things by congressional district the exact way I wanted to, and I wanted to highlight multiple details about the person, not the district or the geographic area.</p>
+                <div class="sectionTitle">Drawbacks</div>
+                <p class="infotext">One of the main reasons why I couldn’t use a heat map was because my values weren’t quantitative, they were nominal. With a variety of labels, I couldn’t create any kind of range without assigning each of the labels a value (which I could have done, but I reasoned that the whole point of making the labels in the first place was to allow the implicit value of associating a congressperson with a particular political figure, prior career, etc.  to be communicated). As a result, I thought that my data wasn’t well suited towards the heat map.</p>
+                <p class="infotext">I also reasoned that my data (and the question that had prompted the data's creation) was more about the people themselves, not information about their Congressional District. I wanted visualizations that focused more on the people, not the geographic location.</p>
+            </div>
+            <div id="draftContent2">
+                <div class="title">First Draft of Project</div>
+                <div class="aDraft" style="background-image: url(../images/draftOne.jpg)"></div>
+                <div class="sectionTitle">Thought Process</div>
             </div>
         </div>
     </svg>

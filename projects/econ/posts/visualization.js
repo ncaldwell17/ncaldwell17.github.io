@@ -9,13 +9,17 @@ function reset_active(id1, id2, id3, id4) {
     fourth.classList.remove('active2');
 }
 
-function reset_display(d1, d2, d3) {
+function reset_display(d1, d2, d3, d4, d5) {
     var first = document.getElementById(d1);
     var second = document.getElementById(d2);
-    var third = document.getElementById(d3)
+    var third = document.getElementById(d3);
+    var fourth = document.getElementById(d4);
+    var fifth = document.getElementById(d5);
     first.style.display = 'none';
     second.style.display = 'none';
     third.style.display = 'none';
+    fourth.style.display = 'none';
+    fifth.style.display = 'none';
 }
 
 function flip(target, activate) {

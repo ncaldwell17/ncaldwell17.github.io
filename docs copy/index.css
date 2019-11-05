@@ -1,0 +1,194 @@
+.myHeader {
+    font-family: 'Major Mono Display', monospace;
+}
+
+#leftColumn {
+    width: 35%;
+    margin-left: 5%;
+    margin-top: 50px;
+    float: left;
+}
+#rightColumn {
+    float: left;
+    margin-right: 5%;
+    margin-top: 50px;
+    width: 53%;
+    border: 10px solid black;
+}
+
+.headerSpacing {
+    margin-top: 10px;
+}
+
+.subTitle {
+    font-size: 30px;
+}
+.parametersWrapper {
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+.aParameterContainer {
+    margin-left: 30px;
+    margin-top: 15px;
+    height: 25px;
+}
+.description {
+    font-size: 22px;
+    float: left;
+}
+.pForm {
+    float: right;
+    margin-right: 100px;
+}
+
+.iDetails {
+    text-align: center;
+    border: none;
+    background-color: slategrey;
+    color: white;
+    font-family: roboto;
+    font-size: 18px;
+    width: 60px;
+}
+
+.featuresWrapper {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 25px;
+}
+.aFeatureContainer {
+    margin-left: 30px;
+    margin-top: 15px;
+    height: 25px;
+}
+.aFeatureContainer:hover {
+    cursor: pointer;
+}
+
+#percentileInteractiveWrapper {
+    height: 25px;
+    width: 250px;
+    background-color: black;
+    float: right;
+    margin-right: 50px;
+}
+.percentileOption {
+    width: 16.6%;
+    background-color: gray;
+    height: 25px;
+    float: left;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.percentileOption:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+    cursor: pointer;
+}
+.percentileIcon {
+    width: 15.75%;
+    height: 23px;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 2px;
+    color: black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.featureToggle {
+    height: 25px;
+    background-color: black;
+    width: 250px;
+    float: right;
+    color: white;
+    font-size: 20px;
+    margin-right: 50px;
+    border-radius: 25px;
+}
+.toggleOff {
+    float: left;
+    width: 140px;
+    text-align: center;
+    
+}
+.toggleOn {
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+
+.active {
+    background-color: greenyellow;
+    color: black;
+    border-radius: 25px;
+}
+.pActive {
+    background-color: greenyellow;
+    color: black;
+}
+
+#mapVisual {
+    height: 750px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-position: center;
+    background-size: cover;
+}
+#redunWrapper {
+    height: 75px;
+    width: 50%;
+    background-color: lightgray;
+    position: bottom;
+}
+
+#colorWrapper {
+    margin-top: 5px;
+    margin-left: 50px;
+    height: 65px;
+    width: 50px;
+    float: left;
+}
+.colorContainer {
+    width: 100%;
+    height: 20px;
+    padding-top: 1.5px;
+}
+.colorBox {
+    height: 14px;
+    width: 14px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#labelWrapper {
+    margin-top: 5px;
+    float: left;
+}
+.labelContainer {
+    width: 100%;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.submitInformation {
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lawngreen;
+    border-radius: 25px;
+    margin-top: 35px;
+    width: 60%;
+    font-weight: bold;
+}
+.submitInformation:hover {
+    background-color: black;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}

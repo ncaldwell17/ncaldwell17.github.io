@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<title>Chicago GV Prototype</title>
+<head>
+    <meta name="description" content="Reinforcement Learning Solution for Chicago Gun Violence">
+    <meta property="og:title" content="Chicago GV Prototype">
+    <meta property="og:description" content="Reinforcement Learning Solution for Chicago Gun Violence">
+    <meta property="og:image" content="#">
+    <meta property="og:url" content="#">
+    <!-- Meta Tags  -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+    <!-- insert font here --> 
+        <!-- Header --> 
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Social Media icons --> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JS -->
+        <script src="index.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+    <!-- Twitter Card --> 
+    <meta name="twitter:card" content="summary-large-image"/>
+    <meta name="twitter:site" content="ncaldwellgatsos.com">
+    <meta name="twitter:creator" content="Noah Caldwell-Gatsos">
+    <meta name="twitter:title" content="#"/> 
+    <meta name="twitter:description" content="#"/>
+    <meta name="twitter:image:src" content="#"/>
+</head>
+<style>
+    html {
+    scroll-behavior: smooth;
+    scroll-behavior: [ auto | smooth ];
+}
+body {
+    background-image: url(images/squared_metal.png);
+    background-color: white;
+    margin: 0;
+    color: #1D1D1D;
+}
+body a {
+    text-decoration: none;
+}
+
+
+/* header */
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+</style>
+<body>
+    <svg id="fader">
+        <div id="leftColumn">
+            <div class="myHeader">
+                <div id="headerTitle" style="font-size: 70px">Chicago</div>
+                <div id="headerSubtitle" style="font-size: 30px;
+                                                margin-top: 15px;">Outreach Allocation Map</div>
+                <div id="headerDate" style="font-size: 27px;
+                                            margin-top: 10px;">v. 1.0.0 - 11/5/2019</div>
+            </div>
+            
+            <div class="parametersWrapper">
+                <div class="subTitle">Parameters</div>
+                <div class="aParameterContainer">
+                    <div class="description">Number of Outreach Workers</div>
+                    <div class="pForm"><input id="workers" class="iDetails" placeholder="000"></div>
+                </div>
+                <div class="aParameterContainer">
+                    <div class="description">Ideal Ratio per Police Beat</div>
+                    <div class="pForm"><input id="ratio" class="iDetails" placeholder="000"></div>
+                </div>
+            </div>
+            
+            <div class="featuresWrapper">
+                <div class="subTitle">Features</div>
+                
+                <div class="aFeatureContainer">
+                    <div class="description">Current Outreach</div>
+                    <script>
+                        var o_switch = false;
+                    </script>
+                    <div class="featureToggle">
+                        <div id="oToggleOff" class="toggleOff active" onclick="o_switch=activate('outreach','off')
+                                                                               fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Don't Include</div>
+                        <div id="oToggleOn" class="toggleOn" onclick="o_switch=activate('outreach','on')
+                                                                      fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Include</div>
+                    </div>
+                </div>
+                <div class="aFeatureContainer">
+                    <div class="description">Homicides per Month</div>
+                    <script>
+                        var h_switch = false;
+                    </script>
+                    <div class="featureToggle">
+                        <div id="hToggleOff" class="toggleOff active" onclick="h_switch=activate('homicide', 'off')
+                                                                               fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Don't Include</div>
+                        <div id="hToggleOn" class="toggleOn" onclick="h_switch=activate('homicide', 'on')
+                                                                      fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Include</div>
+                    </div> 
+                </div>
+                
+                    <div id="hPercentile" class="aFeatureContainer" style="display: none">
+    <div class="description">Homicide Percentile</div>
+    <div id="percentileInteractiveWrapper">
+        <script>
+            var hom_count = 1;
+        </script>
+        <div class="percentileOption" onclick="hom_count = lower_bar(hom_count, 'homicides')">-</div>
+        <div id="opt1h" class="percentileIcon">25%</div>
+        <div id="opt2h" class="percentileIcon">10%</div>
+        <div id="opt3h" class="percentileIcon">5%</div>
+        <div id="opt4h" class="percentileIcon">1%</div>
+        <div class="percentileOption" onclick="hom_count = raise_bar(hom_count, 'homicides')">+</div>
+    </div>
+</div>
+                
+                <div class="aFeatureContainer">
+                    <div class="description">Shootings per Month</div>
+                    <script>
+                        var s_switch = false;
+                    </script>
+                    <div class="featureToggle">
+                        <div id="sToggleOff" class="toggleOff active" onclick="s_switch=activate('shooting','off')
+                                                                               fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Don't Include</div>
+                        <div id="sToggleOn" class="toggleOn" onclick="s_switch=activate('shooting','on')
+                                                                      fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Include</div>
+                    </div>
+                </div>
+                
+                    <div id="sPercentile" class="aFeatureContainer" style="display: none">
+    <div class="description">Shooting Percentile</div>
+    <div id="percentileInteractiveWrapper">
+        <script>
+            var shoot_count = 1;
+        </script>
+        <div class="percentileOption" onclick="shoot_count = lower_bar(shoot_count, 'shootings')">-</div>
+        <div id="opt1s" class="percentileIcon">25%</div>
+        <div id="opt2s" class="percentileIcon">10%</div>
+        <div id="opt3s" class="percentileIcon">5%</div>
+        <div id="opt4s" class="percentileIcon">1%</div>
+        <div class="percentileOption" onclick="shoot_count = raise_bar(shoot_count, 'shootings')">+</div>
+    </div>
+</div>
+                
+                <div class="aFeatureContainer">
+                    <div class="description">Edges Toggle</div>
+                    <script>
+                        var e_switch = false;
+                    </script>
+                    <div class="featureToggle">
+                        <div id="bToggleOff" class="toggleOff active" onclick="e_switch=activate('borders','off')
+                                                                               fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Don't Include</div>
+                        <div id="bToggleOn" class="toggleOn" onclick="e_switch=activate('borders','on')
+                                                                      fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Include</div>
+                    </div>
+                </div>
+                <div class="aFeatureContainer">
+                    <div class="description">Census Toggle</div>
+                    <script>
+                        var c_switch = false;
+                    </script>
+                    <div class="featureToggle">
+                        <div id="cToggleOff" class="toggleOff active" onclick="c_switch=activate('census','off')
+                                                                               fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Don't Include</div>
+                        <div id="cToggleOn" class="toggleOn" onclick="c_switch=activate('census','on')
+                                                                      fetch_mapData(o_switch, h_switch, s_switch, e_switch, c_switch)">Include</div>
+                    </div>
+                </div>
+                
+                    <div id="cPercentile" class="aFeatureContainer" style="display: none">
+    <div class="description">Poverty Percentile</div>
+    <div id="percentileInteractiveWrapper">
+        <script>
+            var c_count = 1;
+        </script>
+        <div class="percentileOption" onclick="c_count = lower_bar(c_count, 'census')">-</div>
+        <div id="opt1c" class="percentileIcon">25%</div>
+        <div id="opt2c" class="percentileIcon">10%</div>
+        <div id="opt3c" class="percentileIcon">5%</div>
+        <div id="opt4c" class="percentileIcon">1%</div>
+        <div class="percentileOption" onclick="c_count = raise_bar(c_count, 'census')">+</div>
+    </div>
+</div>
+                    <div id="cPercentile" class="aFeatureContainer" style="display: none">
+    <div class="description">Unemp. Percentile</div>
+    <div id="percentileInteractiveWrapper">
+        <div class="percentileOption">+</div>
+        <div class="percentileIcon" style="background-color: palegreen">25%</div>
+        <div class="percentileIcon">10%</div>
+        <div class="percentileIcon">5%</div>
+        <div class="percentileIcon">1%</div>
+        <div class="percentileOption">-</div>
+    </div>
+</div>
+               
+                <script>
+                    var data = [];
+                </script>
+                <div id="mySubmit" class="submitInformation" onclick="loadvisual()
+                                                                      data = getData()">Calculate Risk Scores</div>
+                <script>
+                var outreach = data[0];
+                var ratio = data[1];
+                </script>
+                
+                
+            </div>
+        </div>
+        <div id="rightColumn">
+            <div id="mapVisual" style="background-image: url(images/risk_scores.png)">
+            </div>
+        </div>
+    </svg>
+    
+    <script>
+        function fadeInPage() {
+            if (!window.AnimationEvent) { return; }
+            var fader = document.getElementById('fader');
+            fader.classList.add('fade-out');
+        }
+    </script>
+    <script>
+        fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+            }
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+            return;
+            }
+                    var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+    </script>
+</body>
+</html>

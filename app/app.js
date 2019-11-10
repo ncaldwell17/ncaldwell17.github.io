@@ -8,10 +8,11 @@
 /* exported fetch_mapData */
 /* global document */
 /* global window */ 
+/* global console */
 
 
 function raise_bar(count, type) {
-    console.log(count)
+    console.log(count) 
     var res = type.charAt(0);
     document.getElementById("opt{0}{1}".format(count, res)).classList.add('pActive');
     if (count < 4) {

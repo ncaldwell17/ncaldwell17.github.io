@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<title>EB Demo</title>
+    
+<head>
+    <meta name="description" content="#">
+    <meta property="og:title" content="#">
+    <meta property="og:description" content="#">
+    <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+    <meta property="og:url" content="http://euro-travel-example.com/index.htm">
+    <!-- Meta Tags  -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+        <link rel="stylesheet" href="eb.css">
+    <!-- insert font here --> 
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <!-- Social Media icons --> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JS -->
+        <script src="eb.js"></script>
+        <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+        <script src="https://apis.google.com/js/client.js"></script>
+        <script type="text/javascript">
+            var PROJECT_ID = 'gvallocation';
+            var CLIENT_ID = '1014975814746-nlsfpjdgjui5kfd5vi6349k58rlhgm19.apps.googleusercontent.com';
+            var API_KEY = 'lurm6JC57pgu9O_atzi8vp1U';
+            var SCOPES = 'https://www.googleapis.com/auth/compute';
+            
+            var DEFAULT_PROJECT = PROJECT_ID;
+            var DEFAULT_ZONE = 'us-central1-a';
+            var API_VERSION = 'v1';
+            
+            /**
+            * Load the Google Compute Engine API.
+            */
+            function initializeApi() {
+                gapi.client.load('compute', API_VERSION);
+            }
+
+            /**
+            * Authorize Google Compute Engine API.
+            */
+            function authorization() {
+                gapi.client.setApiKey(API_KEY);
+                gapi.auth.authorize({
+                    client_id: CLIENT_ID,
+                    scope: SCOPES,
+                    immediate: false
+                    }, function(authResult) {
+                            if (authResult && !authResult.error) {
+                                window.alert('Auth was successful!');
+                                initializeApi();
+                            } else {
+                              window.alert('Auth was not successful');
+                            }
+                    }
+                );
+            }
+            
+            /* someInput is a String */
+            function launch_function(someInput) {
+                var cloud_location = "https://us-central1-gvallocation.cloudfunctions.net/hello_world";
+
+                /* cleans the text */
+                someInput = someInput.toLowerCase();
+                someInput = someInput.replace(/\s+/g, '');
+                console.log(someInput);
+
+                /* creates the link extensin */
+                /* message is the argument passed to the Cloud Function */
+                var link_extension = "?message={0}".format(someInput);
+                var my_link = cloud_location+link_extension;
+                console.log(my_link);
+
+                var request = gapi.client.compute.instances.list({
+                    'project': DEFAULT_PROJECT,
+                    'zone': DEFAULT_ZONE,
+                });
+                executeRequest(request, 'listInstances');
+            }
+            
+        /**
+        * Executes your Google Compute Engine request object and, subsequently,
+        * prints the response.
+        * @param {gapi.client.request} request A Google Compute Engine request
+        *     object issued from the Google APIs JavaScript client library.
+        * @param {string} apiRequestName The name of the example API request.
+        */
+         function executeRequest(request, apiRequestName) {
+           request.execute(function(resp) {
+             newWindow = window.open(apiRequestName, '',
+               'width=600, height=600, scrollbars=yes');
+             newWindow.document.write('<h1>' + apiRequestName + '</h1> <br />' +
+               '<pre>' + JSON.stringify(resp.result, null, ' ') + '</pre>');
+             if (resp.error) {
+               newWindow.document.write('<h1>Error:</h1>');
+               newWindow.document.write('<pre>' +
+                 JSON.stringify(resp.error, null, ' ') + '</pre>');
+             }
+           });
+         }
+
+            /**
+            * Driver for sample application.
+            */
+            $(window).load(authorization);
+        </script>
+    <!-- Twitter Card --> 
+    <meta name="twitter:card" content="summary-large-image"/>
+    <meta name="twitter:site" content="ncaldwellgatsos.com">
+    <meta name="twitter:creator" content="Noah Caldwell-Gatsos">
+    <meta name="twitter:title" content="#"/> 
+    <meta name="twitter:description" content="#"/>
+    <meta name="twitter:image:src" content="#"/>
+</head>
+    
+    
+<style>
+    html {
+    scroll-behavior: smooth;
+    scroll-behavior: [ auto | smooth ];
+}
+body {
+    background-image: url(images/brickwall.png);
+    color: darkslategrey;
+    margin: 0;
+    font-family: 'Righteous';
+}
+body a {
+    text-decoration: none;
+}
+
+/* header */
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: white;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+    
+</style>
+    
+    
+<body>
+    <svg id="fader">
+        <script>
+            var user_input = null;
+        </script>
+        <div id="landingPage">
+            <input id="entryBox" placeholder="Enter your subject here" style="font-family: Righteous;
+                   margin: auto;">
+            <div class="submit" onclick="user_input=getData(user_input)
+                                         launch_function(user_input)">
+                <div class="submittext">Submit</div>
+            </div>
+        </div>
+        <div id="launchPage" style="display: none"></div>
+        
+    </svg>
+    <script>
+        function fadeInPage() {
+            if (!window.AnimationEvent) { return; }
+            var fader = document.getElementById('fader');
+            fader.classList.add('fade-out');
+        }
+    </script>
+    <script>
+        fadeInPage();
+            
+            //fade-in, fade-out 
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!window.AnimationEvent) { return; }
+                var anchors = document.getElementsByTagName('a');
+    
+            for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname) {
+                continue;
+                }
+            anchors[idx].addEventListener('click', function(event) {
+            var localPath = '/wp-content/uploads/'
+            
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname || anchors[idx].pathname.indexOf(localPath) !== -1) {
+              //continue;
+            }
+            var fader = document.getElementById('fader'),
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                fader.removeEventListener('animationend', listener);
+            };
+            fader.addEventListener('animationend', listener);
+            
+            event.preventDefault();
+            fader.classList.add('fade-in');
+            });
+            }
+            });
+            window.addEventListener('pageshow', function (event) {
+            if (!event.persisted) {
+            return;
+            }
+                    var fader = document.getElementById('fader');
+            fader.classList.remove('fade-in');
+            });
+    </script>
+</body>
+</html>

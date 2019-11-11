@@ -152,7 +152,11 @@ function testData(one, two) {
     console.log(two);
 }
 
-fetch('examples/example.json')
+var url = "https://us-central1-gvallocation.cloudfunctions.net/function-1" 
+var url_ext = "?outreach={0}&ratio={1}".format()
+var my_url = url+url_ext
+
+fetch(my_url)
     .then(function(response) {
 
     })

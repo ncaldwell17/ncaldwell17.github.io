@@ -151,3 +151,11 @@ function testData(one, two) {
     console.log(one);
     console.log(two);
 }
+
+fetch('examples/example.json')
+    .then(function(response) {
+
+    })
+    .catch(function(error) {
+        console.log('Looks like there was a problem: \n', error);
+    })

@@ -3,9 +3,9 @@
 }
 
 .modules {
-                float: left;
                 text-align: center;
-                margin-left: 200px;
+                margin: auto;
+                margin-top: 10px;
                 width: 200px;
                 background-color: #681593;
                 border-radius: 10px;
@@ -215,4 +215,11 @@
     color: white;
     transition: 1s;
     cursor: pointer;
+}
+
+.paperWrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
 }

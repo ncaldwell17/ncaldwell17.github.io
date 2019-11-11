@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<title>Name</title>
+<title>Project Write Up</title>
 <head>
-    <meta name="description" content="#">
+    <meta name="description" content="Write up for project">
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
     <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
@@ -11,13 +11,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS -->
-        <link rel="stylesheet" href="#">
+        <link rel="stylesheet" href="app.css">
     <!-- insert font here --> 
-        
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- Social Media icons --> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- JS -->
-        <script src="#"></script>
+        <script src="app.js"></script>
         <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
     <!-- Twitter Card --> 
     <meta name="twitter:card" content="summary-large-image"/>
@@ -33,13 +33,28 @@
     scroll-behavior: [ auto | smooth ];
 }
 body {
-    background-color: #1D1D1D;
+    background-image: url(images/squared_metal.png);
+    background-color: white;
     margin: 0;
+    color: #681593;
+    font-family: 'roboto';
 }
 body a {
     text-decoration: none;
 }
+    
+    .paperParagraph {
+        margin-left: 50px;
+    }
 
+    .storyboardImage {
+        height: 300px;
+        width: 500px;
+        border: 10px solid black;
+        margin: auto;
+        background-size: cover;
+        background-position: center;
+    }
 
 /* header */
 
@@ -76,7 +91,29 @@ body a {
     
 <body>
     <svg id="fader">
-    
+        <div class="paperWrapper" style="margin-bottom: 100px;">
+            <h1>Visualization Write-up</h1>
+            <h2>Data Domain & Background</h2>
+                <p class="paperParagraph">This data is largely derived from the Chicago Police Department data grouping that I was using to develop a method of assigning a risk score for each beatvia reinforcement learning. I was also tasked with assigning an optimal number of outreach volunteers (a proven technique to help curb gun violence) per beat. In the dataset, I have information from the Chicago Police Department on the number of homicides, shootings, and other similar crimes per beat. In order to complete the assessment of the risk score, I also developed several unique datasets to examine the number of edges that a beat shares with a count of top 25 homicide/shooting percentile beat, as well as the beats that currently possess some sort of outreach presence.</p>
+                <p class="paperParagraph">I thought that this data was well-suited to the assignment because it was multidimensional and in the course of developing a reinforcement learning solution for the City of Chicago, I encountered a number of specification questions from the clients that I felt adapted well to a dynamic visualization.</p>
+            <h3>My Initial Questions</h3>
+                <p class="paperParagraph">Here are a few questions I had while examining this data:</p>
+                    <ol>
+                        <li>What area of the city are the top percentiles of homicides and shootings located in?</li>
+                        <li>Do these areas match where existing outreach is located?</li>
+                        <li>How do these areas match with the areas outlined by certain econometric factors?</li>
+                    </ol>
+            <h3>Difficulties Encountered During Development</h3>
+                <p class="paperParagraph">There were several difficulties that I faced during the creation of this app. The first was design - how to incorporate all of the options in a way that allowed the user to see the effect of their actions while acknowledging the fact that the actual benefit of the visualization is gained from the analysis of the risk scores and visualizing the spread of potential outreach across Chicago (something that can't be seen until the final assignment of variables).</p>
+                <p class="paperParagraph">From a development perspective, there were several major hurdles. The first was how to dynamically update the map. I was easily able to create a visualization of a particular map using topoJSON files, but the result wasn't dynamic. In order to produce exactly what the viewer wanted without hard coding each and every possible scenario. To circumvent this, I decided to create a simple API to allow my javascript events to communicate with my Python file which generated 1) the risk scores and optimized scores, 2) the json maps from the shapefiles. I didn't have a lot of Flask experience but I knew I could just upload the data to a Google Cloud bucket, which could connect to a Cloud Function that could respond to the JavaScript's fetch function.</p>
+            <h2>Storyboards</h2>
+                <p class="paperParagraph">From a design perspective, there were several considerations. In my first iteration I considered simply having the map overlaid with several toggles. I decided against this version because I felt that it crowded the visual.</p>
+                <div class="storyboardImage"></div>
+                <p class="paperParagraph">Like I mentioned above, I encountered the issue that the original reason for creating the visual was to display a calculation derived from user-selected variables. However, becuase of that, the initial visual was only generated after the user entered in their preferences. It wasn't dynamic, and didn't update as they used it. I felt like this design couldn't be used as a result. </p>
+                <div class="storyboardImage"></div>
+            <h2>Final Project Description</h2>
+                <p class="paperParagraph">My final project focused on the assumption that visualizing the data dynamically would improve the user's ability to select for the variables they wanted to include in the eventual calculation of the risk score. Being able to visualize the number of beats would assist in determining if they wanted to deal with granular variables like the difference between the top 25 shootings vs. the top 1 percentile of shootings, and so on. It also allowed for easier analysis of correlations between economic data and crime data. I included a variety of toggle types, using easily recognizable button-like icons, to immediately clue the reader in on how to use the visualization. </p>
+        </div>
     </svg>
     <script>
         function fadeInPage() {

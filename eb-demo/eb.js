@@ -1,6 +1,7 @@
 /* exported getData */
 /* exported launch_function */
 /* global document */
+/* global window */
 
 // First, checks if it isn't implemented yet.
 if (!String.prototype.format) {
@@ -17,6 +18,7 @@ if (!String.prototype.format) {
 
 function getData(someInput) {
     someInput = document.getElementById('entryBox').value;
+    someInput = someInput.toLowerCase();
     console.log(someInput);
     console.log(typeof(someInput));
     return someInput;
